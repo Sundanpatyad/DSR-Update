@@ -28,6 +28,8 @@ async function appendToGoogleSheet(rows) {
     const sheetTitle = `${repoName.substring(0, 50)}_${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}`;
 
     let sheet = doc.sheetsByTitle[sheetTitle];
+    let isNewSheet = false;
+
     if (!sheet) {
       sheet = await doc.addSheet({
         title: sheetTitle,
@@ -38,6 +40,7 @@ async function appendToGoogleSheet(rows) {
           'Total Deletions', 'Full Code Changes'
         ],
       });
+      isNewSheet = true;
       logger.info(`Created new Google Sheet: ${sheetTitle}`);
     }
 
@@ -62,6 +65,70 @@ async function appendToGoogleSheet(rows) {
 
     await sheet.addRows(formattedRows);
     logger.info(`Successfully added ${formattedRows.length} rows to Google Sheet: ${sheetTitle}`);
+
+    // If it's a new sheet, apply formatting and grouping (collapsible columns)
+    if (isNewSheet) {
+      try {
+        await doc.loadInfo(); // Ensure we have the latest sheet ID
+        const sheetId = sheet.sheetId;
+
+        const requests = [
+          // 1. Group columns L to P (indices 11 to 15) to make them collapsible
+          {
+            addDimensionGroup: {
+              dimensionRange: {
+                sheetId: sheetId,
+                dimension: 'COLUMNS',
+                startIndex: 11, // Column L (File Paths)
+                endIndex: 16    // Column P (Full Code Changes) + 1
+              }
+            }
+          },
+          // 2. Format the Header Row (Blue background, White bold text)
+          {
+            repeatCell: {
+              range: {
+                sheetId: sheetId,
+                startRowIndex: 0,
+                endRowIndex: 1
+              },
+              cell: {
+                userEnteredFormat: {
+                  backgroundColor: { red: 0.1, green: 0.46, blue: 0.82 }, // #1976D2
+                  textFormat: { foregroundColor: { red: 1, green: 1, blue: 1 }, bold: true },
+                  horizontalAlignment: 'CENTER',
+                  verticalAlignment: 'MIDDLE'
+                }
+              },
+              fields: 'userEnteredFormat(backgroundColor,textFormat,horizontalAlignment,verticalAlignment)'
+            }
+          },
+          // 3. Format all cells to top-align and wrap text
+          {
+            repeatCell: {
+              range: {
+                sheetId: sheetId,
+                startRowIndex: 1
+              },
+              cell: {
+                userEnteredFormat: {
+                  wrapStrategy: 'WRAP',
+                  verticalAlignment: 'TOP'
+                }
+              },
+              fields: 'userEnteredFormat(wrapStrategy,verticalAlignment)'
+            }
+          }
+        ];
+
+        // @ts-ignore - The internal axios client used by google-spreadsheet
+        await doc.axios.post(`:batchUpdate`, { requests });
+        logger.info(`Successfully applied styling and collapsible columns to ${sheetTitle}`);
+
+      } catch (formatError) {
+        logger.error('Failed to apply Google Sheets formatting:', formatError);
+      }
+    }
 
   } catch (error) {
     logger.error('Error writing to Google Sheets:', error);
