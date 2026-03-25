@@ -44,14 +44,28 @@ async function processPushPayload(payload) {
       const rawMessage = commit.message || '';
       const date = commit.timestamp || new Date().toISOString();
 
+      let moduleName = 'N/A';
+      let taskType = 'N/A';
       let problemStatement = 'N/A';
+      let ticketId = 'N/A';
       let message = rawMessage;
       
+      const moduleMatch = rawMessage.match(/\[Module: (.*?)\]/i);
+      const typeMatch = rawMessage.match(/\[TaskType: (.*?)\]/i);
       const problemMatch = rawMessage.match(/\[Problem Statement: (.*?)\]/i);
-      if (problemMatch && problemMatch[1]) {
-        problemStatement = problemMatch[1].trim();
-        message = rawMessage.replace(/\[Problem Statement: .*?\]/gi, '').trim();
-      }
+      const ticketMatch = rawMessage.match(/\[TicketID: (.*?)\]/i);
+
+      if (moduleMatch) moduleName = moduleMatch[1].trim();
+      if (typeMatch) taskType = typeMatch[1].trim();
+      if (problemMatch) problemStatement = problemMatch[1].trim();
+      if (ticketMatch) ticketId = ticketMatch[1].trim();
+
+      message = rawMessage
+        .replace(/\[Module: .*?\]/gi, '')
+        .replace(/\[TaskType: .*?\]/gi, '')
+        .replace(/\[Problem Statement: .*?\]/gi, '')
+        .replace(/\[TicketID: .*?\]/gi, '')
+        .trim();
 
       let detailedStats = [];
       if (owner && repoName && process.env.GITHUB_TOKEN) {
@@ -85,7 +99,10 @@ async function processPushPayload(payload) {
             branch,
             sha,
             message,
+            moduleName,
+            taskType,
             problemStatement,
+            ticketId,
             filename,
             changeType,
             additions: fileStats ? fileStats.additions : undefined,
