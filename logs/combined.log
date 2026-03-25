@@ -136,3 +136,52 @@
 {"level":"info","message":"::1 - - [25/Mar/2026:05:30:06 +0000] \"POST /webhook/git HTTP/1.1\" 202 59 \"-\" \"GitHub-Hookshot/ea963ee\"","service":"git-commit-tracker","timestamp":"2026-03-25T05:30:06.069Z"}
 {"level":"info","message":"Sending 1 rows for developer sundan.shrama@psquarecompany.com to Excel writer...","service":"git-commit-tracker","timestamp":"2026-03-25T05:30:06.069Z"}
 {"level":"info","message":"Successfully wrote 1 new rows to sundan.shrama@psquarecompany.com_SURYACON_MOBILE_APPLICATION_2026-03.xlsx","service":"git-commit-tracker","timestamp":"2026-03-25T05:30:06.075Z"}
+{"level":"info","message":"Server is running on port 3000 in development mode","service":"git-commit-tracker","timestamp":"2026-03-25T06:12:25.965Z"}
+{"level":"info","message":"Listening for Webhooks at: http://localhost:3000/webhook/git","service":"git-commit-tracker","timestamp":"2026-03-25T06:12:25.966Z"}
+{"level":"info","message":"Incoming Webhook Push Event received","service":"git-commit-tracker","timestamp":"2026-03-25T06:13:23.405Z"}
+{"level":"info","message":"--- Inside processPushPayload ---","service":"git-commit-tracker","timestamp":"2026-03-25T06:13:23.410Z"}
+{"level":"info","message":"Found 1 commits in payload.","service":"git-commit-tracker","timestamp":"2026-03-25T06:13:23.412Z"}
+{"level":"warn","message":"GITHUB_TOKEN not provided or invalid. Skipping detailed fetch for commit 54ab07a9202bb0091c7ee205442964f565ccfd2c","service":"git-commit-tracker","timestamp":"2026-03-25T06:13:23.412Z"}
+{"level":"info","message":"::1 - - [25/Mar/2026:06:13:23 +0000] \"POST /webhook/git HTTP/1.1\" 202 59 \"-\" \"GitHub-Hookshot/ea963ee\"","service":"git-commit-tracker","timestamp":"2026-03-25T06:13:23.413Z"}
+{"level":"info","message":"Sending 1 rows for developer sundan.shrama@psquarecompany.com to Excel writer...","service":"git-commit-tracker","timestamp":"2026-03-25T06:13:23.413Z"}
+{"level":"info","message":"Successfully wrote 1 new rows to sundan.shrama@psquarecompany.com_SURYACON_MOBILE_APPLICATION_2026-03.xlsx","service":"git-commit-tracker","timestamp":"2026-03-25T06:13:23.448Z"}
+{"level":"info","message":"Server is running on port 3000 in development mode","service":"git-commit-tracker","timestamp":"2026-03-25T06:15:02.908Z"}
+{"level":"info","message":"Listening for Webhooks at: http://localhost:3000/webhook/git","service":"git-commit-tracker","timestamp":"2026-03-25T06:15:02.910Z"}
+{"level":"info","message":"Server is running on port 3000 in development mode","service":"git-commit-tracker","timestamp":"2026-03-25T06:19:35.037Z"}
+{"level":"info","message":"Listening for Webhooks at: http://localhost:3000/webhook/git","service":"git-commit-tracker","timestamp":"2026-03-25T06:19:35.038Z"}
+{"level":"info","message":"Incoming Webhook Push Event received","service":"git-commit-tracker","timestamp":"2026-03-25T06:19:56.960Z"}
+{"level":"info","message":"--- Inside processPushPayload ---","service":"git-commit-tracker","timestamp":"2026-03-25T06:19:56.962Z"}
+{"level":"info","message":"Found 1 commits in payload.","service":"git-commit-tracker","timestamp":"2026-03-25T06:19:56.962Z"}
+{"level":"info","message":"Fetching detailed stats for commit: Psquarecompany-psqrco/SURYACON_MOBILE_APPLICATION@a848a07dedf79df5319cd48555ff8b5cacedc0f3","service":"git-commit-tracker","timestamp":"2026-03-25T06:19:56.963Z"}
+{"level":"info","message":"::1 - - [25/Mar/2026:06:19:56 +0000] \"POST /webhook/git HTTP/1.1\" 202 59 \"-\" \"GitHub-Hookshot/ea963ee\"","service":"git-commit-tracker","timestamp":"2026-03-25T06:19:56.984Z"}
+{"level":"info","message":"Successfully fetched details for 1 files in commit a848a07dedf79df5319cd48555ff8b5cacedc0f3","service":"git-commit-tracker","timestamp":"2026-03-25T06:19:57.485Z"}
+{"level":"info","message":"\n=== Changes for App.tsx (Modified) by sundan.shrama@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-25T06:19:57.486Z"}
+{"level":"info","message":"Additions: 0 | Deletions: 12","service":"git-commit-tracker","timestamp":"2026-03-25T06:19:57.486Z"}
+{"level":"info","message":"Patch:","service":"git-commit-tracker","timestamp":"2026-03-25T06:19:57.486Z"}
+{"level":"info","message":"@@ -108,18 +108,6 @@ const InitialLayout = () => {\n     return <Loader />;\n   }\n \n-  if (!ready || !roleReady) {\n-    return <Loader />;\n-  }\n-\n-  if (!ready || !roleReady) {\n-    return <Loader />;\n-  }\n-\n-  if (!ready || !roleReady) {\n-    return <Loader />;\n-  }\n-\n   return (\n     <NavigationContainer ref={navigationRef}>\n       <BackHandlerGuard />","service":"git-commit-tracker","timestamp":"2026-03-25T06:19:57.486Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-25T06:19:57.486Z"}
+{"level":"info","message":"Sending 1 rows for developer sundan.shrama@psquarecompany.com to Excel writer...","service":"git-commit-tracker","timestamp":"2026-03-25T06:19:57.486Z"}
+{"level":"info","message":"Successfully wrote 1 new rows to sundan.shrama@psquarecompany.com_SURYACON_MOBILE_APPLICATION_2026-03.xlsx","service":"git-commit-tracker","timestamp":"2026-03-25T06:19:57.537Z"}
+{"level":"info","message":"Server is running on port 3000 in development mode","service":"git-commit-tracker","timestamp":"2026-03-25T06:22:08.107Z"}
+{"level":"info","message":"Listening for Webhooks at: http://localhost:3000/webhook/git","service":"git-commit-tracker","timestamp":"2026-03-25T06:22:08.109Z"}
+{"level":"info","message":"Server is running on port 3000 in development mode","service":"git-commit-tracker","timestamp":"2026-03-25T06:22:13.055Z"}
+{"level":"info","message":"Listening for Webhooks at: http://localhost:3000/webhook/git","service":"git-commit-tracker","timestamp":"2026-03-25T06:22:13.057Z"}
+{"level":"info","message":"Server is running on port 3000 in development mode","service":"git-commit-tracker","timestamp":"2026-03-25T06:22:20.809Z"}
+{"level":"info","message":"Listening for Webhooks at: http://localhost:3000/webhook/git","service":"git-commit-tracker","timestamp":"2026-03-25T06:22:20.811Z"}
+{"level":"info","message":"Server is running on port 3000 in development mode","service":"git-commit-tracker","timestamp":"2026-03-25T06:23:25.510Z"}
+{"level":"info","message":"Listening for Webhooks at: http://localhost:3000/webhook/git","service":"git-commit-tracker","timestamp":"2026-03-25T06:23:25.512Z"}
+{"level":"info","message":"Server is running on port 3000 in development mode","service":"git-commit-tracker","timestamp":"2026-03-25T06:23:37.582Z"}
+{"level":"info","message":"Listening for Webhooks at: http://localhost:3000/webhook/git","service":"git-commit-tracker","timestamp":"2026-03-25T06:23:37.583Z"}
+{"level":"info","message":"Incoming Webhook Push Event received","service":"git-commit-tracker","timestamp":"2026-03-25T06:25:00.023Z"}
+{"level":"info","message":"--- Inside processPushPayload ---","service":"git-commit-tracker","timestamp":"2026-03-25T06:25:00.026Z"}
+{"level":"info","message":"Found 1 commits in payload.","service":"git-commit-tracker","timestamp":"2026-03-25T06:25:00.027Z"}
+{"level":"info","message":"Fetching detailed stats for commit: Psquarecompany-psqrco/SURYACON_MOBILE_APPLICATION@82c3c6f5c4f22395390e1538516ed24f18f439ab","service":"git-commit-tracker","timestamp":"2026-03-25T06:25:00.027Z"}
+{"level":"info","message":"::1 - - [25/Mar/2026:06:25:00 +0000] \"POST /webhook/git HTTP/1.1\" 202 59 \"-\" \"GitHub-Hookshot/ea963ee\"","service":"git-commit-tracker","timestamp":"2026-03-25T06:25:00.057Z"}
+{"level":"info","message":"Successfully fetched details for 1 files in commit 82c3c6f5c4f22395390e1538516ed24f18f439ab","service":"git-commit-tracker","timestamp":"2026-03-25T06:25:00.650Z"}
+{"level":"info","message":"\n=== Changes for App.tsx (Modified) by sundan.shrama@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-25T06:25:00.650Z"}
+{"level":"info","message":"Additions: 7 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-25T06:25:00.651Z"}
+{"level":"info","message":"Patch:","service":"git-commit-tracker","timestamp":"2026-03-25T06:25:00.651Z"}
+{"level":"info","message":"@@ -108,6 +108,13 @@ const InitialLayout = () => {\n     return <Loader />;\n   }\n \n+  if (!ready || !roleReady) {\n+    return <Loader />;\n+  }\n+  if (!ready || !roleReady) {\n+    return <Loader />;\n+  }\n+\n   return (\n     <NavigationContainer ref={navigationRef}>\n       <BackHandlerGuard />","service":"git-commit-tracker","timestamp":"2026-03-25T06:25:00.651Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-25T06:25:00.651Z"}
+{"level":"info","message":"Sending 1 total rows for repo SURYACON_MOBILE_APPLICATION to Excel writer...","service":"git-commit-tracker","timestamp":"2026-03-25T06:25:00.651Z"}
+{"level":"info","message":"Successfully wrote 1 new rows to SURYACON_MOBILE_APPLICATION_2026-03.xlsx","service":"git-commit-tracker","timestamp":"2026-03-25T06:25:00.680Z"}

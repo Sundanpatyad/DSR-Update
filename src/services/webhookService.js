@@ -35,17 +35,22 @@ async function processPushPayload(payload) {
       owner = payload.repository.owner?.login || payload.repository.owner?.name || '';
     }
 
-    const developerRows = {};
+    const excelRows = [];
 
     for (const commit of commits) {
       const sha = commit.id;
       const author = commit.author?.name || 'Unknown Author';
       const email = commit.author?.email || 'unknown_email';
-      const message = commit.message || '';
+      const rawMessage = commit.message || '';
       const date = commit.timestamp || new Date().toISOString();
 
-      if (!developerRows[email]) {
-        developerRows[email] = [];
+      let problemStatement = 'N/A';
+      let message = rawMessage;
+      
+      const problemMatch = rawMessage.match(/\[Problem Statement: (.*?)\]/i);
+      if (problemMatch && problemMatch[1]) {
+        problemStatement = problemMatch[1].trim();
+        message = rawMessage.replace(/\[Problem Statement: .*?\]/gi, '').trim();
       }
 
       let detailedStats = [];
@@ -60,15 +65,19 @@ async function processPushPayload(payload) {
           const fileStats = detailedStats.find(s => s.filename === filename);
           const patchData = fileStats ? fileStats.patch : '';
           
-          if (patchData) {
+          if (fileStats) {
             if (process.env.NODE_ENV !== 'production') {
-              logger.info(`\n=== Code Changes for ${filename} (${changeType}) by ${email} ===`);
-              logger.info(patchData);
+              logger.info(`\n=== Changes for ${filename} (${changeType}) by ${email} ===`);
+              logger.info(`Additions: ${fileStats.additions} | Deletions: ${fileStats.deletions}`);
+              if (patchData) {
+                logger.info('Patch:');
+                logger.info(patchData);
+              }
               logger.info(`====================================================\n`);
             }
           }
 
-          developerRows[email].push({
+          excelRows.push({
             repo: repoName || 'Unknown Repo',
             date,
             author,
@@ -76,6 +85,7 @@ async function processPushPayload(payload) {
             branch,
             sha,
             message,
+            problemStatement,
             filename,
             changeType,
             additions: fileStats ? fileStats.additions : undefined,
@@ -90,15 +100,9 @@ async function processPushPayload(payload) {
       processFiles(commit.removed, 'Removed');
     }
 
-    const developerEmails = Object.keys(developerRows);
-    if (developerEmails.length > 0) {
-      for (const email of developerEmails) {
-        const rows = developerRows[email];
-        if (rows.length > 0) {
-          logger.info(`Sending ${rows.length} rows for developer ${email} to Excel writer...`);
-          await appendCommitData(rows);
-        }
-      }
+    if (excelRows.length > 0) {
+      logger.info(`Sending ${excelRows.length} total rows for repo ${repoName} to Excel writer...`);
+      await appendCommitData(excelRows);
     } else {
       logger.info('No file changes detected in the commits.');
     }
