@@ -44,6 +44,7 @@ async function processPushPayload(payload) {
       const email = commit.author?.email || 'unknown_email';
       const rawMessage = commit.message || '';
       const date = commit.timestamp || new Date().toISOString();
+      const commitUrl = commit.url || `https://github.com/${owner}/${repoName}/commit/${sha}`;
 
       let moduleName = 'N/A';
       let taskType = 'N/A';
@@ -78,16 +79,11 @@ async function processPushPayload(payload) {
 
         for (const filename of files) {
           const fileStats = detailedStats.find(s => s.filename === filename);
-          const patchData = fileStats ? fileStats.patch : '';
           
           if (fileStats) {
             if (process.env.NODE_ENV !== 'production') {
               logger.info(`\n=== Changes for ${filename} (${changeType}) by ${email} ===`);
               logger.info(`Additions: ${fileStats.additions} | Deletions: ${fileStats.deletions}`);
-              if (patchData) {
-                logger.info('Patch:');
-                logger.info(patchData);
-              }
               logger.info(`====================================================\n`);
             }
           }
@@ -99,6 +95,7 @@ async function processPushPayload(payload) {
             email,
             branch,
             sha,
+            commitUrl,
             message,
             moduleName,
             taskType,
@@ -107,8 +104,7 @@ async function processPushPayload(payload) {
             filename,
             changeType,
             additions: fileStats ? fileStats.additions : undefined,
-            deletions: fileStats ? fileStats.deletions : undefined,
-            patch: patchData
+            deletions: fileStats ? fileStats.deletions : undefined
           });
         }
       };
@@ -136,11 +132,6 @@ async function processPushPayload(payload) {
         const firstRow = fileRows[0];
         
         const combinedFileNames = fileRows.map(r => `[${r.changeType}] ${r.filename}`).join('\n');
-        
-        const combinedPatches = fileRows.map(r => {
-          if (!r.patch) return `--- No patch data for ${r.filename} ---`;
-          return `File: ${r.filename}\n------------------\n${r.patch}\n`;
-        }).join('\n\n====================\n\n');
 
         const totalAdditions = fileRows.reduce((sum, r) => sum + (r.additions || 0), 0);
         const totalDeletions = fileRows.reduce((sum, r) => sum + (r.deletions || 0), 0);
@@ -152,6 +143,7 @@ async function processPushPayload(payload) {
           email: firstRow.email,
           branch: firstRow.branch,
           sha: firstRow.sha,
+          commitUrl: firstRow.commitUrl,
           message: firstRow.message,
           moduleName: firstRow.moduleName,
           taskType: firstRow.taskType,
@@ -160,8 +152,7 @@ async function processPushPayload(payload) {
           filename: combinedFileNames,
           changeType: fileRows.length > 1 ? 'Multiple' : firstRow.changeType,
           additions: totalAdditions,
-          deletions: totalDeletions,
-          patch: combinedPatches
+          deletions: totalDeletions
         });
       }
       

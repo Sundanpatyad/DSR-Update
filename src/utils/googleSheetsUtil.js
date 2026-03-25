@@ -34,10 +34,10 @@ async function appendToGoogleSheet(rows) {
       sheet = await doc.addSheet({
         title: sheetTitle,
         headerValues: [
-          'Repository', 'Date', 'Author', 'Email', 'Branch', 'Commit SHA', 
+          'Repository', 'Date', 'Author', 'Email', 'Branch', 'Commit SHA', 'Commit Link',
           'Commit Message', 'Module Name', 'Task Type', 'Problem Statement', 
           'Ticket ID', 'File Paths', 'Change Type', 'Total Additions', 
-          'Total Deletions', 'Full Code Changes'
+          'Total Deletions'
         ],
       });
       isNewSheet = true;
@@ -51,6 +51,7 @@ async function appendToGoogleSheet(rows) {
       'Email': r.email,
       'Branch': r.branch,
       'Commit SHA': r.sha,
+      'Commit Link': r.commitUrl,
       'Commit Message': r.message,
       'Module Name': r.moduleName,
       'Task Type': r.taskType,
@@ -59,8 +60,7 @@ async function appendToGoogleSheet(rows) {
       'File Paths': r.filename,
       'Change Type': r.changeType,
       'Total Additions': r.additions,
-      'Total Deletions': r.deletions,
-      'Full Code Changes': r.patch
+      'Total Deletions': r.deletions
     }));
 
     await sheet.addRows(formattedRows);
@@ -73,14 +73,14 @@ async function appendToGoogleSheet(rows) {
         const sheetId = sheet.sheetId;
 
         const requests = [
-          // 1. Group columns L to P (indices 11 to 15) to make them collapsible
+          // 1. Group columns M to P (indices 12 to 15) to make them collapsible
           {
             addDimensionGroup: {
               dimensionRange: {
                 sheetId: sheetId,
                 dimension: 'COLUMNS',
-                startIndex: 11, // Column L (File Paths)
-                endIndex: 16    // Column P (Full Code Changes) + 1
+                startIndex: 12, // Column M (File Paths)
+                endIndex: 16    // Column P (Total Deletions) + 1
               }
             }
           },
