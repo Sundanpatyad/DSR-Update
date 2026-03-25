@@ -19,9 +19,8 @@ async function processWriteQueue() {
 
   try {
     const repoName = rows.length > 0 && rows[0].repo ? rows[0].repo : 'unknown-repo';
-    const developerEmail = rows.length > 0 && rows[0].email ? rows[0].email : 'unknown-developer';
     
-    const { workbook, worksheet, filePath } = await initializeExcel(repoName, developerEmail);
+    const { workbook, worksheet, filePath } = await initializeExcel(repoName);
     let addedCount = 0;
 
     for (const rowData of rows) {
@@ -40,6 +39,7 @@ async function processWriteQueue() {
           branch: rowData.branch || 'Unknown',
           sha: rowData.sha || 'N/A',
           message: rowData.message || '',
+          problemStatement: rowData.problemStatement || 'N/A',
           filename: rowData.filename || 'Unknown',
           changeType: rowData.changeType || 'Unknown',
           additions: rowData.additions !== undefined ? rowData.additions : '',
@@ -69,19 +69,18 @@ async function processWriteQueue() {
   }
 }
 
-function getExcelFilePath(repoName, developerEmail) {
+function getExcelFilePath(repoName) {
   const date = new Date();
   const year = date.getFullYear();
   const month = String(date.getMonth() + 1).padStart(2, '0');
   
   const safeRepoName = repoName.replace(/[^a-zA-Z0-9-_]/g, '_');
-  const safeEmail = developerEmail.replace(/[^a-zA-Z0-9-_@.]/g, '_');
   
-  return `${safeEmail}_${safeRepoName}_${year}-${month}.xlsx`;
+  return `${safeRepoName}_${year}-${month}.xlsx`;
 }
 
-async function initializeExcel(repoName, developerEmail) {
-  const dynamicFileName = getExcelFilePath(repoName, developerEmail);
+async function initializeExcel(repoName) {
+  const dynamicFileName = getExcelFilePath(repoName);
   const filePath = path.resolve(process.cwd(), dynamicFileName);
   const workbook = new ExcelJS.Workbook();
   let worksheet;
@@ -123,6 +122,7 @@ function setupColumns(worksheet) {
     { header: 'Branch', key: 'branch', width: 20 },
     { header: 'Commit SHA', key: 'sha', width: 45 },
     { header: 'Commit Message', key: 'message', width: 40 },
+    { header: 'Problem Statement', key: 'problemStatement', width: 45 },
     { header: 'File Name', key: 'filename', width: 35 },
     { header: 'Change Type', key: 'changeType', width: 15 },
     { header: 'Additions', key: 'additions', width: 10 },
@@ -136,9 +136,11 @@ function setupColumns(worksheet) {
 function loadExistingData(worksheet) {
   worksheet.eachRow((row, rowNumber) => {
     if (rowNumber > 1) {
+      // Columns shifted by 1 due to the new "Problem Statement" column
+      // SHA is at 6, Filename is now at 9, Change Type is now at 10
       const sha = row.getCell(6).value || '';
-      const filename = row.getCell(8).value || '';
-      const changeType = row.getCell(9).value || '';
+      const filename = row.getCell(9).value || '';
+      const changeType = row.getCell(10).value || '';
       if (sha && filename) {
         seenCommitsFiles.add(`${sha}-${filename}-${changeType}`);
       }
