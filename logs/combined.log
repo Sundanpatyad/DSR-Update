@@ -1,0 +1,131 @@
+{"level":"info","message":"Server is running on port 3005 in production mode","service":"git-commit-tracker","timestamp":"2026-03-25T04:43:23.327Z"}
+{"level":"info","message":"Listening for Webhooks at: http://localhost:3005/webhook/git","service":"git-commit-tracker","timestamp":"2026-03-25T04:43:23.328Z"}
+{"level":"info","message":"Server is running on port 3005 in production mode","service":"git-commit-tracker","timestamp":"2026-03-25T04:43:42.154Z"}
+{"level":"info","message":"Listening for Webhooks at: http://localhost:3005/webhook/git","service":"git-commit-tracker","timestamp":"2026-03-25T04:43:42.155Z"}
+{"level":"info","message":"Server is running on port 3005 in production mode","service":"git-commit-tracker","timestamp":"2026-03-25T04:43:55.421Z"}
+{"level":"info","message":"Listening for Webhooks at: http://localhost:3005/webhook/git","service":"git-commit-tracker","timestamp":"2026-03-25T04:43:55.422Z"}
+{"level":"info","message":"Server is running on port 3005 in production mode","service":"git-commit-tracker","timestamp":"2026-03-25T04:44:04.960Z"}
+{"level":"info","message":"Listening for Webhooks at: http://localhost:3005/webhook/git","service":"git-commit-tracker","timestamp":"2026-03-25T04:44:04.961Z"}
+{"level":"info","message":"Server is running on port 3005 in production mode","service":"git-commit-tracker","timestamp":"2026-03-25T04:44:12.332Z"}
+{"level":"info","message":"Listening for Webhooks at: http://localhost:3005/webhook/git","service":"git-commit-tracker","timestamp":"2026-03-25T04:44:12.333Z"}
+{"level":"info","message":"Server is running on port 3005 in production mode","service":"git-commit-tracker","timestamp":"2026-03-25T04:44:19.803Z"}
+{"level":"info","message":"Listening for Webhooks at: http://localhost:3005/webhook/git","service":"git-commit-tracker","timestamp":"2026-03-25T04:44:19.804Z"}
+{"level":"info","message":"Server is running on port 3005 in production mode","service":"git-commit-tracker","timestamp":"2026-03-25T04:44:26.219Z"}
+{"level":"info","message":"Listening for Webhooks at: http://localhost:3005/webhook/git","service":"git-commit-tracker","timestamp":"2026-03-25T04:44:26.220Z"}
+{"level":"info","message":"Server is running on port 3005 in production mode","service":"git-commit-tracker","timestamp":"2026-03-25T04:44:32.843Z"}
+{"level":"info","message":"Listening for Webhooks at: http://localhost:3005/webhook/git","service":"git-commit-tracker","timestamp":"2026-03-25T04:44:32.844Z"}
+{"level":"info","message":"Server is running on port 3005 in production mode","service":"git-commit-tracker","timestamp":"2026-03-25T04:44:42.700Z"}
+{"level":"info","message":"Listening for Webhooks at: http://localhost:3005/webhook/git","service":"git-commit-tracker","timestamp":"2026-03-25T04:44:42.701Z"}
+{"level":"info","message":"Server is running on port 3005 in production mode","service":"git-commit-tracker","timestamp":"2026-03-25T04:48:28.310Z"}
+{"level":"info","message":"Listening for Webhooks at: http://localhost:3005/webhook/git","service":"git-commit-tracker","timestamp":"2026-03-25T04:48:28.311Z"}
+{"level":"info","message":"Server is running on port 3005 in production mode","service":"git-commit-tracker","timestamp":"2026-03-25T04:48:41.761Z"}
+{"level":"info","message":"Listening for Webhooks at: http://localhost:3005/webhook/git","service":"git-commit-tracker","timestamp":"2026-03-25T04:48:41.762Z"}
+{"level":"info","message":"Server is running on port 3005 in production mode","service":"git-commit-tracker","timestamp":"2026-03-25T04:48:49.081Z"}
+{"level":"info","message":"Listening for Webhooks at: http://localhost:3005/webhook/git","service":"git-commit-tracker","timestamp":"2026-03-25T04:48:49.082Z"}
+{"level":"info","message":"Server is running on port 3005 in production mode","service":"git-commit-tracker","timestamp":"2026-03-25T04:48:58.364Z"}
+{"level":"info","message":"Listening for Webhooks at: http://localhost:3005/webhook/git","service":"git-commit-tracker","timestamp":"2026-03-25T04:48:58.364Z"}
+{"level":"info","message":"Server is running on port 3005 in production mode","service":"git-commit-tracker","timestamp":"2026-03-25T04:49:09.791Z"}
+{"level":"info","message":"Listening for Webhooks at: http://localhost:3005/webhook/git","service":"git-commit-tracker","timestamp":"2026-03-25T04:49:09.793Z"}
+{"level":"info","message":"Server is running on port 3005 in production mode","service":"git-commit-tracker","timestamp":"2026-03-25T04:49:16.091Z"}
+{"level":"info","message":"Listening for Webhooks at: http://localhost:3005/webhook/git","service":"git-commit-tracker","timestamp":"2026-03-25T04:49:16.092Z"}
+{"level":"info","message":"Server is running on port 3005 in production mode","service":"git-commit-tracker","timestamp":"2026-03-25T04:49:24.772Z"}
+{"level":"info","message":"Listening for Webhooks at: http://localhost:3005/webhook/git","service":"git-commit-tracker","timestamp":"2026-03-25T04:49:24.773Z"}
+{"level":"info","message":"Incoming Webhook Push Event received","service":"git-commit-tracker","timestamp":"2026-03-25T04:50:00.330Z"}
+{"level":"info","message":"--- Inside processPushPayload ---","service":"git-commit-tracker","timestamp":"2026-03-25T04:50:00.333Z"}
+{"level":"info","message":"Found 1 commits in payload.","service":"git-commit-tracker","timestamp":"2026-03-25T04:50:00.333Z"}
+{"level":"warn","message":"GITHUB_TOKEN not provided or invalid. Skipping detailed fetch for commit 185fb7e981a134894b98dafa0536fee2e3a98fc9","service":"git-commit-tracker","timestamp":"2026-03-25T04:50:00.333Z"}
+{"level":"info","message":"::1 - - [25/Mar/2026:04:50:00 +0000] \"POST /webhook/git HTTP/1.1\" 202 59 \"-\" \"GitHub-Hookshot/ea963ee\"","service":"git-commit-tracker","timestamp":"2026-03-25T04:50:00.334Z"}
+{"level":"info","message":"Successfully wrote 1 new rows to SURYACON_MOBILE_APPLICATION_2026-03.xlsx","service":"git-commit-tracker","timestamp":"2026-03-25T04:50:00.367Z"}
+{"level":"info","message":"Server is running on port 3005 in production mode","service":"git-commit-tracker","timestamp":"2026-03-25T04:50:09.300Z"}
+{"level":"info","message":"Listening for Webhooks at: http://localhost:3005/webhook/git","service":"git-commit-tracker","timestamp":"2026-03-25T04:50:09.301Z"}
+{"level":"info","message":"Server is running on port 3005 in production mode","service":"git-commit-tracker","timestamp":"2026-03-25T04:50:46.860Z"}
+{"level":"info","message":"Listening for Webhooks at: http://localhost:3005/webhook/git","service":"git-commit-tracker","timestamp":"2026-03-25T04:50:46.861Z"}
+{"level":"info","message":"Server is running on port 3005 in production mode","service":"git-commit-tracker","timestamp":"2026-03-25T04:52:04.258Z"}
+{"level":"info","message":"Listening for Webhooks at: http://localhost:3005/webhook/git","service":"git-commit-tracker","timestamp":"2026-03-25T04:52:04.259Z"}
+{"level":"info","message":"Server is running on port 3005 in production mode","service":"git-commit-tracker","timestamp":"2026-03-25T04:52:38.931Z"}
+{"level":"info","message":"Listening for Webhooks at: http://localhost:3005/webhook/git","service":"git-commit-tracker","timestamp":"2026-03-25T04:52:38.932Z"}
+{"level":"info","message":"::1 - - [25/Mar/2026:04:53:05 +0000] \"GET /api/v1/downloadimage/getimage?key=public/ProjectImages/sahilsendsd.jpg-1757329478364-17076.jpeg HTTP/1.1\" 404 168 \"-\" \"SURYACON/12 CFNetwork/3860.300.31 Darwin/25.1.0\"","service":"git-commit-tracker","timestamp":"2026-03-25T04:53:05.494Z"}
+{"level":"info","message":"::1 - - [25/Mar/2026:04:53:05 +0000] \"GET /api/v1/downloadimage/getimage?key=public/ProjectImages/unnamed%20(1).jpg-1767702018803-23089.jpeg HTTP/1.1\" 404 168 \"-\" \"SURYACON/12 CFNetwork/3860.300.31 Darwin/25.1.0\"","service":"git-commit-tracker","timestamp":"2026-03-25T04:53:05.496Z"}
+{"level":"info","message":"::1 - - [25/Mar/2026:04:53:05 +0000] \"GET /api/v1/downloadimage/getimage?key=public/ProjectImages/sahilsendsd.jpg-1757329478364-17076.jpeg HTTP/1.1\" 404 168 \"-\" \"SURYACON/12 CFNetwork/3860.300.31 Darwin/25.1.0\"","service":"git-commit-tracker","timestamp":"2026-03-25T04:53:05.584Z"}
+{"level":"info","message":"::1 - - [25/Mar/2026:04:53:07 +0000] \"POST /api/v1/billingmaster/ProjectData/contractor/get-contractors-by-project HTTP/1.1\" 404 210 \"-\" \"SURYACON/12 CFNetwork/3860.300.31 Darwin/25.1.0\"","service":"git-commit-tracker","timestamp":"2026-03-25T04:53:07.141Z"}
+{"level":"info","message":"::1 - - [25/Mar/2026:04:53:07 +0000] \"GET /api/v1/siteengineer/695ea1ee922f177c323b690c/method-details HTTP/1.1\" 404 198 \"-\" \"SURYACON/12 CFNetwork/3860.300.31 Darwin/25.1.0\"","service":"git-commit-tracker","timestamp":"2026-03-25T04:53:07.948Z"}
+{"level":"info","message":"::1 - - [25/Mar/2026:04:53:14 +0000] \"GET /api/v1/downloadimage/getimage?key=public/ProjectImages/sahilsendsd.jpg-1757329478364-17076.jpeg HTTP/1.1\" 404 168 \"-\" \"SURYACON/12 CFNetwork/3860.300.31 Darwin/25.1.0\"","service":"git-commit-tracker","timestamp":"2026-03-25T04:53:14.523Z"}
+{"level":"info","message":"::1 - - [25/Mar/2026:04:53:14 +0000] \"GET /api/v1/downloadimage/getimage?key=public/ProjectImages/unnamed%20(1).jpg-1767702018803-23089.jpeg HTTP/1.1\" 404 168 \"-\" \"SURYACON/12 CFNetwork/3860.300.31 Darwin/25.1.0\"","service":"git-commit-tracker","timestamp":"2026-03-25T04:53:14.524Z"}
+{"level":"info","message":"::1 - - [25/Mar/2026:04:53:14 +0000] \"GET /api/v1/downloadimage/getimage?key=public/ProjectImages/sahilsendsd.jpg-1757329478364-17076.jpeg HTTP/1.1\" 404 168 \"-\" \"SURYACON/12 CFNetwork/3860.300.31 Darwin/25.1.0\"","service":"git-commit-tracker","timestamp":"2026-03-25T04:53:14.655Z"}
+{"level":"info","message":"::1 - - [25/Mar/2026:04:53:16 +0000] \"GET /api/v1/downloadimage/getimage?key=public/ProjectImages/unnamed%20(1).jpg-1767702018803-23089.jpeg HTTP/1.1\" 404 168 \"-\" \"SURYACON/12 CFNetwork/3860.300.31 Darwin/25.1.0\"","service":"git-commit-tracker","timestamp":"2026-03-25T04:53:16.569Z"}
+{"level":"info","message":"::1 - - [25/Mar/2026:04:53:16 +0000] \"GET /api/v1/downloadimage/getimage?key=public/ProjectImages/sahilsendsd.jpg-1757329478364-17076.jpeg HTTP/1.1\" 404 168 \"-\" \"SURYACON/12 CFNetwork/3860.300.31 Darwin/25.1.0\"","service":"git-commit-tracker","timestamp":"2026-03-25T04:53:16.570Z"}
+{"level":"info","message":"Server is running on port 3005 in production mode","service":"git-commit-tracker","timestamp":"2026-03-25T04:58:31.076Z"}
+{"level":"info","message":"Listening for Webhooks at: http://localhost:3005/webhook/git","service":"git-commit-tracker","timestamp":"2026-03-25T04:58:31.076Z"}
+{"level":"info","message":"::1 - - [25/Mar/2026:04:58:44 +0000] \"POST /api/v1/hrmaster/employee/loginEmployee HTTP/1.1\" 404 178 \"-\" \"SURYACON/12 CFNetwork/3860.400.51 Darwin/25.3.0\"","service":"git-commit-tracker","timestamp":"2026-03-25T04:58:44.246Z"}
+{"level":"info","message":"Server is running on port 3005 in production mode","service":"git-commit-tracker","timestamp":"2026-03-25T04:58:46.072Z"}
+{"level":"info","message":"Listening for Webhooks at: http://localhost:3005/webhook/git","service":"git-commit-tracker","timestamp":"2026-03-25T04:58:46.073Z"}
+{"level":"info","message":"::1 - - [25/Mar/2026:04:58:46 +0000] \"POST /api/v1/hrmaster/employee/loginEmployee HTTP/1.1\" 404 178 \"-\" \"SURYACON/12 CFNetwork/3860.400.51 Darwin/25.3.0\"","service":"git-commit-tracker","timestamp":"2026-03-25T04:58:46.470Z"}
+{"level":"info","message":"::1 - - [25/Mar/2026:04:59:09 +0000] \"POST /api/v1/hrmaster/employee/loginEmployee HTTP/1.1\" 404 178 \"-\" \"SURYACON/12 CFNetwork/3860.400.51 Darwin/25.3.0\"","service":"git-commit-tracker","timestamp":"2026-03-25T04:59:09.688Z"}
+{"level":"info","message":"Incoming Webhook Push Event received","service":"git-commit-tracker","timestamp":"2026-03-25T04:59:27.275Z"}
+{"level":"info","message":"--- Inside processPushPayload ---","service":"git-commit-tracker","timestamp":"2026-03-25T04:59:27.279Z"}
+{"level":"info","message":"Found 2 commits in payload.","service":"git-commit-tracker","timestamp":"2026-03-25T04:59:27.280Z"}
+{"level":"warn","message":"GITHUB_TOKEN not provided or invalid. Skipping detailed fetch for commit d2a602bd709b10ec171cf72565ca889adff2c7dc","service":"git-commit-tracker","timestamp":"2026-03-25T04:59:27.280Z"}
+{"level":"info","message":"::1 - - [25/Mar/2026:04:59:27 +0000] \"POST /webhook/git HTTP/1.1\" 202 59 \"-\" \"GitHub-Hookshot/ea963ee\"","service":"git-commit-tracker","timestamp":"2026-03-25T04:59:27.281Z"}
+{"level":"warn","message":"GITHUB_TOKEN not provided or invalid. Skipping detailed fetch for commit eecdb6b90dcad826ee30cc7dd5bc31129d863052","service":"git-commit-tracker","timestamp":"2026-03-25T04:59:27.281Z"}
+{"level":"info","message":"Successfully wrote 2 new rows to SURYACON_MOBILE_APPLICATION_2026-03.xlsx","service":"git-commit-tracker","timestamp":"2026-03-25T04:59:27.353Z"}
+{"level":"info","message":"::1 - - [25/Mar/2026:05:00:05 +0000] \"GET /socket.io/?session=s%253A43bff38a-3a7e-4f90-b8b4-9e6c1f2d2930.StOAR2JiUdS1XJPdPVeupqG6WsdnZXvo54fYcQbgnR0&deviceOS=iOS%2026.3.1&EIO=4&transport=websocket HTTP/1.1\" 404 149 \"-\" \"-\"","service":"git-commit-tracker","timestamp":"2026-03-25T05:00:05.861Z"}
+{"level":"info","message":"::1 - - [25/Mar/2026:05:00:06 +0000] \"GET /api/v1/check-authgetdata HTTP/1.1\" 404 163 \"-\" \"SURYACON/12 CFNetwork/3860.400.51 Darwin/25.3.0\"","service":"git-commit-tracker","timestamp":"2026-03-25T05:00:06.621Z"}
+{"level":"info","message":"::1 - - [25/Mar/2026:05:00:21 +0000] \"GET /api/v1/check-authgetdata HTTP/1.1\" 404 163 \"-\" \"SURYACON/12 CFNetwork/3860.400.51 Darwin/25.3.0\"","service":"git-commit-tracker","timestamp":"2026-03-25T05:00:21.990Z"}
+{"level":"info","message":"::1 - - [25/Mar/2026:05:00:22 +0000] \"GET /socket.io/?session=s%253A43bff38a-3a7e-4f90-b8b4-9e6c1f2d2930.StOAR2JiUdS1XJPdPVeupqG6WsdnZXvo54fYcQbgnR0&deviceOS=iOS%2026.3.1&EIO=4&transport=websocket HTTP/1.1\" 404 149 \"-\" \"-\"","service":"git-commit-tracker","timestamp":"2026-03-25T05:00:22.073Z"}
+{"level":"info","message":"Incoming Webhook Push Event received","service":"git-commit-tracker","timestamp":"2026-03-25T05:01:35.449Z"}
+{"level":"info","message":"--- Inside processPushPayload ---","service":"git-commit-tracker","timestamp":"2026-03-25T05:01:35.451Z"}
+{"level":"info","message":"Found 1 commits in payload.","service":"git-commit-tracker","timestamp":"2026-03-25T05:01:35.451Z"}
+{"level":"warn","message":"GITHUB_TOKEN not provided or invalid. Skipping detailed fetch for commit 5fa37a0247e191fc8f2296d0ce5e71e2aac3fcc2","service":"git-commit-tracker","timestamp":"2026-03-25T05:01:35.451Z"}
+{"level":"info","message":"::1 - - [25/Mar/2026:05:01:35 +0000] \"POST /webhook/git HTTP/1.1\" 202 59 \"-\" \"GitHub-Hookshot/ea963ee\"","service":"git-commit-tracker","timestamp":"2026-03-25T05:01:35.452Z"}
+{"level":"info","message":"Successfully wrote 1 new rows to SURYACON_MOBILE_APPLICATION_2026-03.xlsx","service":"git-commit-tracker","timestamp":"2026-03-25T05:01:35.471Z"}
+{"level":"info","message":"Server is running on port 3005 in production mode","service":"git-commit-tracker","timestamp":"2026-03-25T05:03:33.567Z"}
+{"level":"info","message":"Listening for Webhooks at: http://localhost:3005/webhook/git","service":"git-commit-tracker","timestamp":"2026-03-25T05:03:33.568Z"}
+{"level":"info","message":"Server is running on port 3005 in production mode","service":"git-commit-tracker","timestamp":"2026-03-25T05:03:41.091Z"}
+{"level":"info","message":"Listening for Webhooks at: http://localhost:3005/webhook/git","service":"git-commit-tracker","timestamp":"2026-03-25T05:03:41.093Z"}
+{"level":"info","message":"Server is running on port 3005 in production mode","service":"git-commit-tracker","timestamp":"2026-03-25T05:03:47.953Z"}
+{"level":"info","message":"Listening for Webhooks at: http://localhost:3005/webhook/git","service":"git-commit-tracker","timestamp":"2026-03-25T05:03:47.954Z"}
+{"level":"info","message":"Server is running on port 3005 in production mode","service":"git-commit-tracker","timestamp":"2026-03-25T05:04:00.451Z"}
+{"level":"info","message":"Listening for Webhooks at: http://localhost:3005/webhook/git","service":"git-commit-tracker","timestamp":"2026-03-25T05:04:00.453Z"}
+{"level":"info","message":"Server is running on port 3005 in production mode","service":"git-commit-tracker","timestamp":"2026-03-25T05:04:07.061Z"}
+{"level":"info","message":"Listening for Webhooks at: http://localhost:3005/webhook/git","service":"git-commit-tracker","timestamp":"2026-03-25T05:04:07.062Z"}
+{"level":"info","message":"Incoming Webhook Push Event received","service":"git-commit-tracker","timestamp":"2026-03-25T05:05:10.058Z"}
+{"level":"info","message":"--- Inside processPushPayload ---","service":"git-commit-tracker","timestamp":"2026-03-25T05:05:10.063Z"}
+{"level":"info","message":"Found 1 commits in payload.","service":"git-commit-tracker","timestamp":"2026-03-25T05:05:10.063Z"}
+{"level":"warn","message":"GITHUB_TOKEN not provided or invalid. Skipping detailed fetch for commit baffcf5715516f7eacf701f8edce2dc04dd85258","service":"git-commit-tracker","timestamp":"2026-03-25T05:05:10.064Z"}
+{"level":"info","message":"::1 - - [25/Mar/2026:05:05:10 +0000] \"POST /webhook/git HTTP/1.1\" 202 59 \"-\" \"GitHub-Hookshot/ea963ee\"","service":"git-commit-tracker","timestamp":"2026-03-25T05:05:10.065Z"}
+{"level":"info","message":"Sending 1 rows for developer sundan.shrama@psquarecompany.com to Excel writer...","service":"git-commit-tracker","timestamp":"2026-03-25T05:05:10.065Z"}
+{"level":"info","message":"Successfully wrote 1 new rows to sundan.shrama@psquarecompany.com_SURYACON_MOBILE_APPLICATION_2026-03.xlsx","service":"git-commit-tracker","timestamp":"2026-03-25T05:05:10.141Z"}
+{"level":"info","message":"Server is running on port 3005 in production mode","service":"git-commit-tracker","timestamp":"2026-03-25T05:06:15.065Z"}
+{"level":"info","message":"Listening for Webhooks at: http://localhost:3005/webhook/git","service":"git-commit-tracker","timestamp":"2026-03-25T05:06:15.066Z"}
+{"level":"info","message":"::1 - - [25/Mar/2026:05:06:18 +0000] \"GET / HTTP/1.1\" 404 139 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Trae/1.107.1 Chrome/142.0.7444.235 Electron/39.2.7 Safari/537.36\"","service":"git-commit-tracker","timestamp":"2026-03-25T05:06:18.616Z"}
+{"level":"info","message":"::1 - - [25/Mar/2026:05:06:21 +0000] \"GET / HTTP/1.1\" 404 139 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Trae/1.107.1 Chrome/142.0.7444.235 Electron/39.2.7 Safari/537.36\"","service":"git-commit-tracker","timestamp":"2026-03-25T05:06:21.530Z"}
+{"level":"info","message":"Server is running on port 3005 in production mode","service":"git-commit-tracker","timestamp":"2026-03-25T05:06:59.179Z"}
+{"level":"info","message":"Listening for Webhooks at: http://localhost:3005/webhook/git","service":"git-commit-tracker","timestamp":"2026-03-25T05:06:59.182Z"}
+{"level":"info","message":"Server is running on port 3000 in production mode","service":"git-commit-tracker","timestamp":"2026-03-25T05:13:12.326Z"}
+{"level":"info","message":"Listening for Webhooks at: http://localhost:3000/webhook/git","service":"git-commit-tracker","timestamp":"2026-03-25T05:13:12.327Z"}
+{"level":"info","message":"Server is running on port 3000 in production mode","service":"git-commit-tracker","timestamp":"2026-03-25T05:17:41.971Z"}
+{"level":"info","message":"Listening for Webhooks at: http://localhost:3000/webhook/git","service":"git-commit-tracker","timestamp":"2026-03-25T05:17:41.972Z"}
+{"level":"info","message":"Server is running on port 3000 in production mode","service":"git-commit-tracker","timestamp":"2026-03-25T05:20:20.200Z"}
+{"level":"info","message":"Listening for Webhooks at: http://localhost:3000/webhook/git","service":"git-commit-tracker","timestamp":"2026-03-25T05:20:20.200Z"}
+{"level":"info","message":"Server is running on port 3000 in development mode","service":"git-commit-tracker","timestamp":"2026-03-25T05:21:55.543Z"}
+{"level":"info","message":"Listening for Webhooks at: http://localhost:3000/webhook/git","service":"git-commit-tracker","timestamp":"2026-03-25T05:21:55.544Z"}
+{"level":"info","message":"::1 - - [25/Mar/2026:05:22:34 +0000] \"POST /webhook/git HTTP/1.1\" 200 46 \"-\" \"GitHub-Hookshot/ea963ee\"","service":"git-commit-tracker","timestamp":"2026-03-25T05:22:34.318Z"}
+{"level":"info","message":"Incoming Webhook Push Event received","service":"git-commit-tracker","timestamp":"2026-03-25T05:22:34.480Z"}
+{"level":"info","message":"--- Inside processPushPayload ---","service":"git-commit-tracker","timestamp":"2026-03-25T05:22:34.480Z"}
+{"level":"info","message":"Found 3 commits in payload.","service":"git-commit-tracker","timestamp":"2026-03-25T05:22:34.481Z"}
+{"level":"warn","message":"GITHUB_TOKEN not provided or invalid. Skipping detailed fetch for commit 8ba207b9c0a308854484e0a8f391d75a9933a304","service":"git-commit-tracker","timestamp":"2026-03-25T05:22:34.481Z"}
+{"level":"info","message":"::1 - - [25/Mar/2026:05:22:34 +0000] \"POST /webhook/git HTTP/1.1\" 202 59 \"-\" \"GitHub-Hookshot/ea963ee\"","service":"git-commit-tracker","timestamp":"2026-03-25T05:22:34.481Z"}
+{"level":"warn","message":"GITHUB_TOKEN not provided or invalid. Skipping detailed fetch for commit 006782983ca0fb6d202db6893dbbd451a8cc1e71","service":"git-commit-tracker","timestamp":"2026-03-25T05:22:34.481Z"}
+{"level":"warn","message":"GITHUB_TOKEN not provided or invalid. Skipping detailed fetch for commit 0efc4a6bda99e0c64442c646c0f785a1f5fe88db","service":"git-commit-tracker","timestamp":"2026-03-25T05:22:34.482Z"}
+{"level":"info","message":"Sending 8 rows for developer pintu.kumar@psquarecompany.com to Excel writer...","service":"git-commit-tracker","timestamp":"2026-03-25T05:22:34.482Z"}
+{"level":"info","message":"Successfully wrote 8 new rows to pintu.kumar@psquarecompany.com_SURYACON_MOBILE_APPLICATION_2026-03.xlsx","service":"git-commit-tracker","timestamp":"2026-03-25T05:22:34.508Z"}
+{"level":"info","message":"::1 - - [25/Mar/2026:05:22:47 +0000] \"POST /api/v1/hrmaster/employee/loginEmployee HTTP/1.1\" 404 178 \"-\" \"SURYACON/12 CFNetwork/3860.300.31 Darwin/25.3.0\"","service":"git-commit-tracker","timestamp":"2026-03-25T05:22:47.477Z"}
+{"level":"info","message":"::1 - - [25/Mar/2026:05:22:55 +0000] \"POST /api/v1/hrmaster/employee/loginEmployee HTTP/1.1\" 404 178 \"-\" \"okhttp/4.12.0\"","service":"git-commit-tracker","timestamp":"2026-03-25T05:22:55.273Z"}
+{"level":"info","message":"Incoming Webhook Push Event received","service":"git-commit-tracker","timestamp":"2026-03-25T05:23:06.308Z"}
+{"level":"info","message":"--- Inside processPushPayload ---","service":"git-commit-tracker","timestamp":"2026-03-25T05:23:06.309Z"}
+{"level":"info","message":"Found 1 commits in payload.","service":"git-commit-tracker","timestamp":"2026-03-25T05:23:06.310Z"}
+{"level":"warn","message":"GITHUB_TOKEN not provided or invalid. Skipping detailed fetch for commit 73bfdacf3d17cc3e5362b265a1f2ea01f03f9ba9","service":"git-commit-tracker","timestamp":"2026-03-25T05:23:06.310Z"}
+{"level":"info","message":"::1 - - [25/Mar/2026:05:23:06 +0000] \"POST /webhook/git HTTP/1.1\" 202 59 \"-\" \"GitHub-Hookshot/ea963ee\"","service":"git-commit-tracker","timestamp":"2026-03-25T05:23:06.310Z"}
+{"level":"info","message":"Sending 1 rows for developer sundan.shrama@psquarecompany.com to Excel writer...","service":"git-commit-tracker","timestamp":"2026-03-25T05:23:06.310Z"}
+{"level":"info","message":"Successfully wrote 1 new rows to sundan.shrama@psquarecompany.com_SURYACON_MOBILE_APPLICATION_2026-03.xlsx","service":"git-commit-tracker","timestamp":"2026-03-25T05:23:06.322Z"}
+{"level":"info","message":"::1 - - [25/Mar/2026:05:23:34 +0000] \"POST /api/v1/hrmaster/employee/loginEmployee HTTP/1.1\" 404 178 \"-\" \"SURYACON/12 CFNetwork/3860.300.31 Darwin/25.3.0\"","service":"git-commit-tracker","timestamp":"2026-03-25T05:23:34.458Z"}
