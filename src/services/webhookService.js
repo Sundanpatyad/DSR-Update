@@ -119,10 +119,54 @@ async function processPushPayload(payload) {
     }
 
     if (excelRows.length > 0) {
-      logger.info(`Processing ${excelRows.length} total rows for repo ${repoName}...`);
+      logger.info(`Processing ${excelRows.length} file changes for repo ${repoName}...`);
+
+      // Combine multiple file changes into a single row per commit
+      const commitsMap = new Map();
+      for (const row of excelRows) {
+        if (!commitsMap.has(row.sha)) {
+          commitsMap.set(row.sha, []);
+        }
+        commitsMap.get(row.sha).push(row);
+      }
+
+      const combinedRows = [];
+
+      for (const [sha, fileRows] of commitsMap.entries()) {
+        const firstRow = fileRows[0];
+        
+        const combinedFileNames = fileRows.map(r => `[${r.changeType}] ${r.filename}`).join('\n');
+        
+        const combinedPatches = fileRows.map(r => {
+          if (!r.patch) return `--- No patch data for ${r.filename} ---`;
+          return `File: ${r.filename}\n------------------\n${r.patch}\n`;
+        }).join('\n\n====================\n\n');
+
+        const totalAdditions = fileRows.reduce((sum, r) => sum + (r.additions || 0), 0);
+        const totalDeletions = fileRows.reduce((sum, r) => sum + (r.deletions || 0), 0);
+
+        combinedRows.push({
+          repo: firstRow.repo,
+          date: firstRow.date,
+          author: firstRow.author,
+          email: firstRow.email,
+          branch: firstRow.branch,
+          sha: firstRow.sha,
+          message: firstRow.message,
+          moduleName: firstRow.moduleName,
+          taskType: firstRow.taskType,
+          problemStatement: firstRow.problemStatement,
+          ticketId: firstRow.ticketId,
+          filename: combinedFileNames,
+          changeType: fileRows.length > 1 ? 'Multiple' : firstRow.changeType,
+          additions: totalAdditions,
+          deletions: totalDeletions,
+          patch: combinedPatches
+        });
+      }
       
       // Sync to Google Sheets only
-      await appendToGoogleSheet(excelRows);
+      await appendToGoogleSheet(combinedRows);
       
     } else {
       logger.info('No file changes detected in the commits.');
