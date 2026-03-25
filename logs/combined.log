@@ -129,3 +129,10 @@
 {"level":"info","message":"Sending 1 rows for developer sundan.shrama@psquarecompany.com to Excel writer...","service":"git-commit-tracker","timestamp":"2026-03-25T05:23:06.310Z"}
 {"level":"info","message":"Successfully wrote 1 new rows to sundan.shrama@psquarecompany.com_SURYACON_MOBILE_APPLICATION_2026-03.xlsx","service":"git-commit-tracker","timestamp":"2026-03-25T05:23:06.322Z"}
 {"level":"info","message":"::1 - - [25/Mar/2026:05:23:34 +0000] \"POST /api/v1/hrmaster/employee/loginEmployee HTTP/1.1\" 404 178 \"-\" \"SURYACON/12 CFNetwork/3860.300.31 Darwin/25.3.0\"","service":"git-commit-tracker","timestamp":"2026-03-25T05:23:34.458Z"}
+{"level":"info","message":"Incoming Webhook Push Event received","service":"git-commit-tracker","timestamp":"2026-03-25T05:30:06.068Z"}
+{"level":"info","message":"--- Inside processPushPayload ---","service":"git-commit-tracker","timestamp":"2026-03-25T05:30:06.069Z"}
+{"level":"info","message":"Found 1 commits in payload.","service":"git-commit-tracker","timestamp":"2026-03-25T05:30:06.069Z"}
+{"level":"warn","message":"GITHUB_TOKEN not provided or invalid. Skipping detailed fetch for commit 117ad7eac354af54b8f66ffcd63bef60ae973a7c","service":"git-commit-tracker","timestamp":"2026-03-25T05:30:06.069Z"}
+{"level":"info","message":"::1 - - [25/Mar/2026:05:30:06 +0000] \"POST /webhook/git HTTP/1.1\" 202 59 \"-\" \"GitHub-Hookshot/ea963ee\"","service":"git-commit-tracker","timestamp":"2026-03-25T05:30:06.069Z"}
+{"level":"info","message":"Sending 1 rows for developer sundan.shrama@psquarecompany.com to Excel writer...","service":"git-commit-tracker","timestamp":"2026-03-25T05:30:06.069Z"}
+{"level":"info","message":"Successfully wrote 1 new rows to sundan.shrama@psquarecompany.com_SURYACON_MOBILE_APPLICATION_2026-03.xlsx","service":"git-commit-tracker","timestamp":"2026-03-25T05:30:06.075Z"}
