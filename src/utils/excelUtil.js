@@ -39,7 +39,10 @@ async function processWriteQueue() {
           branch: rowData.branch || 'Unknown',
           sha: rowData.sha || 'N/A',
           message: rowData.message || '',
+          moduleName: rowData.moduleName || 'N/A',
+          taskType: rowData.taskType || 'N/A',
           problemStatement: rowData.problemStatement || 'N/A',
+          ticketId: rowData.ticketId || 'N/A',
           filename: rowData.filename || 'Unknown',
           changeType: rowData.changeType || 'Unknown',
           additions: rowData.additions !== undefined ? rowData.additions : '',
@@ -122,7 +125,10 @@ function setupColumns(worksheet) {
     { header: 'Branch', key: 'branch', width: 20 },
     { header: 'Commit SHA', key: 'sha', width: 45 },
     { header: 'Commit Message', key: 'message', width: 40 },
+    { header: 'Module Name', key: 'moduleName', width: 25 },
+    { header: 'Task Type', key: 'taskType', width: 15 },
     { header: 'Problem Statement', key: 'problemStatement', width: 45 },
+    { header: 'Ticket ID', key: 'ticketId', width: 15 },
     { header: 'File Name', key: 'filename', width: 35 },
     { header: 'Change Type', key: 'changeType', width: 15 },
     { header: 'Additions', key: 'additions', width: 10 },
@@ -136,11 +142,9 @@ function setupColumns(worksheet) {
 function loadExistingData(worksheet) {
   worksheet.eachRow((row, rowNumber) => {
     if (rowNumber > 1) {
-      // Columns shifted by 1 due to the new "Problem Statement" column
-      // SHA is at 6, Filename is now at 9, Change Type is now at 10
       const sha = row.getCell(6).value || '';
-      const filename = row.getCell(9).value || '';
-      const changeType = row.getCell(10).value || '';
+      const filename = row.getCell(12).value || '';
+      const changeType = row.getCell(13).value || '';
       if (sha && filename) {
         seenCommitsFiles.add(`${sha}-${filename}-${changeType}`);
       }
