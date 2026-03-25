@@ -101,7 +101,13 @@ function getExcelFilePath(repoName) {
 
 async function initializeExcel(repoName) {
   const dynamicFileName = getExcelFilePath(repoName);
-  const filePath = path.resolve(process.cwd(), dynamicFileName);
+  const backupDir = path.resolve(process.cwd(), 'backups');
+  
+  if (!fs.existsSync(backupDir)) {
+    fs.mkdirSync(backupDir, { recursive: true });
+  }
+
+  const filePath = path.resolve(backupDir, dynamicFileName);
   const workbook = new ExcelJS.Workbook();
   let worksheet;
 

@@ -1,4 +1,5 @@
 const { appendCommitData } = require('../utils/excelUtil');
+const { appendToGoogleSheet } = require('../utils/googleSheetsUtil');
 const { fetchCommitDetails } = require('./githubService');
 const logger = require('../utils/logger');
 
@@ -118,8 +119,11 @@ async function processPushPayload(payload) {
     }
 
     if (excelRows.length > 0) {
-      logger.info(`Sending ${excelRows.length} total rows for repo ${repoName} to Excel writer...`);
-      await appendCommitData(excelRows);
+      logger.info(`Processing ${excelRows.length} total rows for repo ${repoName}...`);
+      
+      // Sync to Google Sheets only
+      await appendToGoogleSheet(excelRows);
+      
     } else {
       logger.info('No file changes detected in the commits.');
     }
