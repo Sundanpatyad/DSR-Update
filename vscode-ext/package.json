@@ -1,0 +1,38 @@
+{
+  "name": "commit-tracker",
+  "displayName": "Commit Tracker",
+  "description": "Tracks if you have committed today and keeps a streak",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "commit-tracker.checkCommit",
+        "title": "Check Today's Commits"
+      },
+      {
+        "command": "commit-tracker.showStreak",
+        "title": "Show Commit Streak"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.80.0",
+    "@types/node": "18.x",
+    "typescript": "^5.1.3"
+  }
+}
