@@ -52,21 +52,24 @@ async function processPushPayload(payload) {
       let ticketId = 'N/A';
       let message = rawMessage;
       
-      const moduleMatch = rawMessage.match(/\[Module: (.*?)\]/i);
-      const typeMatch = rawMessage.match(/\[TaskType: (.*?)\]/i);
-      const problemMatch = rawMessage.match(/\[Problem Statement: (.*?)\]/i);
-      const ticketMatch = rawMessage.match(/\[TicketID: (.*?)\]/i);
+      // Parse structured fields written by git-commit.js:
+      //   [Module: ...] [TaskType: ...] [Problem: ...] [Ticket: ...]
+      const moduleMatch = rawMessage.match(/\[Module:\s*(.*?)\]/i);
+      const typeMatch   = rawMessage.match(/\[TaskType:\s*(.*?)\]/i);
+      const problemMatch = rawMessage.match(/\[Problem:\s*(.*?)\]/i);
+      const ticketMatch  = rawMessage.match(/\[Ticket:\s*(.*?)\]/i);
 
-      if (moduleMatch) moduleName = moduleMatch[1].trim();
-      if (typeMatch) taskType = typeMatch[1].trim();
-      if (problemMatch) problemStatement = problemMatch[1].trim();
-      if (ticketMatch) ticketId = ticketMatch[1].trim();
+      if (moduleMatch)  moduleName        = moduleMatch[1].trim();
+      if (typeMatch)    taskType          = typeMatch[1].trim();
+      if (problemMatch) problemStatement  = problemMatch[1].trim();
+      if (ticketMatch)  ticketId          = ticketMatch[1].trim();
 
       message = rawMessage
-        .replace(/\[Module: .*?\]/gi, '')
-        .replace(/\[TaskType: .*?\]/gi, '')
-        .replace(/\[Problem Statement: .*?\]/gi, '')
-        .replace(/\[TicketID: .*?\]/gi, '')
+        .replace(/\[Module:\s*.*?\]/gi, '')
+        .replace(/\[TaskType:\s*.*?\]/gi, '')
+        .replace(/\[Problem:\s*.*?\]/gi, '')
+        .replace(/\[Ticket:\s*.*?\]/gi, '')
+        .replace(/\n+/g, ' ')
         .trim();
 
       let detailedStats = [];
