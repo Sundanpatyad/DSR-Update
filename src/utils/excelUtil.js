@@ -43,7 +43,7 @@ async function processWriteQueue() {
 
       const commitRow = worksheet.addRow({
         repo: firstRow.repo,
-        date: new Date(firstRow.date).toLocaleString(),
+        date: new Date(firstRow.date).toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
         author: firstRow.author,
         email: firstRow.email,
         branch: firstRow.branch,
