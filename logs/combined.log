@@ -999,3 +999,750 @@
 {"level":"info","message":"::1 - - [26/Mar/2026:11:51:00 +0000] \"POST /api/v1/siteengineer/sendManpowerApprovalRequest HTTP/1.1\" 404 187 \"-\" \"okhttp/4.12.0\"","service":"git-commit-tracker","timestamp":"2026-03-26T11:51:00.694Z"}
 {"level":"info","message":"::1 - - [26/Mar/2026:11:51:24 +0000] \"GET /api/v1/projectmanager/getSubTaskComments/695ea264922f177c323b6d9e?limit=100&isQuality=false HTTP/1.1\" 404 204 \"-\" \"okhttp/4.12.0\"","service":"git-commit-tracker","timestamp":"2026-03-26T11:51:24.418Z"}
 {"level":"info","message":"::1 - - [26/Mar/2026:11:51:26 +0000] \"GET /api/v1/siteengineer/695ea264922f177c323b6d9e/failure-modes HTTP/1.1\" 404 197 \"-\" \"okhttp/4.12.0\"","service":"git-commit-tracker","timestamp":"2026-03-26T11:51:26.987Z"}
+{"level":"info","message":"::1 - - [26/Mar/2026:11:51:39 +0000] \"GET /api/v1/projectmanager/getSubTaskComments/695ea1f5922f177c323b691b?limit=100&isQuality=false HTTP/1.1\" 404 204 \"-\" \"okhttp/4.12.0\"","service":"git-commit-tracker","timestamp":"2026-03-26T11:51:39.020Z"}
+{"level":"info","message":"::1 - - [26/Mar/2026:11:51:40 +0000] \"GET /api/v1/siteengineer/695ea1f5922f177c323b691b/failure-modes HTTP/1.1\" 404 197 \"-\" \"okhttp/4.12.0\"","service":"git-commit-tracker","timestamp":"2026-03-26T11:51:40.333Z"}
+{"level":"info","message":"Server is running on port 3001 in development mode","service":"git-commit-tracker","timestamp":"2026-03-27T11:45:20.647Z"}
+{"level":"info","message":"Listening for Webhooks at: http://localhost:3001/webhook/git","service":"git-commit-tracker","timestamp":"2026-03-27T11:45:20.648Z"}
+{"level":"info","message":"Server is running on port 3001 in development mode","service":"git-commit-tracker","timestamp":"2026-03-27T12:36:46.295Z"}
+{"level":"info","message":"Listening for Webhooks at: http://localhost:3001/webhook/git","service":"git-commit-tracker","timestamp":"2026-03-27T12:36:46.298Z"}
+{"level":"info","message":"Server is running on port 3001 in development mode","service":"git-commit-tracker","timestamp":"2026-03-27T12:37:02.468Z"}
+{"level":"info","message":"Listening for Webhooks at: http://localhost:3001/webhook/git","service":"git-commit-tracker","timestamp":"2026-03-27T12:37:02.471Z"}
+{"level":"info","message":"::1 - - [27/Mar/2026:12:42:37 +0000] \"GET /socket.io/?session=s%253Aa5012456-d7dc-4126-8d69-612ba3c36c77.xCdYqfu0ksQyz0u8LiJSvtvkbMP3jVsDozItdNJpn70&deviceOS=Android%2016&EIO=4&transport=websocket HTTP/1.1\" 404 149 \"-\" \"okhttp/4.12.0\"","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:37.945Z"}
+{"level":"info","message":"::1 - - [27/Mar/2026:12:42:41 +0000] \"GET /socket.io/?session=s%253A7016a92c-550f-4b94-af27-eb858e7ac435.q682F%252FVhfgxnDtDvPVZIHaYXgzOmanIgZqiWXKtkcgA&deviceOS=iOS%2026.2&EIO=4&transport=websocket HTTP/1.1\" 404 149 \"-\" \"-\"","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:41.052Z"}
+{"level":"info","message":"::1 - - [27/Mar/2026:12:42:41 +0000] \"GET /socket.io/?session=s%253A74af5fb0-80da-4aca-a60f-72ec9d4be880.DDwxofpHpjnXUcv9s10QpZo81oVGG0pyVtp2noF62Nc&deviceOS=Android%2016&EIO=4&transport=websocket HTTP/1.1\" 404 149 \"-\" \"okhttp/4.12.0\"","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:41.207Z"}
+{"level":"info","message":"::1 - - [27/Mar/2026:12:42:42 +0000] \"GET /socket.io/?session=s%253Aa5012456-d7dc-4126-8d69-612ba3c36c77.xCdYqfu0ksQyz0u8LiJSvtvkbMP3jVsDozItdNJpn70&deviceOS=Android%2016&EIO=4&transport=websocket HTTP/1.1\" 404 149 \"-\" \"okhttp/4.12.0\"","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:42.162Z"}
+{"level":"info","message":"::1 - - [27/Mar/2026:12:42:46 +0000] \"GET /socket.io/?session=s%253A7016a92c-550f-4b94-af27-eb858e7ac435.q682F%252FVhfgxnDtDvPVZIHaYXgzOmanIgZqiWXKtkcgA&deviceOS=iOS%2026.2&EIO=4&transport=websocket HTTP/1.1\" 404 149 \"-\" \"-\"","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:46.362Z"}
+{"level":"info","message":"::1 - - [27/Mar/2026:12:42:46 +0000] \"GET /socket.io/?session=s%253A74af5fb0-80da-4aca-a60f-72ec9d4be880.DDwxofpHpjnXUcv9s10QpZo81oVGG0pyVtp2noF62Nc&deviceOS=Android%2016&EIO=4&transport=websocket HTTP/1.1\" 404 149 \"-\" \"okhttp/4.12.0\"","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:46.379Z"}
+{"level":"info","message":"::1 - - [27/Mar/2026:12:42:47 +0000] \"GET /socket.io/?session=s%253Aa5012456-d7dc-4126-8d69-612ba3c36c77.xCdYqfu0ksQyz0u8LiJSvtvkbMP3jVsDozItdNJpn70&deviceOS=Android%2016&EIO=4&transport=websocket HTTP/1.1\" 404 149 \"-\" \"okhttp/4.12.0\"","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:47.380Z"}
+{"level":"info","message":"::1 - - [27/Mar/2026:12:42:51 +0000] \"GET /socket.io/?session=s%253A74af5fb0-80da-4aca-a60f-72ec9d4be880.DDwxofpHpjnXUcv9s10QpZo81oVGG0pyVtp2noF62Nc&deviceOS=Android%2016&EIO=4&transport=websocket HTTP/1.1\" 404 149 \"-\" \"okhttp/4.12.0\"","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:51.554Z"}
+{"level":"info","message":"::1 - - [27/Mar/2026:12:42:51 +0000] \"GET /socket.io/?session=s%253A7016a92c-550f-4b94-af27-eb858e7ac435.q682F%252FVhfgxnDtDvPVZIHaYXgzOmanIgZqiWXKtkcgA&deviceOS=iOS%2026.2&EIO=4&transport=websocket HTTP/1.1\" 404 149 \"-\" \"-\"","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:51.641Z"}
+{"level":"info","message":"::1 - - [27/Mar/2026:12:42:52 +0000] \"GET /socket.io/?session=s%253Aa5012456-d7dc-4126-8d69-612ba3c36c77.xCdYqfu0ksQyz0u8LiJSvtvkbMP3jVsDozItdNJpn70&deviceOS=Android%2016&EIO=4&transport=websocket HTTP/1.1\" 404 149 \"-\" \"okhttp/4.12.0\"","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:52.585Z"}
+{"level":"info","message":"Incoming Webhook Push Event received","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:53.952Z"}
+{"level":"info","message":"--- Inside processPushPayload ---","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:53.957Z"}
+{"level":"info","message":"Found 6 commits in payload.","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:53.959Z"}
+{"level":"info","message":"Fetching detailed stats for commit: Psquarecompany-psqrco/SURYACON_MOBILE_APPLICATION@e4afeede9acde189f4afabf426522cce2309d546","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:53.959Z"}
+{"level":"info","message":"::1 - - [27/Mar/2026:12:42:53 +0000] \"POST /webhook/git HTTP/1.1\" 202 59 \"-\" \"GitHub-Hookshot/b951dd4\"","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:53.999Z"}
+{"level":"info","message":"Successfully fetched details for 1 files in commit e4afeede9acde189f4afabf426522cce2309d546","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:54.533Z"}
+{"level":"info","message":"\n=== Changes for src/config/Env.ts (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:54.533Z"}
+{"level":"info","message":"Additions: 1 | Deletions: 1","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:54.533Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:54.533Z"}
+{"level":"info","message":"Fetching detailed stats for commit: Psquarecompany-psqrco/SURYACON_MOBILE_APPLICATION@67a3e32b4d84429e733898bb43f4965be45b338c","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:54.534Z"}
+{"level":"info","message":"Successfully fetched details for 59 files in commit 67a3e32b4d84429e733898bb43f4965be45b338c","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.393Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/BagItemTransfer/TransferList.tsx (Added) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.394Z"}
+{"level":"info","message":"Additions: 109 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.394Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.394Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/BagItemTransfer/TransferStates.tsx (Added) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.394Z"}
+{"level":"info","message":"Additions: 50 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.394Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.394Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/BagTicketView/TicketList.tsx (Added) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.394Z"}
+{"level":"info","message":"Additions: 99 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.394Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.394Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/BagTicketView/TicketSectionHeader.tsx (Added) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.394Z"}
+{"level":"info","message":"Additions: 81 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.394Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.394Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/MyBag/BagEmptyState.tsx (Added) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.394Z"}
+{"level":"info","message":"Additions: 33 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.394Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.394Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/MyBag/BagLoadingState.tsx (Added) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.394Z"}
+{"level":"info","message":"Additions: 28 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.394Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.394Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/MyBag/ResourceList.tsx (Added) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.395Z"}
+{"level":"info","message":"Additions: 95 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.395Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.395Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/MyBag/ReturnAction/EmployeeView.tsx (Added) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.395Z"}
+{"level":"info","message":"Additions: 77 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.395Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.395Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/MyBag/ReturnAction/InventoryActionForm.tsx (Added) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.395Z"}
+{"level":"info","message":"Additions: 252 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.395Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.395Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/MyBag/ReturnAction/InventoryView.tsx (Added) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.395Z"}
+{"level":"info","message":"Additions: 138 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.395Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.395Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/MyBag/ReturnAction/ModalFooter.tsx (Added) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.395Z"}
+{"level":"info","message":"Additions: 143 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.395Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.395Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/MyBag/ReturnAction/OperationSelector.tsx (Added) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.395Z"}
+{"level":"info","message":"Additions: 118 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.395Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.395Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/MyBag/ReturnAction/ReturnHeader.tsx (Added) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.396Z"}
+{"level":"info","message":"Additions: 68 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.396Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.396Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/MyBag/ReturnAction/index.ts (Added) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.396Z"}
+{"level":"info","message":"Additions: 6 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.396Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.396Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/TicketScreen/Sections/ItemsHeader.tsx (Added) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.396Z"}
+{"level":"info","message":"Additions: 67 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.396Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.396Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/TicketScreen/Sections/RemarksSection.tsx (Added) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.396Z"}
+{"level":"info","message":"Additions: 51 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.396Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.396Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/TicketScreen/Sections/SubtaskSectionHeader.tsx (Added) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.396Z"}
+{"level":"info","message":"Additions: 60 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.396Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.396Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/TicketScreen/Sections/index.ts (Added) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.396Z"}
+{"level":"info","message":"Additions: 3 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.396Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.396Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/common/SwitchChip.tsx (Added) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.396Z"}
+{"level":"info","message":"Additions: 214 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.396Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.396Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/redux/hook/useBagItemTransfer.tsx (Added) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.396Z"}
+{"level":"info","message":"Additions: 260 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.397Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.397Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/redux/hook/useBagTicketView.ts (Added) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.397Z"}
+{"level":"info","message":"Additions: 130 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.397Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.397Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/redux/hook/useMyBag.tsx (Added) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.397Z"}
+{"level":"info","message":"Additions: 548 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.397Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.398Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/redux/hook/useTicketLogic.tsx (Added) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.398Z"}
+{"level":"info","message":"Additions: 222 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.398Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.398Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/AnimatedInput.tsx (Modified) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.398Z"}
+{"level":"info","message":"Additions: 39 | Deletions: 35","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.398Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.398Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/Bag/BagCustomButton.tsx (Modified) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.399Z"}
+{"level":"info","message":"Additions: 15 | Deletions: 19","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.399Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.399Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/Bag/BagResourceCard.tsx (Modified) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.399Z"}
+{"level":"info","message":"Additions: 2 | Deletions: 2","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.399Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.399Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/Bag/CustomItemCard.tsx (Modified) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.399Z"}
+{"level":"info","message":"Additions: 18 | Deletions: 38","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.399Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.399Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/Bag/EditBagQuantityModal.tsx (Modified) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.399Z"}
+{"level":"info","message":"Additions: 16 | Deletions: 17","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.399Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.400Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/Bag/EditBagResourceCard.tsx (Modified) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.400Z"}
+{"level":"info","message":"Additions: 14 | Deletions: 17","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.400Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.400Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/BagItemTransfer/TransferSubtaskSection.tsx (Modified) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.400Z"}
+{"level":"info","message":"Additions: 33 | Deletions: 39","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.400Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.400Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/BagItemTransfer/TransferTabs.tsx (Modified) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.400Z"}
+{"level":"info","message":"Additions: 50 | Deletions: 52","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.400Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.400Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/BagItemTransfer/index.ts (Modified) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.400Z"}
+{"level":"info","message":"Additions: 2 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.400Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.400Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/BagTicketView/FilterModals.tsx (Modified) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.400Z"}
+{"level":"info","message":"Additions: 139 | Deletions: 135","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.400Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.400Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/BagTicketView/ReturnTicketItemCard.tsx (Modified) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.400Z"}
+{"level":"info","message":"Additions: 24 | Deletions: 56","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.400Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.400Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/BagTicketView/TicketItemCard.tsx (Modified) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.400Z"}
+{"level":"info","message":"Additions: 23 | Deletions: 44","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.401Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.401Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/BagTicketView/index.ts (Modified) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.401Z"}
+{"level":"info","message":"Additions: 2 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.401Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.401Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/HomePage/SubtaskList.tsx (Modified) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.401Z"}
+{"level":"info","message":"Additions: 1 | Deletions: 1","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.401Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.401Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/HomePage/TaskCard/index.tsx (Modified) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.401Z"}
+{"level":"info","message":"Additions: 1 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.401Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.401Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/MyBag/BagFloatingActions.tsx (Modified) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.401Z"}
+{"level":"info","message":"Additions: 3 | Deletions: 4","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.401Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.401Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/MyBag/BagTabs.tsx (Modified) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.401Z"}
+{"level":"info","message":"Additions: 45 | Deletions: 24","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.401Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.401Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/MyBag/ReturnActionModal.tsx (Modified) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.401Z"}
+{"level":"info","message":"Additions: 225 | Deletions: 609","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.401Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.401Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/MyBag/SubtaskGroupSection.tsx (Modified) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.401Z"}
+{"level":"info","message":"Additions: 2 | Deletions: 2","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.401Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.401Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/MyBag/index.ts (Modified) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.401Z"}
+{"level":"info","message":"Additions: 3 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.401Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.402Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/SubtaskModal.tsx (Modified) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.402Z"}
+{"level":"info","message":"Additions: 2 | Deletions: 1","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.402Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.402Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/TicketScreen/AttachmentSection.tsx (Modified) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.402Z"}
+{"level":"info","message":"Additions: 77 | Deletions: 66","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.402Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.402Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/TicketScreen/EditQuantityModal.tsx (Modified) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.402Z"}
+{"level":"info","message":"Additions: 233 | Deletions: 214","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.402Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.402Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/TicketScreen/TicketItemResourceCard.tsx (Modified) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.402Z"}
+{"level":"info","message":"Additions: 222 | Deletions: 234","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.402Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.402Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/TicketScreen/TicketSummaryCard.tsx (Modified) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.402Z"}
+{"level":"info","message":"Additions: 131 | Deletions: 162","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.402Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.402Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/screens/BagItemTransfer.tsx (Modified) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.402Z"}
+{"level":"info","message":"Additions: 27 | Deletions: 412","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.402Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.402Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/screens/BagTicketView.tsx (Modified) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.402Z"}
+{"level":"info","message":"Additions: 57 | Deletions: 442","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.402Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.402Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/screens/MyBag.tsx (Modified) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.402Z"}
+{"level":"info","message":"Additions: 91 | Deletions: 499","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.402Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.402Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/screens/TicketScreen.tsx (Modified) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.406Z"}
+{"level":"info","message":"Additions: 111 | Deletions: 500","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.406Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.406Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/screens/styles/TicketScreen.styles.ts (Modified) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.406Z"}
+{"level":"info","message":"Additions: 33 | Deletions: 7","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.406Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.406Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/types/BagTicketData.ts (Modified) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.406Z"}
+{"level":"info","message":"Additions: 2 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.406Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.406Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/types/MyBag.ts (Modified) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.406Z"}
+{"level":"info","message":"Additions: 13 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.406Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.406Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/types/ReturnTicket.ts (Modified) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.406Z"}
+{"level":"info","message":"Additions: 2 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.406Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.406Z"}
+{"level":"info","message":"\n=== Changes for src/utils/permissionUtils.ts (Modified) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.407Z"}
+{"level":"info","message":"Additions: 31 | Deletions: 6","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.407Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.407Z"}
+{"level":"info","message":"\n=== Changes for src/utils/uploadUtils.ts (Modified) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.407Z"}
+{"level":"info","message":"Additions: 14 | Deletions: 3","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.407Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.407Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/redux/hook/useMyBag.ts (Removed) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.407Z"}
+{"level":"info","message":"Additions: 0 | Deletions: 101","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.407Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.407Z"}
+{"level":"info","message":"Fetching detailed stats for commit: Psquarecompany-psqrco/SURYACON_MOBILE_APPLICATION@4e343fe6999a534526726dee4f42fdfb6aebcee9","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:55.407Z"}
+{"level":"info","message":"Successfully fetched details for 141 files in commit 4e343fe6999a534526726dee4f42fdfb6aebcee9","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.393Z"}
+{"level":"info","message":"\n=== Changes for git-commit.js (Added) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.393Z"}
+{"level":"info","message":"Additions: 237 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.393Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.393Z"}
+{"level":"info","message":"\n=== Changes for src/roles/projectManager/hooks/useInventoryCartStorage.ts (Added) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.393Z"}
+{"level":"info","message":"Additions: 188 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.393Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.393Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/AssetCart/FloatingCart.tsx (Added) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.393Z"}
+{"level":"info","message":"Additions: 26 | Deletions: 17","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.393Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.393Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/BagItemTransfer/TransferList.tsx (Added) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.393Z"}
+{"level":"info","message":"Additions: 109 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.393Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.393Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/BagItemTransfer/TransferStates.tsx (Added) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.393Z"}
+{"level":"info","message":"Additions: 50 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.393Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.393Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/BagTicketView/TicketList.tsx (Added) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.393Z"}
+{"level":"info","message":"Additions: 99 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.393Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.394Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/BagTicketView/TicketSectionHeader.tsx (Added) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.394Z"}
+{"level":"info","message":"Additions: 81 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.394Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.394Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/HomePage/TaskCard/components/CardBackground.tsx (Added) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.394Z"}
+{"level":"info","message":"Additions: 50 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.394Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.394Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/HomePage/TaskCard/components/CardBody.tsx (Added) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.394Z"}
+{"level":"info","message":"Additions: 41 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.394Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.394Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/HomePage/TaskCard/components/CardFooter.tsx (Added) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.394Z"}
+{"level":"info","message":"Additions: 40 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.394Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.394Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/HomePage/TaskCard/components/CardHeader.tsx (Added) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.394Z"}
+{"level":"info","message":"Additions: 87 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.394Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.394Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/HomePage/TaskCard/components/TaskDropdown.tsx (Added) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.394Z"}
+{"level":"info","message":"Additions: 80 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.394Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.394Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/HomePage/TaskCard/components/WorkerItem.tsx (Added) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.394Z"}
+{"level":"info","message":"Additions: 21 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.394Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.394Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/HomePage/TaskCard/components/index.ts (Added) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.394Z"}
+{"level":"info","message":"Additions: 6 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.394Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.394Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/HomePage/TaskCard/index.tsx (Added) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.394Z"}
+{"level":"info","message":"Additions: 270 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.394Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.394Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/HomePage/TaskCard/task_card_styles.ts (Added) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.394Z"}
+{"level":"info","message":"Additions: 200 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.394Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.394Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/HomePage/TaskCard/types.ts (Added) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.394Z"}
+{"level":"info","message":"Additions: 54 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.394Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.394Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/MyBag/BagEmptyState.tsx (Added) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.394Z"}
+{"level":"info","message":"Additions: 33 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.394Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.394Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/MyBag/BagLoadingState.tsx (Added) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.394Z"}
+{"level":"info","message":"Additions: 28 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.394Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.394Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/MyBag/ResourceList.tsx (Added) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.394Z"}
+{"level":"info","message":"Additions: 95 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.394Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.394Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/MyBag/ReturnAction/EmployeeView.tsx (Added) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.395Z"}
+{"level":"info","message":"Additions: 77 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.395Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.395Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/MyBag/ReturnAction/InventoryActionForm.tsx (Added) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.395Z"}
+{"level":"info","message":"Additions: 252 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.395Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.395Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/MyBag/ReturnAction/InventoryView.tsx (Added) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.395Z"}
+{"level":"info","message":"Additions: 138 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.395Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.395Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/MyBag/ReturnAction/ModalFooter.tsx (Added) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.395Z"}
+{"level":"info","message":"Additions: 143 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.395Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.395Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/MyBag/ReturnAction/OperationSelector.tsx (Added) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.395Z"}
+{"level":"info","message":"Additions: 118 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.395Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.395Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/MyBag/ReturnAction/ReturnHeader.tsx (Added) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.395Z"}
+{"level":"info","message":"Additions: 68 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.395Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.395Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/MyBag/ReturnAction/index.ts (Added) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.395Z"}
+{"level":"info","message":"Additions: 6 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.395Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.395Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/TicketScreen/Sections/ItemsHeader.tsx (Added) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.395Z"}
+{"level":"info","message":"Additions: 67 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.395Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.395Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/TicketScreen/Sections/RemarksSection.tsx (Added) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.395Z"}
+{"level":"info","message":"Additions: 51 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.395Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.395Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/TicketScreen/Sections/SubtaskSectionHeader.tsx (Added) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.395Z"}
+{"level":"info","message":"Additions: 60 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.395Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.395Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/TicketScreen/Sections/index.ts (Added) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.395Z"}
+{"level":"info","message":"Additions: 3 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.395Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.395Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/common/SwitchChip.tsx (Added) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.396Z"}
+{"level":"info","message":"Additions: 214 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.396Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.396Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/database/migrations/002/003_add_is_ended_to_subtasks.ts (Added) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.396Z"}
+{"level":"info","message":"Additions: 28 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.396Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.396Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/redux/hook/useBagItemTransfer.tsx (Added) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.396Z"}
+{"level":"info","message":"Additions: 260 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.396Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.396Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/redux/hook/useBagTicketView.ts (Added) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.396Z"}
+{"level":"info","message":"Additions: 130 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.396Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.396Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/redux/hook/useMyBag.tsx (Added) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.396Z"}
+{"level":"info","message":"Additions: 548 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.396Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.396Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/redux/hook/useTicketLogic.tsx (Added) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.396Z"}
+{"level":"info","message":"Additions: 222 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.396Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.396Z"}
+{"level":"info","message":"\n=== Changes for App.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.396Z"}
+{"level":"info","message":"Additions: 48 | Deletions: 57","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.396Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.396Z"}
+{"level":"info","message":"\n=== Changes for android/app/build.gradle (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.396Z"}
+{"level":"info","message":"Additions: 2 | Deletions: 2","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.396Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.396Z"}
+{"level":"info","message":"\n=== Changes for ios/Podfile.lock (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.396Z"}
+{"level":"info","message":"Additions: 1 | Deletions: 1","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.396Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.396Z"}
+{"level":"info","message":"\n=== Changes for package-lock.json (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.396Z"}
+{"level":"info","message":"Additions: 8 | Deletions: 8","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.396Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.396Z"}
+{"level":"info","message":"\n=== Changes for package.json (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.397Z"}
+{"level":"info","message":"Additions: 2 | Deletions: 1","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.397Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.397Z"}
+{"level":"info","message":"\n=== Changes for src/core/migrations/migrationHelpers.ts (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.397Z"}
+{"level":"info","message":"Additions: 18 | Deletions: 1","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.397Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.397Z"}
+{"level":"info","message":"\n=== Changes for src/hooks/useCommentThread.ts (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.397Z"}
+{"level":"info","message":"Additions: 163 | Deletions: 94","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.397Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.397Z"}
+{"level":"info","message":"\n=== Changes for src/redux/api/commentReplyApi.ts (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.397Z"}
+{"level":"info","message":"Additions: 44 | Deletions: 30","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.397Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.397Z"}
+{"level":"info","message":"\n=== Changes for src/redux/slice/commentSlice.ts (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.397Z"}
+{"level":"info","message":"Additions: 80 | Deletions: 31","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.397Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.397Z"}
+{"level":"info","message":"\n=== Changes for src/redux/slice/replySlice.ts (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.397Z"}
+{"level":"info","message":"Additions: 18 | Deletions: 11","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.397Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.397Z"}
+{"level":"info","message":"\n=== Changes for src/redux/store.ts (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.397Z"}
+{"level":"info","message":"Additions: 16 | Deletions: 10","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.397Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.397Z"}
+{"level":"info","message":"\n=== Changes for src/roles/auth/LoginPage.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.397Z"}
+{"level":"info","message":"Additions: 1 | Deletions: 2","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.397Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.397Z"}
+{"level":"info","message":"\n=== Changes for src/roles/projectManager/components/DPR/TowerCard.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.398Z"}
+{"level":"info","message":"Additions: 10 | Deletions: 7","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.398Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.398Z"}
+{"level":"info","message":"\n=== Changes for src/roles/projectManager/components/HomePagePM/TowerCard.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.398Z"}
+{"level":"info","message":"Additions: 1 | Deletions: 3","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.398Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.398Z"}
+{"level":"info","message":"\n=== Changes for src/roles/projectManager/components/MaterialUsed/CartItem/CartItem.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.398Z"}
+{"level":"info","message":"Additions: 13 | Deletions: 7","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.398Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.398Z"}
+{"level":"info","message":"\n=== Changes for src/roles/projectManager/components/MaterialUsed/MaterialProgressCard.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.398Z"}
+{"level":"info","message":"Additions: 16 | Deletions: 5","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.398Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.398Z"}
+{"level":"info","message":"\n=== Changes for src/roles/projectManager/components/MaterialUsed/PMFloatingCartBar.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.399Z"}
+{"level":"info","message":"Additions: 36 | Deletions: 15","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.399Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.399Z"}
+{"level":"info","message":"\n=== Changes for src/roles/projectManager/components/MaterialUsed/ResourceCard/ResourceCard.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.399Z"}
+{"level":"info","message":"Additions: 10 | Deletions: 2","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.399Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.399Z"}
+{"level":"info","message":"\n=== Changes for src/roles/projectManager/components/common/TaskProgressBar.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.399Z"}
+{"level":"info","message":"Additions: 1 | Deletions: 2","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.399Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.399Z"}
+{"level":"info","message":"\n=== Changes for src/roles/projectManager/database/repositories/MonthlyInventory/MonthlyInventoryhRepository.ts (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.399Z"}
+{"level":"info","message":"Additions: 16 | Deletions: 6","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.399Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.399Z"}
+{"level":"info","message":"\n=== Changes for src/roles/projectManager/screens/Main/Inventory/InventoryCartItems.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.399Z"}
+{"level":"info","message":"Additions: 10 | Deletions: 9","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.399Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.400Z"}
+{"level":"info","message":"\n=== Changes for src/roles/projectManager/screens/Main/Inventory/InventoryCartView.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.400Z"}
+{"level":"info","message":"Additions: 2 | Deletions: 2","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.400Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.400Z"}
+{"level":"info","message":"\n=== Changes for src/roles/projectManager/screens/Main/Inventory/PMInventory.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.400Z"}
+{"level":"info","message":"Additions: 6 | Deletions: 12","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.400Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.400Z"}
+{"level":"info","message":"\n=== Changes for src/roles/projectManager/screens/Main/Inventory/PMTicketScreen.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.400Z"}
+{"level":"info","message":"Additions: 22 | Deletions: 6","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.400Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.400Z"}
+{"level":"info","message":"\n=== Changes for src/roles/projectManager/screens/Main/Inventory/components/FloatingCartButton.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.400Z"}
+{"level":"info","message":"Additions: 11 | Deletions: 8","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.400Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.400Z"}
+{"level":"info","message":"\n=== Changes for src/roles/projectManager/screens/Main/Inventory/components/InventoryCartProductGrid.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.400Z"}
+{"level":"info","message":"Additions: 3 | Deletions: 1","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.400Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.400Z"}
+{"level":"info","message":"\n=== Changes for src/roles/projectManager/screens/Main/SyncProgressBar.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.400Z"}
+{"level":"info","message":"Additions: 1 | Deletions: 6","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.400Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.401Z"}
+{"level":"info","message":"\n=== Changes for src/roles/projectManager/screens/Main/materialUsed/PMAddMTCategories.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.401Z"}
+{"level":"info","message":"Additions: 6 | Deletions: 2","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.401Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.401Z"}
+{"level":"info","message":"\n=== Changes for src/roles/projectManager/screens/Main/materialUsed/PMCartScreen.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.401Z"}
+{"level":"info","message":"Additions: 3 | Deletions: 7","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.402Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.402Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/AnimatedInput.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.402Z"}
+{"level":"info","message":"Additions: 39 | Deletions: 35","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.402Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.402Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/AssetCart/index.ts (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.402Z"}
+{"level":"info","message":"Additions: 1 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.402Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.402Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/Bag/BagCustomButton.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.402Z"}
+{"level":"info","message":"Additions: 15 | Deletions: 19","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.402Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.402Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/Bag/BagResourceCard.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.402Z"}
+{"level":"info","message":"Additions: 2 | Deletions: 2","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.402Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.402Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/Bag/CustomItemCard.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.402Z"}
+{"level":"info","message":"Additions: 18 | Deletions: 38","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.402Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.402Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/Bag/EditBagQuantityModal.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.402Z"}
+{"level":"info","message":"Additions: 16 | Deletions: 17","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.402Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.402Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/Bag/EditBagResourceCard.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.403Z"}
+{"level":"info","message":"Additions: 14 | Deletions: 17","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.403Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.403Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/BagItemTransfer/TransferSubtaskSection.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.403Z"}
+{"level":"info","message":"Additions: 33 | Deletions: 39","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.403Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.403Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/BagItemTransfer/TransferTabs.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.403Z"}
+{"level":"info","message":"Additions: 50 | Deletions: 52","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.403Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.403Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/BagItemTransfer/index.ts (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.403Z"}
+{"level":"info","message":"Additions: 2 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.403Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.403Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/BagTicketView/FilterModals.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.403Z"}
+{"level":"info","message":"Additions: 139 | Deletions: 135","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.403Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.403Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/BagTicketView/ReturnTicketItemCard.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.403Z"}
+{"level":"info","message":"Additions: 24 | Deletions: 56","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.403Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.403Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/BagTicketView/TicketItemCard.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.403Z"}
+{"level":"info","message":"Additions: 23 | Deletions: 44","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.404Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.404Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/BagTicketView/index.ts (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.404Z"}
+{"level":"info","message":"Additions: 2 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.404Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.404Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/CartSubtasksModal.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.404Z"}
+{"level":"info","message":"Additions: 30 | Deletions: 15","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.404Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.404Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/CartView/CartFooter.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.404Z"}
+{"level":"info","message":"Additions: 12 | Deletions: 10","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.404Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.404Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/CartView/ItemCard.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.404Z"}
+{"level":"info","message":"Additions: 23 | Deletions: 7","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.404Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.404Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/FloatingCartButton.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.404Z"}
+{"level":"info","message":"Additions: 21 | Deletions: 11","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.404Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.404Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/GradeModal.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.404Z"}
+{"level":"info","message":"Additions: 134 | Deletions: 80","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.404Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.404Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/HomePage/FloatingActionMenu.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.404Z"}
+{"level":"info","message":"Additions: 3 | Deletions: 3","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.404Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.404Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/HomePage/ProjectSelection.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.404Z"}
+{"level":"info","message":"Additions: 40 | Deletions: 24","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.404Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.404Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/HomePage/SubtaskList.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.404Z"}
+{"level":"info","message":"Additions: 2 | Deletions: 2","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.404Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.404Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/MyBag/BagFloatingActions.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.404Z"}
+{"level":"info","message":"Additions: 3 | Deletions: 4","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.404Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.404Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/MyBag/BagTabs.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.405Z"}
+{"level":"info","message":"Additions: 45 | Deletions: 24","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.405Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.405Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/MyBag/ReturnActionModal.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.405Z"}
+{"level":"info","message":"Additions: 225 | Deletions: 609","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.405Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.405Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/MyBag/SubtaskGroupSection.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.405Z"}
+{"level":"info","message":"Additions: 2 | Deletions: 2","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.405Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.405Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/MyBag/index.ts (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.405Z"}
+{"level":"info","message":"Additions: 3 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.405Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.405Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/ProductGrid.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.405Z"}
+{"level":"info","message":"Additions: 42 | Deletions: 29","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.405Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.405Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/SECommentModal.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.405Z"}
+{"level":"info","message":"Additions: 64 | Deletions: 59","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.405Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.405Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/SESubTask/SubtaskSelectorModal.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.405Z"}
+{"level":"info","message":"Additions: 1 | Deletions: 1","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.405Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.405Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/SubtaskModal.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.405Z"}
+{"level":"info","message":"Additions: 2 | Deletions: 1","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.405Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.405Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/TaskCard.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.405Z"}
+{"level":"info","message":"Additions: 1 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.405Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.405Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/TicketScreen/AttachmentSection.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.405Z"}
+{"level":"info","message":"Additions: 77 | Deletions: 66","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.405Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.405Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/TicketScreen/EditQuantityModal.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.405Z"}
+{"level":"info","message":"Additions: 233 | Deletions: 214","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.405Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.405Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/TicketScreen/TicketItemResourceCard.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.405Z"}
+{"level":"info","message":"Additions: 222 | Deletions: 234","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.405Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.405Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/TicketScreen/TicketSummaryCard.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.405Z"}
+{"level":"info","message":"Additions: 131 | Deletions: 162","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.405Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.405Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/WorkInstruction/DropdownSection.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.405Z"}
+{"level":"info","message":"Additions: 17 | Deletions: 4","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.405Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.405Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/WorkInstruction/PhotoCarousel.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.405Z"}
+{"level":"info","message":"Additions: 294 | Deletions: 233","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.405Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.405Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/WorkInstruction/QualityModal.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.405Z"}
+{"level":"info","message":"Additions: 6 | Deletions: 1","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.405Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.405Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/WorkInstruction/WorkInstructionHeader.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.405Z"}
+{"level":"info","message":"Additions: 2 | Deletions: 2","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.405Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.405Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/WorkInstruction/WorkInstructionItem.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.405Z"}
+{"level":"info","message":"Additions: 310 | Deletions: 214","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.405Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.406Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/component/WorkInstruction/index.ts (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.406Z"}
+{"level":"info","message":"Additions: 3 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.406Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.406Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/database/migrations/001/001_create_project_monthly_target_table.ts (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.406Z"}
+{"level":"info","message":"Additions: 16 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.406Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.406Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/database/migrations/002/002_add_description_to_subtasks.ts (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.406Z"}
+{"level":"info","message":"Additions: 5 | Deletions: 6","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.406Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.406Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/database/migrations/index.ts (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.406Z"}
+{"level":"info","message":"Additions: 2 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.406Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.406Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/database/repositories/ProjectMonthlyTarget/SubtaskRepository.ts (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.406Z"}
+{"level":"info","message":"Additions: 121 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.406Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.406Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/database/repositories/WorkInstruction/workInstructionRepository.ts (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.406Z"}
+{"level":"info","message":"Additions: 227 | Deletions: 5","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.406Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.406Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/redux/api/siteApi.ts (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.406Z"}
+{"level":"info","message":"Additions: 7 | Deletions: 3","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.406Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.406Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/redux/hook/useWorkInstructions.ts (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.406Z"}
+{"level":"info","message":"Additions: 57 | Deletions: 3","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.406Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.406Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/redux/slice/projectMonthlyTargetSlice.ts (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.406Z"}
+{"level":"info","message":"Additions: 0 | Deletions: 1","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.406Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.406Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/redux/slice/workInstructionSlice.ts (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.406Z"}
+{"level":"info","message":"Additions: 20 | Deletions: 2","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.406Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.406Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/screens/AssetCart.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.406Z"}
+{"level":"info","message":"Additions: 11 | Deletions: 12","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.406Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.406Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/screens/BagItemTransfer.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.406Z"}
+{"level":"info","message":"Additions: 27 | Deletions: 412","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.406Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.406Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/screens/BagTicketView.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.406Z"}
+{"level":"info","message":"Additions: 57 | Deletions: 442","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.406Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.406Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/screens/CartView.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.406Z"}
+{"level":"info","message":"Additions: 24 | Deletions: 24","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.407Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.407Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/screens/HomePage/HomePage.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.407Z"}
+{"level":"info","message":"Additions: 1 | Deletions: 1","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.407Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.407Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/screens/MyBag.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.407Z"}
+{"level":"info","message":"Additions: 91 | Deletions: 499","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.407Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.407Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/screens/SESubTask.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.407Z"}
+{"level":"info","message":"Additions: 16 | Deletions: 21","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.407Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.407Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/screens/TicketScreen.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.407Z"}
+{"level":"info","message":"Additions: 111 | Deletions: 500","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.407Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.407Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/screens/WorkInstruction.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.407Z"}
+{"level":"info","message":"Additions: 423 | Deletions: 278","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.407Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.407Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/screens/styles/TicketScreen.styles.ts (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.407Z"}
+{"level":"info","message":"Additions: 33 | Deletions: 7","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.407Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.407Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/types/BagTicketData.ts (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.407Z"}
+{"level":"info","message":"Additions: 2 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.407Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.407Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/types/MyBag.ts (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.407Z"}
+{"level":"info","message":"Additions: 13 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.407Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.407Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/types/ProjectMonthlyTarget.ts (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.407Z"}
+{"level":"info","message":"Additions: 11 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.407Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.407Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/types/ReturnTicket.ts (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.408Z"}
+{"level":"info","message":"Additions: 2 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.408Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.408Z"}
+{"level":"info","message":"\n=== Changes for src/roles/timeKeeper/screens/AddManpower/AddManpower.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.408Z"}
+{"level":"info","message":"Additions: 1 | Deletions: 1","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.408Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.408Z"}
+{"level":"info","message":"\n=== Changes for src/sharedComponents/common/AttachmentSelectorModal.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.408Z"}
+{"level":"info","message":"Additions: 40 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.408Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.408Z"}
+{"level":"info","message":"\n=== Changes for src/sharedComponents/common/BackButton.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.408Z"}
+{"level":"info","message":"Additions: 5 | Deletions: 7","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.408Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.408Z"}
+{"level":"info","message":"\n=== Changes for src/sharedComponents/common/BottomModal.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.408Z"}
+{"level":"info","message":"Additions: 58 | Deletions: 85","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.408Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.408Z"}
+{"level":"info","message":"\n=== Changes for src/sharedComponents/common/Header.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.408Z"}
+{"level":"info","message":"Additions: 62 | Deletions: 58","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.408Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.408Z"}
+{"level":"info","message":"\n=== Changes for src/sharedComponents/common/LinearGradient.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.409Z"}
+{"level":"info","message":"Additions: 9 | Deletions: 8","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.409Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.409Z"}
+{"level":"info","message":"\n=== Changes for src/sharedComponents/common/QuantityCounter.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.410Z"}
+{"level":"info","message":"Additions: 44 | Deletions: 10","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.410Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.410Z"}
+{"level":"info","message":"\n=== Changes for src/utils/permissionUtils.ts (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.410Z"}
+{"level":"info","message":"Additions: 31 | Deletions: 6","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.410Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.410Z"}
+{"level":"info","message":"\n=== Changes for src/utils/uploadUtils.ts (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.410Z"}
+{"level":"info","message":"Additions: 14 | Deletions: 3","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.411Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.411Z"}
+{"level":"info","message":"\n=== Changes for src/roles/siteEngineer/redux/hook/useMyBag.ts (Removed) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.411Z"}
+{"level":"info","message":"Additions: 0 | Deletions: 101","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.411Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.411Z"}
+{"level":"info","message":"Fetching detailed stats for commit: Psquarecompany-psqrco/SURYACON_MOBILE_APPLICATION@fbe9f0fc00d1f8de6ef67a6ec1242290b3d10f3b","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.411Z"}
+{"level":"info","message":"::1 - - [27/Mar/2026:12:42:56 +0000] \"GET /socket.io/?session=s%253A74af5fb0-80da-4aca-a60f-72ec9d4be880.DDwxofpHpjnXUcv9s10QpZo81oVGG0pyVtp2noF62Nc&deviceOS=Android%2016&EIO=4&transport=websocket HTTP/1.1\" 404 149 \"-\" \"okhttp/4.12.0\"","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.732Z"}
+{"level":"info","message":"Successfully fetched details for 10 files in commit fbe9f0fc00d1f8de6ef67a6ec1242290b3d10f3b","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.785Z"}
+{"level":"info","message":"\n=== Changes for src/roles/qualityEngineer/database/migrations/001/001_create_control_plan_tables.ts (Added) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.785Z"}
+{"level":"info","message":"Additions: 77 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.785Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.785Z"}
+{"level":"info","message":"\n=== Changes for src/roles/qualityEngineer/database/migrations/index.ts (Added) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.785Z"}
+{"level":"info","message":"Additions: 5 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.785Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.785Z"}
+{"level":"info","message":"\n=== Changes for src/roles/qualityEngineer/database/repositories/ControlPlanRepository.ts (Added) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.785Z"}
+{"level":"info","message":"Additions: 429 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.785Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.785Z"}
+{"level":"info","message":"\n=== Changes for src/core/migrations/registry.ts (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.785Z"}
+{"level":"info","message":"Additions: 5 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.785Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.785Z"}
+{"level":"info","message":"\n=== Changes for src/roles/inventoryEngineer/screens/CreateRequest/CreateRequest.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.785Z"}
+{"level":"info","message":"Additions: 1 | Deletions: 38","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.785Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.785Z"}
+{"level":"info","message":"\n=== Changes for src/roles/qualityEngineer/components/ProgressBarHome/ProgressBarHome.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.785Z"}
+{"level":"info","message":"Additions: 32 | Deletions: 11","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.785Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.785Z"}
+{"level":"info","message":"\n=== Changes for src/roles/qualityEngineer/components/QeSubtaskBar.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.785Z"}
+{"level":"info","message":"Additions: 56 | Deletions: 38","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.785Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.785Z"}
+{"level":"info","message":"\n=== Changes for src/roles/qualityEngineer/redux/api/qualityEngineerApi.ts (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.785Z"}
+{"level":"info","message":"Additions: 19 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.785Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.785Z"}
+{"level":"info","message":"\n=== Changes for src/roles/qualityEngineer/screens/QEHomePage/QEHomePage.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.785Z"}
+{"level":"info","message":"Additions: 83 | Deletions: 110","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.785Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.785Z"}
+{"level":"info","message":"\n=== Changes for src/roles/qualityEngineer/screens/QESubtask/QESubtask.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.785Z"}
+{"level":"info","message":"Additions: 63 | Deletions: 51","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.785Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.785Z"}
+{"level":"info","message":"Fetching detailed stats for commit: Psquarecompany-psqrco/SURYACON_MOBILE_APPLICATION@6ddbc923995a2b2f9232e0e9fff173e4f7962efa","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.785Z"}
+{"level":"info","message":"::1 - - [27/Mar/2026:12:42:56 +0000] \"GET /socket.io/?session=s%253A7016a92c-550f-4b94-af27-eb858e7ac435.q682F%252FVhfgxnDtDvPVZIHaYXgzOmanIgZqiWXKtkcgA&deviceOS=iOS%2026.2&EIO=4&transport=websocket HTTP/1.1\" 404 149 \"-\" \"-\"","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:56.919Z"}
+{"level":"info","message":"Successfully fetched details for 10 files in commit 6ddbc923995a2b2f9232e0e9fff173e4f7962efa","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.255Z"}
+{"level":"info","message":"\n=== Changes for src/roles/qualityEngineer/database/migrations/001/001_create_control_plan_tables.ts (Added) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.255Z"}
+{"level":"info","message":"Additions: 77 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.255Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.255Z"}
+{"level":"info","message":"\n=== Changes for src/roles/qualityEngineer/database/migrations/index.ts (Added) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.255Z"}
+{"level":"info","message":"Additions: 5 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.255Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.255Z"}
+{"level":"info","message":"\n=== Changes for src/roles/qualityEngineer/database/repositories/ControlPlanRepository.ts (Added) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.255Z"}
+{"level":"info","message":"Additions: 429 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.255Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.255Z"}
+{"level":"info","message":"\n=== Changes for src/core/migrations/registry.ts (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.255Z"}
+{"level":"info","message":"Additions: 5 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.255Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.256Z"}
+{"level":"info","message":"\n=== Changes for src/roles/inventoryEngineer/screens/CreateRequest/CreateRequest.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.256Z"}
+{"level":"info","message":"Additions: 1 | Deletions: 38","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.256Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.256Z"}
+{"level":"info","message":"\n=== Changes for src/roles/qualityEngineer/components/ProgressBarHome/ProgressBarHome.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.256Z"}
+{"level":"info","message":"Additions: 32 | Deletions: 11","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.256Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.256Z"}
+{"level":"info","message":"\n=== Changes for src/roles/qualityEngineer/components/QeSubtaskBar.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.256Z"}
+{"level":"info","message":"Additions: 56 | Deletions: 38","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.256Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.256Z"}
+{"level":"info","message":"\n=== Changes for src/roles/qualityEngineer/redux/api/qualityEngineerApi.ts (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.256Z"}
+{"level":"info","message":"Additions: 19 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.256Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.256Z"}
+{"level":"info","message":"\n=== Changes for src/roles/qualityEngineer/screens/QEHomePage/QEHomePage.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.256Z"}
+{"level":"info","message":"Additions: 83 | Deletions: 110","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.256Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.256Z"}
+{"level":"info","message":"\n=== Changes for src/roles/qualityEngineer/screens/QESubtask/QESubtask.tsx (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.256Z"}
+{"level":"info","message":"Additions: 63 | Deletions: 51","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.256Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.256Z"}
+{"level":"info","message":"Fetching detailed stats for commit: Psquarecompany-psqrco/SURYACON_MOBILE_APPLICATION@3927781b8aff7ed015c30e9b5b87b8a653b44022","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.256Z"}
+{"level":"info","message":"Successfully fetched details for 10 files in commit 3927781b8aff7ed015c30e9b5b87b8a653b44022","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.688Z"}
+{"level":"info","message":"\n=== Changes for src/roles/qualityEngineer/database/migrations/001/001_create_control_plan_tables.ts (Added) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.688Z"}
+{"level":"info","message":"Additions: 77 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.688Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.688Z"}
+{"level":"info","message":"\n=== Changes for src/roles/qualityEngineer/database/migrations/index.ts (Added) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.688Z"}
+{"level":"info","message":"Additions: 5 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.688Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.688Z"}
+{"level":"info","message":"\n=== Changes for src/roles/qualityEngineer/database/repositories/ControlPlanRepository.ts (Added) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.688Z"}
+{"level":"info","message":"Additions: 429 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.688Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.688Z"}
+{"level":"info","message":"\n=== Changes for src/core/migrations/registry.ts (Modified) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.688Z"}
+{"level":"info","message":"Additions: 5 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.688Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.688Z"}
+{"level":"info","message":"\n=== Changes for src/roles/inventoryEngineer/screens/CreateRequest/CreateRequest.tsx (Modified) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.688Z"}
+{"level":"info","message":"Additions: 1 | Deletions: 38","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.688Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.688Z"}
+{"level":"info","message":"\n=== Changes for src/roles/qualityEngineer/components/ProgressBarHome/ProgressBarHome.tsx (Modified) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.688Z"}
+{"level":"info","message":"Additions: 32 | Deletions: 11","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.688Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.688Z"}
+{"level":"info","message":"\n=== Changes for src/roles/qualityEngineer/components/QeSubtaskBar.tsx (Modified) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.688Z"}
+{"level":"info","message":"Additions: 56 | Deletions: 38","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.688Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.688Z"}
+{"level":"info","message":"\n=== Changes for src/roles/qualityEngineer/redux/api/qualityEngineerApi.ts (Modified) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.688Z"}
+{"level":"info","message":"Additions: 19 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.688Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.688Z"}
+{"level":"info","message":"\n=== Changes for src/roles/qualityEngineer/screens/QEHomePage/QEHomePage.tsx (Modified) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.688Z"}
+{"level":"info","message":"Additions: 83 | Deletions: 110","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.688Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.688Z"}
+{"level":"info","message":"\n=== Changes for src/roles/qualityEngineer/screens/QESubtask/QESubtask.tsx (Modified) by pintu.kumar@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.689Z"}
+{"level":"info","message":"Additions: 63 | Deletions: 51","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.689Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.689Z"}
+{"level":"info","message":"Processing 232 file changes for repo SURYACON_MOBILE_APPLICATION...","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.689Z"}
+{"level":"info","message":"::1 - - [27/Mar/2026:12:42:57 +0000] \"GET /socket.io/?session=s%253Aa5012456-d7dc-4126-8d69-612ba3c36c77.xCdYqfu0ksQyz0u8LiJSvtvkbMP3jVsDozItdNJpn70&deviceOS=Android%2016&EIO=4&transport=websocket HTTP/1.1\" 404 149 \"-\" \"okhttp/4.12.0\"","service":"git-commit-tracker","timestamp":"2026-03-27T12:42:57.778Z"}
+{"level":"info","message":"Successfully added 6 rows to Google Sheet: SURYACON_MOBILE_APPLICATION_2026-03","service":"git-commit-tracker","timestamp":"2026-03-27T12:43:00.112Z"}
+{"level":"info","message":"::1 - - [27/Mar/2026:12:45:30 +0000] \"GET /api/v1/timekeeper/allAssignedMusterRoll/695e5a027520c09542c8f510 HTTP/1.1\" 404 203 \"-\" \"SURYACON/12 CFNetwork/3860.300.31 Darwin/25.1.0\"","service":"git-commit-tracker","timestamp":"2026-03-27T12:45:30.451Z"}
+{"level":"info","message":"::1 - - [27/Mar/2026:12:45:30 +0000] \"GET /api/v1/siteEngineer/getAssignedManpowerByProject HTTP/1.1\" 404 187 \"-\" \"SURYACON/12 CFNetwork/3860.300.31 Darwin/25.1.0\"","service":"git-commit-tracker","timestamp":"2026-03-27T12:45:30.451Z"}
+{"level":"info","message":"Incoming Webhook Push Event received","service":"git-commit-tracker","timestamp":"2026-03-27T12:45:35.497Z"}
+{"level":"info","message":"--- Inside processPushPayload ---","service":"git-commit-tracker","timestamp":"2026-03-27T12:45:35.498Z"}
+{"level":"info","message":"Found 1 commits in payload.","service":"git-commit-tracker","timestamp":"2026-03-27T12:45:35.498Z"}
+{"level":"info","message":"Fetching detailed stats for commit: Psquarecompany-psqrco/SURYACON_MOBILE_APPLICATION@4ce67a0407e5bc38edc7e73c6a322db3d6fac2d8","service":"git-commit-tracker","timestamp":"2026-03-27T12:45:35.498Z"}
+{"level":"info","message":"::1 - - [27/Mar/2026:12:45:35 +0000] \"POST /webhook/git HTTP/1.1\" 202 59 \"-\" \"GitHub-Hookshot/b951dd4\"","service":"git-commit-tracker","timestamp":"2026-03-27T12:45:35.501Z"}
+{"level":"info","message":"Successfully fetched details for 1 files in commit 4ce67a0407e5bc38edc7e73c6a322db3d6fac2d8","service":"git-commit-tracker","timestamp":"2026-03-27T12:45:36.059Z"}
+{"level":"info","message":"\n=== Changes for src/roles/timeKeeper/utils/manpowerCalculations.ts (Modified) by sundan.shrama@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T12:45:36.060Z"}
+{"level":"info","message":"Additions: 15 | Deletions: 2","service":"git-commit-tracker","timestamp":"2026-03-27T12:45:36.060Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T12:45:36.060Z"}
+{"level":"info","message":"Processing 1 file changes for repo SURYACON_MOBILE_APPLICATION...","service":"git-commit-tracker","timestamp":"2026-03-27T12:45:36.060Z"}
+{"level":"info","message":"Created new Google Sheet: SURYACON_MOBILE_APPLICATION_2026-03","service":"git-commit-tracker","timestamp":"2026-03-27T12:45:37.633Z"}
+{"level":"info","message":"Successfully added 1 rows to Google Sheet: SURYACON_MOBILE_APPLICATION_2026-03","service":"git-commit-tracker","timestamp":"2026-03-27T12:45:38.104Z"}
+{"level":"error","message":"Failed to apply Google Sheets formatting: Cannot read properties of undefined (reading 'post')","service":"git-commit-tracker","stack":"TypeError: Cannot read properties of undefined (reading 'post')\n    at appendToGoogleSheet (/Users/sundansharma/Documents/test/src/utils/googleSheetsUtil.js:125:25)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async processPushPayload (/Users/sundansharma/Documents/test/src/services/webhookService.js:163:7)","timestamp":"2026-03-27T12:45:38.570Z"}
