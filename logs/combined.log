@@ -999,3 +999,18 @@
 {"level":"info","message":"::1 - - [26/Mar/2026:11:51:00 +0000] \"POST /api/v1/siteengineer/sendManpowerApprovalRequest HTTP/1.1\" 404 187 \"-\" \"okhttp/4.12.0\"","service":"git-commit-tracker","timestamp":"2026-03-26T11:51:00.694Z"}
 {"level":"info","message":"::1 - - [26/Mar/2026:11:51:24 +0000] \"GET /api/v1/projectmanager/getSubTaskComments/695ea264922f177c323b6d9e?limit=100&isQuality=false HTTP/1.1\" 404 204 \"-\" \"okhttp/4.12.0\"","service":"git-commit-tracker","timestamp":"2026-03-26T11:51:24.418Z"}
 {"level":"info","message":"::1 - - [26/Mar/2026:11:51:26 +0000] \"GET /api/v1/siteengineer/695ea264922f177c323b6d9e/failure-modes HTTP/1.1\" 404 197 \"-\" \"okhttp/4.12.0\"","service":"git-commit-tracker","timestamp":"2026-03-26T11:51:26.987Z"}
+{"level":"info","message":"Server is running on port 3100 in development mode","service":"git-commit-tracker","timestamp":"2026-03-27T08:25:30.210Z"}
+{"level":"info","message":"Listening for Webhooks at: http://localhost:3100/webhook/git","service":"git-commit-tracker","timestamp":"2026-03-27T08:25:30.213Z"}
+{"level":"info","message":"Incoming Webhook Push Event received","service":"git-commit-tracker","timestamp":"2026-03-27T08:26:41.126Z"}
+{"level":"info","message":"--- Inside processPushPayload ---","service":"git-commit-tracker","timestamp":"2026-03-27T08:26:41.129Z"}
+{"level":"info","message":"Found 1 commits in payload.","service":"git-commit-tracker","timestamp":"2026-03-27T08:26:41.130Z"}
+{"level":"info","message":"Fetching detailed stats for commit: Psquarecompany-psqrco/SURYACON_MOBILE_APPLICATION@e4afeede9acde189f4afabf426522cce2309d546","service":"git-commit-tracker","timestamp":"2026-03-27T08:26:41.130Z"}
+{"level":"info","message":"::1 - - [27/Mar/2026:08:26:41 +0000] \"POST /webhook/git HTTP/1.1\" 202 59 \"-\" \"GitHub-Hookshot/b951dd4\"","service":"git-commit-tracker","timestamp":"2026-03-27T08:26:41.183Z"}
+{"level":"info","message":"Successfully fetched details for 1 files in commit e4afeede9acde189f4afabf426522cce2309d546","service":"git-commit-tracker","timestamp":"2026-03-27T08:26:41.715Z"}
+{"level":"info","message":"\n=== Changes for src/config/Env.ts (Modified) by ritik.bansal@psquarecompany.com ===","service":"git-commit-tracker","timestamp":"2026-03-27T08:26:41.717Z"}
+{"level":"info","message":"Additions: 1 | Deletions: 1","service":"git-commit-tracker","timestamp":"2026-03-27T08:26:41.717Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-03-27T08:26:41.718Z"}
+{"level":"info","message":"Processing 1 file changes for repo SURYACON_MOBILE_APPLICATION...","service":"git-commit-tracker","timestamp":"2026-03-27T08:26:41.718Z"}
+{"level":"info","message":"Created new Google Sheet: SURYACON_MOBILE_APPLICATION_2026-03","service":"git-commit-tracker","timestamp":"2026-03-27T08:26:43.955Z"}
+{"level":"info","message":"Successfully added 1 rows to Google Sheet: SURYACON_MOBILE_APPLICATION_2026-03","service":"git-commit-tracker","timestamp":"2026-03-27T08:26:44.560Z"}
+{"level":"error","message":"Failed to apply Google Sheets formatting: Cannot read properties of undefined (reading 'post')","service":"git-commit-tracker","stack":"TypeError: Cannot read properties of undefined (reading 'post')\n    at appendToGoogleSheet (D:\\All Projects\\DSR-Update-main\\src\\utils\\googleSheetsUtil.js:125:25)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async processPushPayload (D:\\All Projects\\DSR-Update-main\\src\\services\\webhookService.js:163:7)","timestamp":"2026-03-27T08:26:45.057Z"}
