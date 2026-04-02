@@ -46,7 +46,7 @@ async function appendToGoogleSheet(rows) {
 
     const formattedRows = rows.map(r => ({
       'Repository': r.repo,
-      'Date': new Date(r.date).toLocaleString(),
+      'Date': new Date(r.date).toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
       'Author': r.author,
       'Email': r.email,
       'Branch': r.branch,
