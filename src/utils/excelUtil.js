@@ -156,6 +156,7 @@ function setupColumns(worksheet) {
     { header: 'Date', key: 'date', width: 18 },
     { header: 'Author', key: 'author', width: 15 },
     { header: 'Email', key: 'email', width: 20 },
+    { header: 'Commit Time', key: 'commitTime', width: 15 },
     { header: 'Branch', key: 'branch', width: 15 },
     { header: 'Commit SHA', key: 'sha', width: 20 },
     { header: 'Commit Message', key: 'message', width: 30 },
@@ -193,7 +194,7 @@ function setupColumns(worksheet) {
 function loadExistingData(worksheet) {
   worksheet.eachRow((row, rowNumber) => {
     if (rowNumber > 1) {
-      const shaValue = row.getCell(6).value;
+      const shaValue = row.getCell(7).value;
       if (shaValue && shaValue !== 'Commit SHA') {
          seenCommits.add(shaValue);
       }
