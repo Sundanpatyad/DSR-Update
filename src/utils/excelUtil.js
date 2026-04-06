@@ -41,11 +41,23 @@ async function processWriteQueue() {
       const totalAdditions = fileRows.reduce((sum, r) => sum + (r.additions || 0), 0);
       const totalDeletions = fileRows.reduce((sum, r) => sum + (r.deletions || 0), 0);
 
+
+      const fullDate = new Date(firstRow.date);
+      const dateOnly = fullDate.toLocaleDateString('en-IN', { timeZone: 'Asia/Kolkata' });
+      const timeOnly = fullDate.toLocaleTimeString('en-IN', { 
+        timeZone: 'Asia/Kolkata', 
+        hour: '2-digit', 
+        minute: '2-digit', 
+        second: '2-digit', 
+        hour12: true 
+      });
+
       const commitRow = worksheet.addRow({
         repo: firstRow.repo,
-        date: new Date(firstRow.date).toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
+        date: dateOnly,
         author: firstRow.author,
         email: firstRow.email,
+        commitTime: timeOnly,
         branch: firstRow.branch,
         sha: firstRow.sha,
         message: firstRow.message,
