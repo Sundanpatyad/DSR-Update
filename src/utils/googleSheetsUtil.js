@@ -34,7 +34,7 @@ async function appendToGoogleSheet(rows) {
       sheet = await doc.addSheet({
         title: sheetTitle,
         headerValues: [
-          'Repository', 'Date', 'Author', 'Email', 'Branch', 'Commit SHA', 'Commit Link',
+          'Repository', 'Date', 'Author', 'Email','Commit Time', 'Branch', 'Commit SHA', 'Commit Link',
           'Commit Message', 'Module Name', 'Task Type', 'Problem Statement', 
           'Ticket ID', 'File Paths', 'Change Type', 'Total Additions', 
           'Total Deletions'
