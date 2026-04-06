@@ -44,11 +44,21 @@ async function appendToGoogleSheet(rows) {
       logger.info(`Created new Google Sheet: ${sheetTitle}`);
     }
 
+    const dateOnly = fullDate.toLocaleDateString('en-IN', { timeZone: 'Asia/Kolkata' });
+      const timeOnly = fullDate.toLocaleTimeString('en-IN', { 
+        timeZone: 'Asia/Kolkata', 
+        hour: '2-digit', 
+        minute: '2-digit', 
+        second: '2-digit', 
+        hour12: true 
+      });
+
     const formattedRows = rows.map(r => ({
       'Repository': r.repo,
-      'Date': new Date(r.date).toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
+      'Date': dateOnly,
       'Author': r.author,
       'Email': r.email,
+      'Commit Time': timeOnly,
       'Branch': r.branch,
       'Commit SHA': r.sha,
       'Commit Link': r.commitUrl,
