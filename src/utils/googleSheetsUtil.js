@@ -186,10 +186,10 @@ async function appendToGoogleSheet(rows) {
      --------------------------*/
     const formattedRows = rows.map(r => {
       const fullDate = new Date(r.date);
-
+        const isoDate = fullDate.toISOString().split('T')[0];
       return {
         'Repository': r.repo,
-        'Date': fullDate.toLocaleDateString('en-IN', { timeZone: 'Asia/Kolkata' }),
+        'Date': isoDate,
         'Author': r.author,
         'Email': r.email,
         'Commit Time': fullDate.toLocaleTimeString('en-IN', {
