@@ -1,15 +1,17 @@
-const { GoogleSpreadsheet } = require('google-spreadsheet');
-const { JWT } = require('google-auth-library');
-const logger = require('./logger');
+const { GoogleSpreadsheet } = require("google-spreadsheet");
+const { JWT } = require("google-auth-library");
+const logger = require("./logger");
 
 const GOOGLE_SHEET_ID = process.env.GOOGLE_SHEET_ID;
 const GOOGLE_SERVICE_ACCOUNT_EMAIL = process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL;
-const GOOGLE_PRIVATE_KEY = process.env.GOOGLE_PRIVATE_KEY ? process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, '\n') : null;
+const GOOGLE_PRIVATE_KEY = process.env.GOOGLE_PRIVATE_KEY
+  ? process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, "\n")
+  : null;
 
 const serviceAccountAuth = new JWT({
   email: GOOGLE_SERVICE_ACCOUNT_EMAIL,
   key: GOOGLE_PRIVATE_KEY,
-  scopes: ['https://www.googleapis.com/auth/spreadsheets'],
+  scopes: ["https://www.googleapis.com/auth/spreadsheets"],
 });
 
 // async function appendToGoogleSheet(rows) {
@@ -35,8 +37,8 @@ const serviceAccountAuth = new JWT({
 //         title: sheetTitle,
 //         headerValues: [
 //           'Repository', 'Date', 'Author', 'Email','Commit Time', 'Branch', 'Commit SHA', 'Commit Link',
-//           'Commit Message', 'Module Name', 'Task Type', 'Problem Statement', 
-//           'Ticket ID', 'File Paths', 'Change Type', 'Total Additions', 
+//           'Commit Message', 'Module Name', 'Task Type', 'Problem Statement',
+//           'Ticket ID', 'File Paths', 'Change Type', 'Total Additions',
 //           'Total Deletions'
 //         ],
 //       });
@@ -45,12 +47,12 @@ const serviceAccountAuth = new JWT({
 //     }
 //     const fullDate = new Date(r.date);
 //     const dateOnly = fullDate.toLocaleDateString('en-IN', { timeZone: 'Asia/Kolkata' });
-//     const timeOnly = fullDate.toLocaleTimeString('en-IN', { 
-//       timeZone: 'Asia/Kolkata', 
-//       hour: '2-digit', 
-//       minute: '2-digit', 
-//       second: '2-digit', 
-//       hour12: true 
+//     const timeOnly = fullDate.toLocaleTimeString('en-IN', {
+//       timeZone: 'Asia/Kolkata',
+//       hour: '2-digit',
+//       minute: '2-digit',
+//       second: '2-digit',
+//       hour12: true
 //     });
 
 //     const formattedRows = rows.map(r => ({
@@ -146,12 +148,33 @@ const serviceAccountAuth = new JWT({
 // }
 
 async function appendToGoogleSheet(rows) {
-  if (!GOOGLE_SHEET_ID || !GOOGLE_SERVICE_ACCOUNT_EMAIL || !GOOGLE_PRIVATE_KEY) {
-    logger.warn('Google Sheets configuration is incomplete. Skipping cloud sync.');
+  if (
+    !GOOGLE_SHEET_ID ||
+    !GOOGLE_SERVICE_ACCOUNT_EMAIL ||
+    !GOOGLE_PRIVATE_KEY
+  ) {
+    logger.warn(
+      "Google Sheets configuration is incomplete. Skipping cloud sync.",
+    );
     return;
   }
 
   if (!rows?.length) return;
+
+  /** -------------------------
+   * 1. FILTER: Remove Merge Commits
+   * --------------------------*/
+  const pushOnlyRows = rows.filter((r) => {
+    const isMergeMessage = r.message?.toLowerCase().startsWith("merge");
+
+    const hasMultipleParents = r.parents && r.parents.length > 1;
+
+    return !isMergeMessage && !hasMultipleParents;
+  });
+  if (pushOnlyRows.length === 0) {
+    logger.info("No regular commits found (all were merges). Skipping update.");
+    return;
+  }
 
   try {
     const doc = new GoogleSpreadsheet(GOOGLE_SHEET_ID, serviceAccountAuth);
@@ -160,9 +183,9 @@ async function appendToGoogleSheet(rows) {
     /** -------------------------
      * Sheet Name
      --------------------------*/
-    const repoName = rows[0]?.repo || 'unknown-repo';
+    const repoName = pushOnlyRows[0]?.repo || "unknown-repo";
     const date = new Date();
-    const sheetTitle = `${repoName.substring(0, 50)}_${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}`;
+    const sheetTitle = `${repoName.substring(0, 50)}_${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}`;
 
     let sheet = doc.sheetsByTitle[sheetTitle];
     let isNewSheet = false;
@@ -171,10 +194,24 @@ async function appendToGoogleSheet(rows) {
       sheet = await doc.addSheet({
         title: sheetTitle,
         headerValues: [
-          'CREATED_AT', 'Repository', 'Date', 'Author', 'Email','Commit Time', 'Branch',
-          'Commit SHA', 'Commit Link','Commit Message', 'Module Name',
-          'Task Type', 'Problem Statement','Ticket ID', 'File Paths',
-          'Change Type', 'Total Additions','Total Deletions'
+          "CREATED_AT",
+          "Repository",
+          "Date",
+          "Author",
+          "Email",
+          "Commit Time",
+          "Branch",
+          "Commit SHA",
+          "Commit Link",
+          "Commit Message",
+          "Module Name",
+          "Task Type",
+          "Problem Statement",
+          "Ticket ID",
+          "File Paths",
+          "Change Type",
+          "Total Additions",
+          "Total Deletions",
         ],
       });
       isNewSheet = true;
@@ -184,33 +221,33 @@ async function appendToGoogleSheet(rows) {
     /** -------------------------
      * Format rows (FIXED)
      --------------------------*/
-    const formattedRows = rows.map(r => {
+    const formattedRows = pushOnlyRows.map((r) => {
       const fullDate = new Date(r.date);
-        const isoDate = fullDate.toISOString().split('T')[0];
+      const isoDate = fullDate.toISOString().split("T")[0];
       return {
-        'Repository': r.repo,
-        'Date': isoDate,
-        'Author': r.author,
-        'Email': r.email,
-        'Commit Time': fullDate.toLocaleTimeString('en-IN', {
-          timeZone: 'Asia/Kolkata',
-          hour: '2-digit',
-          minute: '2-digit',
-          second: '2-digit',
-          hour12: true
+        Repository: r.repo,
+        Date: isoDate,
+        Author: r.author,
+        Email: r.email,
+        "Commit Time": fullDate.toLocaleTimeString("en-IN", {
+          timeZone: "Asia/Kolkata",
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+          hour12: true,
         }),
-        'Branch': r.branch,
-        'Commit SHA': r.sha,
-        'Commit Link': r.commitUrl,
-        'Commit Message': r.message,
-        'Module Name': r.moduleName,
-        'Task Type': r.taskType,
-        'Problem Statement': r.problemStatement,
-        'Ticket ID': r.ticketId,
-        'File Paths': r.filename,
-        'Change Type': r.changeType,
-        'Total Additions': r.additions,
-        'Total Deletions': r.deletions
+        Branch: r.branch,
+        "Commit SHA": r.sha,
+        "Commit Link": r.commitUrl,
+        "Commit Message": r.message,
+        "Module Name": r.moduleName,
+        "Task Type": r.taskType,
+        "Problem Statement": r.problemStatement,
+        "Ticket ID": r.ticketId,
+        "File Paths": r.filename,
+        "Change Type": r.changeType,
+        "Total Additions": r.additions,
+        "Total Deletions": r.deletions,
       };
     });
 
@@ -238,11 +275,11 @@ async function appendToGoogleSheet(rows) {
             addDimensionGroup: {
               dimensionRange: {
                 sheetId,
-                dimension: 'COLUMNS',
+                dimension: "COLUMNS",
                 startIndex: 12,
-                endIndex: 16
-              }
-            }
+                endIndex: 16,
+              },
+            },
           },
           {
             repeatCell: {
@@ -252,40 +289,39 @@ async function appendToGoogleSheet(rows) {
                   backgroundColor: { red: 0.1, green: 0.46, blue: 0.82 },
                   textFormat: {
                     foregroundColor: { red: 1, green: 1, blue: 1 },
-                    bold: true
+                    bold: true,
                   },
-                  horizontalAlignment: 'CENTER'
-                }
+                  horizontalAlignment: "CENTER",
+                },
               },
-              fields: 'userEnteredFormat(backgroundColor,textFormat,horizontalAlignment)'
-            }
+              fields:
+                "userEnteredFormat(backgroundColor,textFormat,horizontalAlignment)",
+            },
           },
           {
             repeatCell: {
               range: { sheetId, startRowIndex: 1 },
               cell: {
                 userEnteredFormat: {
-                  wrapStrategy: 'WRAP',
-                  verticalAlignment: 'TOP'
-                }
+                  wrapStrategy: "WRAP",
+                  verticalAlignment: "TOP",
+                },
               },
-              fields: 'userEnteredFormat(wrapStrategy,verticalAlignment)'
-            }
-          }
+              fields: "userEnteredFormat(wrapStrategy,verticalAlignment)",
+            },
+          },
         ];
 
-        await doc.axios.post(':batchUpdate', { requests });
-
+        await doc.axios.post(":batchUpdate", { requests });
       } catch (err) {
-        logger.error('Formatting failed:', err);
+        logger.error("Formatting failed:", err);
       }
     }
-
   } catch (error) {
-    logger.error('Error writing to Google Sheets:', error);
+    logger.error("Error writing to Google Sheets:", error);
   }
 }
 
 module.exports = {
-  appendToGoogleSheet
+  appendToGoogleSheet,
 };
