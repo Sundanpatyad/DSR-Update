@@ -1,4 +1,4 @@
-const { processPushPayload } = require('../services/webhookService');
+const { enqueueWebhook } = require('../services/queueService');
 const crypto = require('crypto');
 const logger = require('../utils/logger');
 
@@ -48,9 +48,9 @@ const handleGitWebhook = async (req, res) => {
       }
       
       res.status(202).json({ message: 'Webhook received. Processing in background...' });
-      
-      processPushPayload(payload).catch(err => {
-        logger.error(`Background processing failed: ${err.message}`, { stack: err.stack });
+
+      enqueueWebhook(payload).catch(err => {
+        logger.error(`Queue processing failed: ${err.message}`, { stack: err.stack });
       });
     } else {
       res.status(200).json({ message: `Ignored event type: ${eventType}` });

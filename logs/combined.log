@@ -1746,3 +1746,9 @@
 {"level":"info","message":"Created new Google Sheet: SURYACON_MOBILE_APPLICATION_2026-03","service":"git-commit-tracker","timestamp":"2026-03-27T12:45:37.633Z"}
 {"level":"info","message":"Successfully added 1 rows to Google Sheet: SURYACON_MOBILE_APPLICATION_2026-03","service":"git-commit-tracker","timestamp":"2026-03-27T12:45:38.104Z"}
 {"level":"error","message":"Failed to apply Google Sheets formatting: Cannot read properties of undefined (reading 'post')","service":"git-commit-tracker","stack":"TypeError: Cannot read properties of undefined (reading 'post')\n    at appendToGoogleSheet (/Users/sundansharma/Documents/test/src/utils/googleSheetsUtil.js:125:25)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async processPushPayload (/Users/sundansharma/Documents/test/src/services/webhookService.js:163:7)","timestamp":"2026-03-27T12:45:38.570Z"}
+{"level":"info","message":"Server is running on port 3001 in development mode","service":"git-commit-tracker","timestamp":"2026-04-14T04:51:37.271Z"}
+{"level":"info","message":"Listening for Webhooks at: http://localhost:3001/webhook/git","service":"git-commit-tracker","timestamp":"2026-04-14T04:51:37.272Z"}
+{"level":"info","message":"Server is running on port 3001 in development mode","service":"git-commit-tracker","timestamp":"2026-04-14T04:54:01.821Z"}
+{"level":"info","message":"Listening for Webhooks at: http://localhost:3001/webhook/git","service":"git-commit-tracker","timestamp":"2026-04-14T04:54:01.823Z"}
+{"level":"info","message":"Server is running on port 3001 in development mode","service":"git-commit-tracker","timestamp":"2026-04-14T04:54:05.134Z"}
+{"level":"info","message":"Listening for Webhooks at: http://localhost:3001/webhook/git","service":"git-commit-tracker","timestamp":"2026-04-14T04:54:05.136Z"}
