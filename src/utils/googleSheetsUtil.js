@@ -148,6 +148,8 @@ const serviceAccountAuth = new JWT({
 // }
 
 async function appendToGoogleSheet(rows) {
+  logger.info(`appendToGoogleSheet called with ${rows?.length || 0} rows`);
+  
   if (
     !GOOGLE_SHEET_ID ||
     !GOOGLE_SERVICE_ACCOUNT_EMAIL ||
@@ -156,29 +158,38 @@ async function appendToGoogleSheet(rows) {
     logger.warn(
       "Google Sheets configuration is incomplete. Skipping cloud sync.",
     );
+    logger.warn(`GOOGLE_SHEET_ID: ${!!GOOGLE_SHEET_ID}`);
+    logger.warn(`GOOGLE_SERVICE_ACCOUNT_EMAIL: ${!!GOOGLE_SERVICE_ACCOUNT_EMAIL}`);
+    logger.warn(`GOOGLE_PRIVATE_KEY: ${!!GOOGLE_PRIVATE_KEY}`);
     return;
   }
 
-  if (!rows?.length) return;
+  if (!rows?.length) {
+    logger.warn("No rows provided to appendToGoogleSheet");
+    return;
+  }
 
   /** -------------------------
    * 1. FILTER: Remove Merge Commits
    * --------------------------*/
   const pushOnlyRows = rows.filter((r) => {
     const isMergeMessage = r.message?.toLowerCase().startsWith("merge");
-
     const hasMultipleParents = r.parents && r.parents.length > 1;
-
     return !isMergeMessage && !hasMultipleParents;
   });
+  
+  logger.info(`Filtered ${rows.length} rows to ${pushOnlyRows.length} non-merge commits`);
+  
   if (pushOnlyRows.length === 0) {
     logger.info("No regular commits found (all were merges). Skipping update.");
     return;
   }
 
   try {
+    logger.info(`Loading Google Sheet: ${GOOGLE_SHEET_ID}`);
     const doc = new GoogleSpreadsheet(GOOGLE_SHEET_ID, serviceAccountAuth);
     await doc.loadInfo();
+    logger.info(`Successfully loaded Google Sheet`);
 
     /** -------------------------
      * Sheet Name
@@ -186,11 +197,13 @@ async function appendToGoogleSheet(rows) {
     const repoName = pushOnlyRows[0]?.repo || "unknown-repo";
     const date = new Date();
     const sheetTitle = `${repoName.substring(0, 50)}_${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}`;
+    logger.info(`Looking for sheet: ${sheetTitle}`);
 
     let sheet = doc.sheetsByTitle[sheetTitle];
     let isNewSheet = false;
 
     if (!sheet) {
+      logger.info(`Sheet not found, creating new sheet: ${sheetTitle}`);
       sheet = await doc.addSheet({
         title: sheetTitle,
         headerValues: [
@@ -216,11 +229,14 @@ async function appendToGoogleSheet(rows) {
       });
       isNewSheet = true;
       logger.info(`Created new Google Sheet: ${sheetTitle}`);
+    } else {
+      logger.info(`Found existing sheet: ${sheetTitle}`);
     }
 
     /** -------------------------
      * Format rows (FIXED)
      --------------------------*/
+    logger.info(`Formatting ${pushOnlyRows.length} rows`);
     const formattedRows = pushOnlyRows.map((r) => {
       const fullDate = new Date(r.date);
       const isoDate = fullDate.toISOString().split("T")[0];
@@ -255,70 +271,19 @@ async function appendToGoogleSheet(rows) {
      * Batch insert (IMPORTANT)
      --------------------------*/
     const chunkSize = 500;
+    logger.info(`Adding ${formattedRows.length} rows in chunks of ${chunkSize}`);
 
     for (let i = 0; i < formattedRows.length; i += chunkSize) {
       const chunk = formattedRows.slice(i, i + chunkSize);
+      logger.info(`Adding chunk ${Math.floor(i / chunkSize) + 1} with ${chunk.length} rows`);
       await sheet.addRows(chunk);
+      logger.info(`Successfully added chunk ${Math.floor(i / chunkSize) + 1}`);
     }
 
-    logger.info(`Added ${formattedRows.length} rows to ${sheetTitle}`);
-
-    /** -------------------------
-     * Formatting (ONLY ONCE)
-     --------------------------*/
-    if (isNewSheet) {
-      try {
-        const sheetId = sheet.sheetId;
-
-        const requests = [
-          {
-            addDimensionGroup: {
-              dimensionRange: {
-                sheetId,
-                dimension: "COLUMNS",
-                startIndex: 12,
-                endIndex: 16,
-              },
-            },
-          },
-          {
-            repeatCell: {
-              range: { sheetId, startRowIndex: 0, endRowIndex: 1 },
-              cell: {
-                userEnteredFormat: {
-                  backgroundColor: { red: 0.1, green: 0.46, blue: 0.82 },
-                  textFormat: {
-                    foregroundColor: { red: 1, green: 1, blue: 1 },
-                    bold: true,
-                  },
-                  horizontalAlignment: "CENTER",
-                },
-              },
-              fields:
-                "userEnteredFormat(backgroundColor,textFormat,horizontalAlignment)",
-            },
-          },
-          {
-            repeatCell: {
-              range: { sheetId, startRowIndex: 1 },
-              cell: {
-                userEnteredFormat: {
-                  wrapStrategy: "WRAP",
-                  verticalAlignment: "TOP",
-                },
-              },
-              fields: "userEnteredFormat(wrapStrategy,verticalAlignment)",
-            },
-          },
-        ];
-
-        await doc.axios.post(":batchUpdate", { requests });
-      } catch (err) {
-        logger.error("Formatting failed:", err);
-      }
-    }
+    logger.info(`Successfully added ${formattedRows.length} rows to ${sheetTitle}`);
   } catch (error) {
     logger.error("Error writing to Google Sheets:", error);
+    logger.error(`Error stack: ${error.stack}`);
   }
 }
 

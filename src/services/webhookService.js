@@ -159,8 +159,12 @@ async function processPushPayload(payload) {
         });
       }
       
+      logger.info(`Combined ${excelRows.length} file changes into ${combinedRows.length} commit rows`);
+      
       // Sync to Google Sheets only
+      logger.info(`Calling appendToGoogleSheet with ${combinedRows.length} combined rows`);
       await appendToGoogleSheet(combinedRows);
+      logger.info(`Successfully completed appendToGoogleSheet`);
       
     } else {
       logger.info('No file changes detected in the commits.');
