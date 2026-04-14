@@ -41,11 +41,23 @@ async function processWriteQueue() {
       const totalAdditions = fileRows.reduce((sum, r) => sum + (r.additions || 0), 0);
       const totalDeletions = fileRows.reduce((sum, r) => sum + (r.deletions || 0), 0);
 
+
+      const fullDate = new Date(firstRow.date);
+      const dateOnly = fullDate.toLocaleDateString('en-IN', { timeZone: 'Asia/Kolkata' });
+      const timeOnly = fullDate.toLocaleTimeString('en-IN', { 
+        timeZone: 'Asia/Kolkata', 
+        hour: '2-digit', 
+        minute: '2-digit', 
+        second: '2-digit', 
+        hour12: true 
+      });
+
       const commitRow = worksheet.addRow({
         repo: firstRow.repo,
-        date: new Date(firstRow.date).toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
+        date: dateOnly,
         author: firstRow.author,
         email: firstRow.email,
+        commitTime: timeOnly,
         branch: firstRow.branch,
         sha: firstRow.sha,
         message: firstRow.message,
@@ -144,6 +156,7 @@ function setupColumns(worksheet) {
     { header: 'Date', key: 'date', width: 18 },
     { header: 'Author', key: 'author', width: 15 },
     { header: 'Email', key: 'email', width: 20 },
+    { header: 'Commit Time', key: 'commitTime', width: 15 },
     { header: 'Branch', key: 'branch', width: 15 },
     { header: 'Commit SHA', key: 'sha', width: 20 },
     { header: 'Commit Message', key: 'message', width: 30 },
@@ -181,7 +194,7 @@ function setupColumns(worksheet) {
 function loadExistingData(worksheet) {
   worksheet.eachRow((row, rowNumber) => {
     if (rowNumber > 1) {
-      const shaValue = row.getCell(6).value;
+      const shaValue = row.getCell(7).value;
       if (shaValue && shaValue !== 'Commit SHA') {
          seenCommits.add(shaValue);
       }

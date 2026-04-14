@@ -20,8 +20,10 @@ app.use(morgan('combined', { stream: { write: message => logger.info(message.tri
 app.use('/webhook', webhookRoutes);
 //test commit
 app.get('/health', (req, res) => {
-  res.status(200).json({ status: 'UP', timestamp: new Date() });
+  // res.status(200).json({ status: 'UP', timestamp: new Date() });
+  res.status(200).send("OK");
 });
+
 
 app.use((err, req, res, next) => {
   logger.error(`Unhandled error: ${err.message}`, { stack: err.stack });
@@ -29,3 +31,6 @@ app.use((err, req, res, next) => {
 });
 
 module.exports = app;
+
+
+
