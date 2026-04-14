@@ -2,17 +2,18 @@
 
 ## Overview
 
-The queue system is designed to handle high-volume webhook requests (100+ concurrent) reliably without data loss or API rate limit issues.
+The queue system is designed to handle high-volume webhook requests (100+ concurrent) reliably without data loss or API rate limit issues. It uses Upstash Redis for persistent queue storage, ensuring no data loss during crashes, deployments, or developer updates.
 
 ## Architecture
 
 ### Components
 
-1. **queueService.js** - Core queue management
+1. **queueService.js** - Core queue management with Redis persistence
 2. **webhookController.js** - HTTP endpoint that enqueues webhooks
 3. **webhookService.js** - Processes individual webhook payloads
 4. **githubService.js** - Fetches commit details with rate limiting
 5. **googleSheetsUtil.js** - Writes data to Google Sheets with batching
+6. **Upstash Redis** - Cloud-native Redis for persistent queue storage
 
 ## Key Features
 
@@ -29,12 +30,14 @@ The queue system is designed to handle high-volume webhook requests (100+ concur
 - Automatic retry on network/API errors
 - Final failure logged and discarded
 
-### 3. Queue Persistence
+### 3. Redis Queue Persistence
 
-- Saves queue to `logs/queue-backup.json` on every operation
+- **Upstash Redis** - Cloud-native Redis for persistent storage
+- Queue saved to Redis key `webhook-queue` on every operation
 - Automatic recovery on server restart
-- No data loss on crashes
-- Backup file deleted after successful load
+- No data loss on crashes or deployments
+- Queue deleted from Redis after successful load
+- Graceful fallback to in-memory queue if Redis unavailable
 
 ### 4. GitHub API Rate Limiting
 
@@ -64,7 +67,7 @@ GitHub Push Event
 webhookController.handleGitWebhook()
     ↓ (202 Accepted)
 queueService.enqueueWebhook()
-    ↓ (save to disk)
+    ↓ (save to Redis)
 queueService.processQueue()
     ↓ (3 parallel workers)
 webhookService.processPushPayload()
@@ -84,14 +87,13 @@ src/
 ├── controllers/
 │   └── webhookController.js    # HTTP endpoint, signature verification
 ├── services/
-│   ├── queueService.js          # Queue management, persistence, retries
+│   ├── queueService.js          # Queue management, Redis persistence, retries
 │   ├── webhookService.js         # Payload processing logic
 │   └── githubService.js         # GitHub API with rate limiting & cache
 ├── utils/
 │   ├── googleSheetsUtil.js      # Google Sheets integration
 │   └── logger.js                # Logging configuration
-logs/
-└── queue-backup.json            # Queue persistence (created on crash)
+.env                             # Environment variables (including Redis credentials)
 ```
 
 ## Configuration
@@ -104,6 +106,10 @@ GITHUB_TOKEN=your_github_personal_access_token
 GOOGLE_SHEET_ID=your_sheet_id
 GOOGLE_SERVICE_ACCOUNT_EMAIL=your_service_account_email
 GOOGLE_PRIVATE_KEY=your_private_key
+
+# Upstash Redis Configuration
+UPSTASH_REDIS_REST_URL=https://your-upstash-url.upstash.io
+UPSTASH_REDIS_REST_TOKEN=your-upstash-rest-token
 ```
 
 ### Queue Configuration (queueService.js)
@@ -134,7 +140,7 @@ const chunkSize = 500;  // Rows per batch
 1. **Reception Phase**
    - All 100 receive `202 Accepted` response immediately
    - All added to in-memory queue
-   - Queue saved to disk (for crash recovery)
+   - Queue saved to Redis (for crash recovery)
 
 2. **Processing Phase**
    - 3 workers start processing simultaneously
@@ -163,21 +169,23 @@ const chunkSize = 500;  // Rows per batch
 ### What Happens on Crash
 
 1. **Before Crash**
-   - Queue state saved to `logs/queue-backup.json`
+   - Queue state saved to Redis key `webhook-queue`
    - All pending webhooks preserved
    - Retry counts maintained
+   - Data persists even if server is destroyed
 
 2. **After Crash**
-   - Server restarts
-   - `loadQueueFromDisk()` restores queue
+   - Server restarts (or new instance spins up)
+   - `loadQueueFromRedis()` restores queue from Redis
    - Processing resumes automatically
-   - Backup file deleted
+   - Queue deleted from Redis after successful load
 
-3. **Limitations**
-   - Original HTTP responses already sent (202 Accepted)
-   - Promise resolve/reject functions replaced with empty functions
-   - GitHub not notified about recovery
-   - This is acceptable (webhooks are fire-and-forget)
+3. **Benefits of Redis Persistence**
+   - **Zero data loss** - Queue survives server destruction
+   - **Deployment safety** - Queue persists across deployments
+   - **Developer updates** - Queue survives code changes
+   - **Multi-instance safe** - Can run multiple instances (with proper coordination)
+   - **No file system issues** - No disk space or permission problems
 
 ### Testing Crash Recovery
 
@@ -189,11 +197,11 @@ npm start
 curl -X POST http://localhost:3000/webhook/git -d '{...}'
 
 # Kill server (Ctrl+C)
-# Queue saved to logs/queue-backup.json
+# Queue saved to Redis
 
 # Restart server
 npm start
-# Queue automatically loads and resumes processing
+# Queue automatically loads from Redis and resumes processing
 ```
 
 ## Monitoring & Logging
@@ -207,15 +215,28 @@ console.log(stats);
 // { waiting: 97, running: 3, maxConcurrency: 3 }
 ```
 
+### Redis Connection Status
+
+```javascript
+// Check logs for Redis initialization
+// "Upstash Redis client initialized" - Redis connected
+// "UPSTASH_REDIS_REST_URL or UPSTASH_REDIS_REST_TOKEN not found" - Fallback to in-memory
+```
+
 ### Log Messages
 
+- `Upstash Redis client initialized` - Redis connection successful
+- `UPSTASH_REDIS_REST_URL or UPSTASH_REDIS_REST_TOKEN not found. Falling back to in-memory queue.` - Redis unavailable
 - `Webhook added to queue. Queue size: X, Active: Y`
 - `Processing webhook. Queue: X, Active: Y, Retry: Z`
 - `Webhook processed successfully`
 - `Webhook processing failed (attempt X): error message`
 - `Retrying in Xms...`
 - `Webhook failed after 3 retries. Giving up.`
-- `Loaded X items from queue backup`
+- `Loaded X items from Redis queue` - Queue restored from Redis
+- `No queue data found in Redis` - No pending items
+- `Queue saved to Redis` - Queue persisted
+- `Failed to save queue to Redis` - Redis save error (continues processing)
 - `Rate limiting: waiting Xms before GitHub API call`
 - `Cache hit for commit abc123`
 
@@ -227,11 +248,13 @@ console.log(stats);
    - Automatic retry with exponential backoff
    - Logged with attempt number
    - Max 3 retries
+   - Queue state saved to Redis on each retry
 
 2. **Permanent Errors** (invalid data, 404)
    - Logged as error
    - Not retried after 3 attempts
    - Webhook discarded
+   - Queue state saved to Redis before discard
 
 3. **GitHub API Errors**
    - 401: Invalid token (check GITHUB_TOKEN)
@@ -243,6 +266,12 @@ console.log(stats);
    - API errors: Logged, data preserved in queue
    - Rate limits: Handled by batching
 
+5. **Redis Errors**
+   - Connection failure: Falls back to in-memory queue
+   - Save failure: Continues processing, logs error
+   - Load failure: Continues with empty queue, logs error
+   - All Redis errors are non-blocking
+
 ## Best Practices
 
 ### For High Load
@@ -250,7 +279,8 @@ console.log(stats);
 1. **Monitor queue size** - Alert if backlog grows > 50
 2. **Check GitHub rate limits** - Stay under 5000/hour
 3. **Review logs regularly** - Look for retry patterns
-4. **Test crash recovery** - Verify queue persistence works
+4. **Test crash recovery** - Verify Redis persistence works
+5. **Monitor Redis connection** - Ensure stable connection
 
 ### For Reliability
 
@@ -258,6 +288,8 @@ console.log(stats);
 2. **Set up log rotation** - Prevent disk space issues
 3. **Monitor server resources** - CPU, memory, disk I/O
 4. **Backup Google Sheets** - Export regularly
+5. **Monitor Redis usage** - Check Upstash dashboard for limits
+6. **Test Redis fallback** - Verify graceful degradation
 
 ### For Performance
 
@@ -265,6 +297,7 @@ console.log(stats);
 2. **Tune MIN_REQUEST_INTERVAL** for GitHub API limits
 3. **Use caching** effectively for repeated commits
 4. **Batch Google Sheets writes** appropriately
+5. **Monitor Redis latency** - Ensure fast queue operations
 
 ## Troubleshooting
 
@@ -277,6 +310,7 @@ console.log(stats);
 - Verify `activeWorkers` count
 - Ensure `isProcessing` flag not stuck
 - Restart server to reset queue state
+- Check if Redis connection is established
 
 ### GitHub API Rate Limits
 
@@ -294,19 +328,50 @@ console.log(stats);
 
 **Solutions:**
 - Verify GOOGLE_SHEET_ID is correct
-- Check service account has sheet access
+- Check service account has editor access
+- Verify GOOGLE_SERVICE_ACCOUNT_EMAIL matches
 - Ensure GOOGLE_PRIVATE_KEY has proper newlines
-- Review Google Sheets API quotas
+- Check logs for Google Sheets errors
 
-### Queue Backup Not Loading
+### Redis Connection Issues
 
-**Symptom:** Crashed server doesn't restore queue
+**Symptom:** "UPSTASH_REDIS_REST_URL or UPSTASH_REDIS_REST_TOKEN not found" in logs
 
 **Solutions:**
-- Check `logs/queue-backup.json` exists
-- Verify file permissions
-- Review logs for load errors
-- Manually restore if needed
+- Verify UPSTASH_REDIS_REST_URL is set in .env
+- Verify UPSTASH_REDIS_REST_TOKEN is set in .env
+- Check Upstash dashboard for correct credentials
+- Ensure .env file is loaded (restart server)
+- Check for typos in variable names
+
+**Symptom:** "Failed to save queue to Redis" errors
+
+**Solutions:**
+- Check Upstash service status
+- Verify network connectivity to Upstash
+- Check Upstash dashboard for rate limits
+- Verify token has proper permissions
+- Check for Redis connection timeout
+
+**Symptom:** Queue not loading from Redis on restart
+
+**Solutions:**
+- Verify Redis key `webhook-queue` exists in Upstash dashboard
+- Check logs for "Loaded X items from Redis queue"
+- Verify Redis connection is established on startup
+- Check for Redis load errors in logs
+- Manually check Redis data in Upstash dashboard
+
+### High Memory Usage
+
+**Symptom:** Server using excessive memory
+
+**Solutions:**
+- Reduce MAX_CONCURRENCY to 2
+- Reduce CACHE_TTL to 2 minutes
+- Monitor commit cache size
+- Restart server periodically
+- Check Redis memory usage in Upstash dashboard
 
 ## API Reference
 
@@ -354,4 +419,5 @@ Fetches detailed commit information from GitHub API.
 - Handles errors gracefully
 
 ## Summary
-This system can handle 100+ concurrent webhook requests reliably without data loss or API rate limit issues.
+
+This system can handle 100+ concurrent webhook requests reliably without data loss or API rate limit issues, with Redis ensuring no requests are skipped even during server crashes or developer updates.

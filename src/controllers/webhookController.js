@@ -43,16 +43,23 @@ const handleGitWebhook = async (req, res) => {
       }
 
       if (!payload || !payload.commits || !Array.isArray(payload.commits)) {
-        logger.warn('Received push event with no commits array');
+        logger.warn('Request NOT added to queue: No commits array in payload');
         return res.status(200).json({ message: 'No commits to process' });
       }
+
+      logger.info(`Request will be added to queue: Found ${payload.commits.length} commits in push event`);
       
       res.status(202).json({ message: 'Webhook received. Processing in background...' });
 
-      enqueueWebhook(payload).catch(err => {
-        logger.error(`Queue processing failed: ${err.message}`, { stack: err.stack });
-      });
+      enqueueWebhook(payload)
+        .then(() => {
+          logger.info('Webhook successfully enqueued for processing');
+        })
+        .catch(err => {
+          logger.error(`Queue processing failed: ${err.message}`, { stack: err.stack });
+        });
     } else {
+      logger.info(`Request NOT added to queue: Event type '${eventType}' is not a push event`);
       res.status(200).json({ message: `Ignored event type: ${eventType}` });
     }
   } catch (error) {

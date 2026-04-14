@@ -18,6 +18,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@upstash/redis": "^1.37.0",
     "axios": "^1.6.8",
     "crypto": "^1.0.1",
     "dotenv": "^16.4.5",

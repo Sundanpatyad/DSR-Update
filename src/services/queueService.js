@@ -1,33 +1,51 @@
 const { processPushPayload } = require('./webhookService');
 const logger = require('../utils/logger');
-const fs = require('fs');
-const path = require('path');
+const { Redis } = require('@upstash/redis');
+require('dotenv').config();
 
-const QUEUE_FILE = path.join(__dirname, '../../logs/queue-backup.json');
+const UPSTASH_REDIS_REST_URL = process.env.UPSTASH_REDIS_REST_URL;
+const UPSTASH_REDIS_REST_TOKEN = process.env.UPSTASH_REDIS_REST_TOKEN;
 const MAX_CONCURRENCY = 3;
 const MAX_RETRIES = 3;
 const RETRY_DELAYS = [1000, 5000, 15000];
+
+let redis = null;
+
+if (UPSTASH_REDIS_REST_URL && UPSTASH_REDIS_REST_TOKEN) {
+  redis = new Redis({
+    url: UPSTASH_REDIS_REST_URL,
+    token: UPSTASH_REDIS_REST_TOKEN
+  });
+  logger.info('Upstash Redis client initialized');
+} else {
+  logger.warn('UPSTASH_REDIS_REST_URL or UPSTASH_REDIS_REST_TOKEN not found in environment variables. Falling back to in-memory queue.');
+}
 
 const queue = [];
 let activeWorkers = 0;
 let isProcessing = false;
 
-function saveQueueToDisk() {
+async function saveQueueToRedis() {
+  if (!redis) return;
+  
   try {
     const queueData = queue.map(item => ({
       payload: item.payload,
       retryCount: item.retryCount || 0
     }));
-    fs.writeFileSync(QUEUE_FILE, JSON.stringify(queueData, null, 2));
+    await redis.set('webhook-queue', JSON.stringify(queueData));
+    logger.debug('Queue saved to Redis');
   } catch (error) {
-    logger.error('Failed to save queue to disk:', error);
+    logger.error('Failed to save queue to Redis:', error);
   }
 }
 
-function loadQueueFromDisk() {
+async function loadQueueFromRedis() {
+  if (!redis) return;
+  
   try {
-    if (fs.existsSync(QUEUE_FILE)) {
-      const data = fs.readFileSync(QUEUE_FILE, 'utf8');
+    const data = await redis.get('webhook-queue');
+    if (data) {
       const queueData = JSON.parse(data);
       queueData.forEach(item => {
         queue.push({
@@ -37,12 +55,14 @@ function loadQueueFromDisk() {
           reject: () => {}
         });
       });
-      logger.info(`Loaded ${queueData.length} items from queue backup`);
-      fs.unlinkSync(QUEUE_FILE);
+      logger.info(`Loaded ${queueData.length} items from Redis queue`);
+      await redis.del('webhook-queue');
       processQueue();
+    } else {
+      logger.info('No queue data found in Redis');
     }
   } catch (error) {
-    logger.error('Failed to load queue from disk:', error);
+    logger.error('Failed to load queue from Redis:', error);
   }
 }
 
@@ -89,7 +109,7 @@ async function processItem(item) {
       setTimeout(async () => {
         item.retryCount = retryCount + 1;
         queue.unshift(item);
-        saveQueueToDisk();
+        await saveQueueToRedis();
         processQueue();
       }, delay);
     } else {
@@ -103,7 +123,7 @@ async function enqueueWebhook(payload) {
   return new Promise((resolve, reject) => {
     queue.push({ payload, resolve, reject, retryCount: 0 });
     logger.info(`Webhook added to queue. Queue size: ${queue.length}, Active: ${activeWorkers}`);
-    saveQueueToDisk();
+    saveQueueToRedis();
     processQueue();
   });
 }
@@ -116,7 +136,7 @@ function getQueueStats() {
   };
 }
 
-loadQueueFromDisk();
+loadQueueFromRedis();
 
 module.exports = {
   enqueueWebhook,

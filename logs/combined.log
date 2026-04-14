@@ -612,3 +612,93 @@
 {"level":"info","message":"Successfully added 1 rows to MASSAED_CLIENT_2026-04","service":"git-commit-tracker","timestamp":"2026-04-14T05:34:16.331Z"}
 {"level":"info","message":"Successfully completed appendToGoogleSheet","service":"git-commit-tracker","timestamp":"2026-04-14T05:34:16.331Z"}
 {"level":"info","message":"Webhook processed successfully","service":"git-commit-tracker","timestamp":"2026-04-14T05:34:16.331Z"}
+{"level":"info","message":"Incoming Webhook Push Event received","service":"git-commit-tracker","timestamp":"2026-04-14T05:56:59.866Z"}
+{"level":"info","message":"Webhook added to queue. Queue size: 1, Active: 0","service":"git-commit-tracker","timestamp":"2026-04-14T05:56:59.869Z"}
+{"level":"info","message":"Processing webhook. Queue: 0, Active: 1, Retry: 0","service":"git-commit-tracker","timestamp":"2026-04-14T05:56:59.871Z"}
+{"level":"info","message":"--- Inside processPushPayload ---","service":"git-commit-tracker","timestamp":"2026-04-14T05:56:59.871Z"}
+{"level":"info","message":"Found 1 commits in payload.","service":"git-commit-tracker","timestamp":"2026-04-14T05:56:59.871Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [14/Apr/2026:05:56:59 +0000] \"POST /webhook/git HTTP/1.1\" 202 59 \"-\" \"GitHub-Hookshot/2db9b08\"","service":"git-commit-tracker","timestamp":"2026-04-14T05:56:59.871Z"}
+{"level":"info","message":"Fetching detailed stats for commit: Psquarecompany-psqrco/MASSAED_CLIENT@1b816c0bcecdb1c7555decd151504fbbadfba827","service":"git-commit-tracker","timestamp":"2026-04-14T05:56:59.872Z"}
+{"level":"info","message":"Successfully fetched details for 1 files in commit 1b816c0bcecdb1c7555decd151504fbbadfba827","service":"git-commit-tracker","timestamp":"2026-04-14T05:57:00.413Z"}
+{"level":"info","message":"\n=== Changes for App.tsx (Modified) by sundansharma@Sundans-Mac-mini.local ===","service":"git-commit-tracker","timestamp":"2026-04-14T05:57:00.413Z"}
+{"level":"info","message":"Additions: 3 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-04-14T05:57:00.413Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-04-14T05:57:00.413Z"}
+{"level":"info","message":"Processing 1 file changes for repo MASSAED_CLIENT...","service":"git-commit-tracker","timestamp":"2026-04-14T05:57:00.413Z"}
+{"level":"info","message":"Combined 1 file changes into 1 commit rows","service":"git-commit-tracker","timestamp":"2026-04-14T05:57:00.413Z"}
+{"level":"info","message":"Calling appendToGoogleSheet with 1 combined rows","service":"git-commit-tracker","timestamp":"2026-04-14T05:57:00.413Z"}
+{"level":"info","message":"appendToGoogleSheet called with 1 rows","service":"git-commit-tracker","timestamp":"2026-04-14T05:57:00.413Z"}
+{"level":"info","message":"Filtered 1 rows to 1 non-merge commits","service":"git-commit-tracker","timestamp":"2026-04-14T05:57:00.413Z"}
+{"level":"info","message":"Loading Google Sheet: 1TjzH-MTenbMadMQwhEI9BFvLSWbA7oXfAG11grjgCTI","service":"git-commit-tracker","timestamp":"2026-04-14T05:57:00.413Z"}
+{"level":"info","message":"Successfully loaded Google Sheet","service":"git-commit-tracker","timestamp":"2026-04-14T05:57:01.079Z"}
+{"level":"info","message":"Looking for sheet: MASSAED_CLIENT_2026-04","service":"git-commit-tracker","timestamp":"2026-04-14T05:57:01.079Z"}
+{"level":"info","message":"Found existing sheet: MASSAED_CLIENT_2026-04","service":"git-commit-tracker","timestamp":"2026-04-14T05:57:01.079Z"}
+{"level":"info","message":"Formatting 1 rows","service":"git-commit-tracker","timestamp":"2026-04-14T05:57:01.080Z"}
+{"level":"info","message":"Adding 1 rows in chunks of 500","service":"git-commit-tracker","timestamp":"2026-04-14T05:57:01.082Z"}
+{"level":"info","message":"Adding chunk 1 with 1 rows","service":"git-commit-tracker","timestamp":"2026-04-14T05:57:01.082Z"}
+{"level":"info","message":"Successfully added chunk 1","service":"git-commit-tracker","timestamp":"2026-04-14T05:57:02.226Z"}
+{"level":"info","message":"Successfully added 1 rows to MASSAED_CLIENT_2026-04","service":"git-commit-tracker","timestamp":"2026-04-14T05:57:02.227Z"}
+{"level":"info","message":"Successfully completed appendToGoogleSheet","service":"git-commit-tracker","timestamp":"2026-04-14T05:57:02.227Z"}
+{"level":"info","message":"Webhook processed successfully","service":"git-commit-tracker","timestamp":"2026-04-14T05:57:02.227Z"}
+{"level":"info","message":"Incoming Webhook Push Event received","service":"git-commit-tracker","timestamp":"2026-04-14T06:00:06.719Z"}
+{"level":"info","message":"Webhook added to queue. Queue size: 1, Active: 0","service":"git-commit-tracker","timestamp":"2026-04-14T06:00:06.720Z"}
+{"level":"info","message":"Processing webhook. Queue: 0, Active: 1, Retry: 0","service":"git-commit-tracker","timestamp":"2026-04-14T06:00:06.720Z"}
+{"level":"info","message":"--- Inside processPushPayload ---","service":"git-commit-tracker","timestamp":"2026-04-14T06:00:06.721Z"}
+{"level":"info","message":"Found 1 commits in payload.","service":"git-commit-tracker","timestamp":"2026-04-14T06:00:06.721Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [14/Apr/2026:06:00:06 +0000] \"POST /webhook/git HTTP/1.1\" 202 59 \"-\" \"GitHub-Hookshot/2db9b08\"","service":"git-commit-tracker","timestamp":"2026-04-14T06:00:06.722Z"}
+{"level":"info","message":"Fetching detailed stats for commit: Psquarecompany-psqrco/MASSAED_CLIENT@3bc0d9a22a7a214d8f66f19f0a365e9170697478","service":"git-commit-tracker","timestamp":"2026-04-14T06:00:06.722Z"}
+{"level":"info","message":"Successfully fetched details for 1 files in commit 3bc0d9a22a7a214d8f66f19f0a365e9170697478","service":"git-commit-tracker","timestamp":"2026-04-14T06:00:07.206Z"}
+{"level":"info","message":"\n=== Changes for App.tsx (Modified) by sundansharma@Sundans-Mac-mini.local ===","service":"git-commit-tracker","timestamp":"2026-04-14T06:00:07.207Z"}
+{"level":"info","message":"Additions: 0 | Deletions: 2","service":"git-commit-tracker","timestamp":"2026-04-14T06:00:07.207Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-04-14T06:00:07.207Z"}
+{"level":"info","message":"Processing 1 file changes for repo MASSAED_CLIENT...","service":"git-commit-tracker","timestamp":"2026-04-14T06:00:07.207Z"}
+{"level":"info","message":"Combined 1 file changes into 1 commit rows","service":"git-commit-tracker","timestamp":"2026-04-14T06:00:07.207Z"}
+{"level":"info","message":"Calling appendToGoogleSheet with 1 combined rows","service":"git-commit-tracker","timestamp":"2026-04-14T06:00:07.207Z"}
+{"level":"info","message":"appendToGoogleSheet called with 1 rows","service":"git-commit-tracker","timestamp":"2026-04-14T06:00:07.207Z"}
+{"level":"info","message":"Filtered 1 rows to 1 non-merge commits","service":"git-commit-tracker","timestamp":"2026-04-14T06:00:07.207Z"}
+{"level":"info","message":"Loading Google Sheet: 1TjzH-MTenbMadMQwhEI9BFvLSWbA7oXfAG11grjgCTI","service":"git-commit-tracker","timestamp":"2026-04-14T06:00:07.207Z"}
+{"level":"info","message":"Successfully loaded Google Sheet","service":"git-commit-tracker","timestamp":"2026-04-14T06:00:07.832Z"}
+{"level":"info","message":"Looking for sheet: MASSAED_CLIENT_2026-04","service":"git-commit-tracker","timestamp":"2026-04-14T06:00:07.832Z"}
+{"level":"info","message":"Found existing sheet: MASSAED_CLIENT_2026-04","service":"git-commit-tracker","timestamp":"2026-04-14T06:00:07.832Z"}
+{"level":"info","message":"Formatting 1 rows","service":"git-commit-tracker","timestamp":"2026-04-14T06:00:07.833Z"}
+{"level":"info","message":"Adding 1 rows in chunks of 500","service":"git-commit-tracker","timestamp":"2026-04-14T06:00:07.833Z"}
+{"level":"info","message":"Adding chunk 1 with 1 rows","service":"git-commit-tracker","timestamp":"2026-04-14T06:00:07.833Z"}
+{"level":"info","message":"Successfully added chunk 1","service":"git-commit-tracker","timestamp":"2026-04-14T06:00:09.104Z"}
+{"level":"info","message":"Successfully added 1 rows to MASSAED_CLIENT_2026-04","service":"git-commit-tracker","timestamp":"2026-04-14T06:00:09.104Z"}
+{"level":"info","message":"Successfully completed appendToGoogleSheet","service":"git-commit-tracker","timestamp":"2026-04-14T06:00:09.104Z"}
+{"level":"info","message":"Webhook processed successfully","service":"git-commit-tracker","timestamp":"2026-04-14T06:00:09.104Z"}
+{"level":"warn","message":"UPSTASH_REDIS_REST_URL or UPSTASH_REDIS_REST_TOKEN not found in environment variables. Falling back to in-memory queue.","service":"git-commit-tracker","timestamp":"2026-04-14T06:01:57.781Z"}
+{"level":"info","message":"Server is running on port 3001 in development mode","service":"git-commit-tracker","timestamp":"2026-04-14T06:01:57.784Z"}
+{"level":"info","message":"Listening for Webhooks at: http://localhost:3001/webhook/git","service":"git-commit-tracker","timestamp":"2026-04-14T06:01:57.785Z"}
+{"level":"info","message":"Upstash Redis client initialized","service":"git-commit-tracker","timestamp":"2026-04-14T06:02:20.512Z"}
+{"level":"info","message":"Server is running on port 3001 in development mode","service":"git-commit-tracker","timestamp":"2026-04-14T06:02:20.515Z"}
+{"level":"info","message":"Listening for Webhooks at: http://localhost:3001/webhook/git","service":"git-commit-tracker","timestamp":"2026-04-14T06:02:20.515Z"}
+{"level":"info","message":"No queue data found in Redis","service":"git-commit-tracker","timestamp":"2026-04-14T06:02:20.749Z"}
+{"level":"info","message":"Incoming Webhook Push Event received","service":"git-commit-tracker","timestamp":"2026-04-14T06:03:15.292Z"}
+{"level":"info","message":"Request will be added to queue: Found 1 commits in push event","service":"git-commit-tracker","timestamp":"2026-04-14T06:03:15.292Z"}
+{"level":"info","message":"Webhook added to queue. Queue size: 1, Active: 0","service":"git-commit-tracker","timestamp":"2026-04-14T06:03:15.294Z"}
+{"level":"info","message":"Processing webhook. Queue: 0, Active: 1, Retry: 0","service":"git-commit-tracker","timestamp":"2026-04-14T06:03:15.294Z"}
+{"level":"info","message":"--- Inside processPushPayload ---","service":"git-commit-tracker","timestamp":"2026-04-14T06:03:15.294Z"}
+{"level":"info","message":"Found 1 commits in payload.","service":"git-commit-tracker","timestamp":"2026-04-14T06:03:15.294Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [14/Apr/2026:06:03:15 +0000] \"POST /webhook/git HTTP/1.1\" 202 59 \"-\" \"GitHub-Hookshot/2db9b08\"","service":"git-commit-tracker","timestamp":"2026-04-14T06:03:15.295Z"}
+{"level":"info","message":"Fetching detailed stats for commit: Psquarecompany-psqrco/MASSAED_CLIENT@ad1f97bb7a062b65840dbdaa12f2a5ec870733b2","service":"git-commit-tracker","timestamp":"2026-04-14T06:03:15.295Z"}
+{"level":"info","message":"Successfully fetched details for 1 files in commit ad1f97bb7a062b65840dbdaa12f2a5ec870733b2","service":"git-commit-tracker","timestamp":"2026-04-14T06:03:15.778Z"}
+{"level":"info","message":"\n=== Changes for App.tsx (Modified) by sundansharma@Sundans-Mac-mini.local ===","service":"git-commit-tracker","timestamp":"2026-04-14T06:03:15.778Z"}
+{"level":"info","message":"Additions: 3 | Deletions: 0","service":"git-commit-tracker","timestamp":"2026-04-14T06:03:15.779Z"}
+{"level":"info","message":"====================================================\n","service":"git-commit-tracker","timestamp":"2026-04-14T06:03:15.779Z"}
+{"level":"info","message":"Processing 1 file changes for repo MASSAED_CLIENT...","service":"git-commit-tracker","timestamp":"2026-04-14T06:03:15.779Z"}
+{"level":"info","message":"Combined 1 file changes into 1 commit rows","service":"git-commit-tracker","timestamp":"2026-04-14T06:03:15.780Z"}
+{"level":"info","message":"Calling appendToGoogleSheet with 1 combined rows","service":"git-commit-tracker","timestamp":"2026-04-14T06:03:15.780Z"}
+{"level":"info","message":"appendToGoogleSheet called with 1 rows","service":"git-commit-tracker","timestamp":"2026-04-14T06:03:15.780Z"}
+{"level":"info","message":"Filtered 1 rows to 1 non-merge commits","service":"git-commit-tracker","timestamp":"2026-04-14T06:03:15.780Z"}
+{"level":"info","message":"Loading Google Sheet: 1TjzH-MTenbMadMQwhEI9BFvLSWbA7oXfAG11grjgCTI","service":"git-commit-tracker","timestamp":"2026-04-14T06:03:15.780Z"}
+{"level":"info","message":"Successfully loaded Google Sheet","service":"git-commit-tracker","timestamp":"2026-04-14T06:03:16.918Z"}
+{"level":"info","message":"Looking for sheet: MASSAED_CLIENT_2026-04","service":"git-commit-tracker","timestamp":"2026-04-14T06:03:16.918Z"}
+{"level":"info","message":"Found existing sheet: MASSAED_CLIENT_2026-04","service":"git-commit-tracker","timestamp":"2026-04-14T06:03:16.919Z"}
+{"level":"info","message":"Formatting 1 rows","service":"git-commit-tracker","timestamp":"2026-04-14T06:03:16.919Z"}
+{"level":"info","message":"Adding 1 rows in chunks of 500","service":"git-commit-tracker","timestamp":"2026-04-14T06:03:16.946Z"}
+{"level":"info","message":"Adding chunk 1 with 1 rows","service":"git-commit-tracker","timestamp":"2026-04-14T06:03:16.947Z"}
+{"level":"info","message":"Successfully added chunk 1","service":"git-commit-tracker","timestamp":"2026-04-14T06:03:18.105Z"}
+{"level":"info","message":"Successfully added 1 rows to MASSAED_CLIENT_2026-04","service":"git-commit-tracker","timestamp":"2026-04-14T06:03:18.105Z"}
+{"level":"info","message":"Successfully completed appendToGoogleSheet","service":"git-commit-tracker","timestamp":"2026-04-14T06:03:18.105Z"}
+{"level":"info","message":"Webhook processed successfully","service":"git-commit-tracker","timestamp":"2026-04-14T06:03:18.105Z"}
+{"level":"info","message":"Webhook successfully enqueued for processing","service":"git-commit-tracker","timestamp":"2026-04-14T06:03:18.105Z"}
