@@ -6,20 +6,18 @@ on:
 
 jobs:
 
-  # 🪟 WINDOWS
   build-windows:
     runs-on: windows-latest
-
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-node@v4
         with:
           node-version: 18
-
       - run: npm install -g pkg
-
       - run: pkg git-commit.js --targets node18-win-x64
+
+      - name: Debug
+        run: dir
 
       - uses: actions/upload-artifact@v4
         with:
@@ -27,43 +25,39 @@ jobs:
           path: "*.exe"
 
 
-  # 🐧 LINUX
   build-linux:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-node@v4
         with:
           node-version: 18
-
       - run: npm install -g pkg
-
       - run: pkg git-commit.js --targets node18-linux-x64
+
+      - name: Debug
+        run: ls -la
 
       - uses: actions/upload-artifact@v4
         with:
           name: linux
-          path: "git-commit*"
+          path: "*"
 
 
-  # 🍎 MACOS
   build-macos:
     runs-on: macos-latest
-
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-node@v4
         with:
           node-version: 18
-
       - run: npm install -g pkg
-
       - run: pkg git-commit.js --targets node18-macos-x64,node18-macos-arm64
+
+      - name: Debug
+        run: ls -la
 
       - uses: actions/upload-artifact@v4
         with:
           name: macos
-          path: "git-commit*"
+          path: "*"
