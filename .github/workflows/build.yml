@@ -25,12 +25,13 @@ jobs:
         run: npm install -g pkg
 
       - name: Build
+        shell: bash
         run: |
-          if [[ "$RUNNER_OS" == "Windows" ]]; then
+          if [ "$RUNNER_OS" = "Windows" ]; then
             pkg git-commit.js --targets node18-win-x64
-          elif [[ "$RUNNER_OS" == "Linux" ]]; then
+          elif [ "$RUNNER_OS" = "Linux" ]; then
             pkg git-commit.js --targets node18-linux-x64
-          elif [[ "$RUNNER_OS" == "macOS" ]]; then
+          elif [ "$RUNNER_OS" = "macOS" ]; then
             pkg git-commit.js --targets node18-macos-x64,node18-macos-arm64
           fi
 
