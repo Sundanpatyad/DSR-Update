@@ -8,6 +8,7 @@ function generateSignature(data) {
 
 function verifySignature(data, receivedSignature) {
   if (!receivedSignature || typeof receivedSignature !== "string") {
+    console.warn("Received signature is missing or not a string.");
     return "Unauthorized";
   }
 
@@ -17,12 +18,15 @@ function verifySignature(data, receivedSignature) {
     const expectedBuffer = Buffer.from(expectedSignature, "hex");
     const receivedBuffer = Buffer.from(receivedSignature.trim(), "hex");
 
-    // 🔥 FIX: check length before comparing
+    // FIX: check length before comparing
     if (expectedBuffer.length !== receivedBuffer.length) {
+        console.warn("Signature length mismatch. Possible tampering detected.");
       return "Unauthorized";
     }
 
     const isValid = crypto.timingSafeEqual(expectedBuffer, receivedBuffer);
+
+    console.log(`Signature verification result: ${isValid ? "Authorized" : "Unauthorized"}`);
 
     return isValid ? "Authorized" : "Unauthorized";
   } catch (err) {
