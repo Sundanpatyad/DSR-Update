@@ -5,7 +5,8 @@ const readline = require("readline");
 
 const crypto = require("crypto");
 
-const SECRET = "5bskIQHmkkip7SEh924oYmdFjeSlLta41AVgtOBodC8a5Hfgj9xIcxoHv56LTdIIlZSKJWXyIZxs1EGRXvS4OBcMwyMl6UW8H5YL3BSIpv6My8OQm2ZVE1wmZas3pkSGQkoRdDYu5QWsDmBTcDhe7F32IAtLfp3kG6vwKLWkdoSVBXzOwgEfxFXzJ9Attj5KhTK0hoxc4lZpwExPIS3WcwDeJ0eiKm5XOxCuQdaJ1IeaCUYAdR10K5TaywfmWyjA";
+const SECRET =
+  "5bskIQHmkkip7SEh924oYmdFjeSlLta41AVgtOBodC8a5Hfgj9xIcxoHv56LTdIIlZSKJWXyIZxs1EGRXvS4OBcMwyMl6UW8H5YL3BSIpv6My8OQm2ZVE1wmZas3pkSGQkoRdDYu5QWsDmBTcDhe7F32IAtLfp3kG6vwKLWkdoSVBXzOwgEfxFXzJ9Attj5KhTK0hoxc4lZpwExPIS3WcwDeJ0eiKm5XOxCuQdaJ1IeaCUYAdR10K5TaywfmWyjA";
 
 function generateSignature(data) {
   return crypto.createHmac("sha256", SECRET).update(data).digest("hex");
@@ -43,12 +44,19 @@ async function main() {
     process.exit(1);
   }
   let tasktype = taskType.toLowerCase();
-  tasktype = tasktype === "f" ? "feature" : tasktype === "b" ? "bug" : tasktype === "r" ? "refactor" : tasktype;
+  tasktype =
+    tasktype === "f"
+      ? "feature"
+      : tasktype === "b"
+        ? "bug"
+        : tasktype === "r"
+          ? "refactor"
+          : tasktype;
   if (!["feature", "bug", "refactor"].includes(tasktype)) {
     console.error("Error: Please enter valid input");
     process.exit(1);
   }
-  
+
   let problemStmt = "N/A";
   if (["bug", "refactor"].includes(tasktype)) {
     problemStmt = await askQuestion(
@@ -77,17 +85,26 @@ async function main() {
   );
   const dataToSign = `${commitMsg}|${moduleName}|${tasktype}|${problemStmt}|${ticketId}`;
   const signature = generateSignature(dataToSign);
-  const formattedMessage = `${commitMsg}
-    [Module: ${moduleName}]
-    [TaskType: ${taskType}]
-    [Problem Statement: ${problemStmt}]
-    [TicketID: ${ticketId.trim() || "N/A"}]
-    [Signature: ${signature}]`;
+  // const formattedMessage = `${commitMsg}
+  //   [Module: ${moduleName}]
+  //   [TaskType: ${taskType}]
+  //   [Problem Statement: ${problemStmt}]
+  //   [TicketID: ${ticketId.trim() || "N/A"}]
+  //   [Signature: ${signature}]`;
 
-  console.log("\nFormatted Commit Message:\n", formattedMessage);
   try {
     execSync("git add .", { stdio: "inherit" });
-    execSync(`git commit -m "${formattedMessage}"`, { stdio: "inherit" });
+    const finalTicket = ticketId.trim() || "N/A";
+    // execSync(`git commit -m "${formattedMessage}"`, { stdio: "inherit" });
+    execSync(
+      `git commit -m "${commitMsg}" \
+-m "[Module: ${moduleName}]" \
+-m "[TaskType: ${tasktype}]" \
+-m "[Problem Statement: ${problemStmt}]" \
+-m "[TicketID: ${finalTicket}]" \
+-m "[Signature: ${signature}]"`,
+      { stdio: "inherit" },
+    );
     console.log("\nSuccessfully committed!");
 
     const pushAns = await askQuestion("6. Do you want to push now? (y/n): ");
