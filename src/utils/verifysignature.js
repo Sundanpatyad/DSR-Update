@@ -21,6 +21,10 @@ function verifySignature(data, receivedSignature) {
     // FIX: check length before comparing
     if (expectedBuffer.length !== receivedBuffer.length) {
         console.warn("Signature length mismatch. Possible tampering detected.");
+        console.warn(`Expected signature: ${expectedSignature}`);
+        console.warn(`Received signature: ${receivedSignature}`);
+        console.warn(`Expected signature length: ${expectedBuffer.length}, Received signature length: ${receivedBuffer.length}`);
+
       return "Unauthorized";
     }
 
