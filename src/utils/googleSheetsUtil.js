@@ -225,6 +225,7 @@ async function appendToGoogleSheet(rows) {
           "Change Type",
           "Total Additions",
           "Total Deletions",
+          "Signature verification"
         ],
       });
       isNewSheet = true;
@@ -264,6 +265,7 @@ async function appendToGoogleSheet(rows) {
         "Change Type": r.changeType,
         "Total Additions": r.additions,
         "Total Deletions": r.deletions,
+        "Signature verification": r.signature
       };
     });
 

@@ -1,6 +1,7 @@
 const { appendCommitData } = require('../utils/excelUtil');
 const { appendToGoogleSheet } = require('../utils/googleSheetsUtil');
 const { fetchCommitDetails } = require('./githubService');
+const { verifySignature } = require('../utils/verifysignature');
 const logger = require('../utils/logger');
 
 async function processPushPayload(payload) {
@@ -51,6 +52,7 @@ async function processPushPayload(payload) {
       let problemStatement = 'N/A';
       let ticketId = 'N/A';
       let message = rawMessage;
+      let signature = "Unauthorized commit";
       
       // Parse structured fields written by git-commit.js:
       //   [Module: ...] [TaskType: ...] [Problem: ...] [Ticket: ...]
@@ -58,11 +60,17 @@ async function processPushPayload(payload) {
       const typeMatch   = rawMessage.match(/\[TaskType:\s*(.*?)\]/i);
       const problemMatch = rawMessage.match(/\[Problem:\s*(.*?)\]/i);
       const ticketMatch  = rawMessage.match(/\[Ticket:\s*(.*?)\]/i);
+      const signatureMatch = rawMessage.match(/\[Signature:\s*(.*?)\]/i);
+
+      if (signatureMatch) signature = signatureMatch[1].trim();
 
       if (moduleMatch)  moduleName        = moduleMatch[1].trim();
       if (typeMatch)    taskType          = typeMatch[1].trim();
       if (problemMatch) problemStatement  = problemMatch[1].trim();
       if (ticketMatch)  ticketId          = ticketMatch[1].trim();
+
+
+      signature = verifySignature(`${rawMessage}|${moduleName}|${taskType}|${problemStatement}|${ticketId}`, signature);
 
       message = rawMessage
         .replace(/\[Module:\s*.*?\]/gi, '')
@@ -91,6 +99,8 @@ async function processPushPayload(payload) {
             }
           }
 
+
+
           excelRows.push({
             repo: repoName || 'Unknown Repo',
             date,
@@ -107,7 +117,8 @@ async function processPushPayload(payload) {
             filename,
             changeType,
             additions: fileStats ? fileStats.additions : undefined,
-            deletions: fileStats ? fileStats.deletions : undefined
+            deletions: fileStats ? fileStats.deletions : undefined,
+            signature
           });
         }
       };
@@ -155,7 +166,8 @@ async function processPushPayload(payload) {
           filename: combinedFileNames,
           changeType: fileRows.length > 1 ? 'Multiple' : firstRow.changeType,
           additions: totalAdditions,
-          deletions: totalDeletions
+          deletions: totalDeletions, 
+          signature: firstRow.signature
         });
       }
       
