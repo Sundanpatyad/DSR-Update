@@ -1,7 +1,7 @@
 const { appendCommitData } = require('../utils/excelUtil');
 const { appendToGoogleSheet } = require('../utils/googleSheetsUtil');
 const { fetchCommitDetails } = require('./githubService');
-const { verifySignature } = require('../utils/verifysignature');
+const { verifycodeSignature } = require('../utils/verifysignature');
 const logger = require('../utils/logger');
 
 async function processPushPayload(payload) {
@@ -70,7 +70,10 @@ async function processPushPayload(payload) {
       if (ticketMatch)  ticketId          = ticketMatch[1].trim();
 
 
-      signature = verifySignature(`${rawMessage}|${moduleName}|${taskType}|${problemStatement}|${ticketId}`, signature);
+      console.log("RAW MESSAGE:\n", rawMessage);
+
+      const baseMessage = rawMessage.split("\n")[0].trim();
+      signature = verifycodeSignature(`${baseMessage}|${moduleName}|${taskType}|${problemStatement}|${ticketId}`, signature);
 
       message = rawMessage
         .replace(/\[Module:\s*.*?\]/gi, '')

@@ -6,7 +6,7 @@ function generateSignature(data) {
   return crypto.createHmac("sha256", SECRET).update(data).digest("hex");
 }
 
-function verifySignature(data, receivedSignature) {
+function verifycodeSignature(data, receivedSignature) {
   if (!receivedSignature || typeof receivedSignature !== "string") {
     console.warn("Received signature is missing or not a string.");
     return "Unauthorized";
@@ -40,5 +40,5 @@ function verifySignature(data, receivedSignature) {
 }
 
 module.exports = {
-  verifySignature
+  verifycodeSignature
 };
