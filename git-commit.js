@@ -78,12 +78,13 @@ async function main() {
   const dataToSign = `${commitMsg}|${moduleName}|${tasktype}|${problemStmt}|${ticketId}`;
   const signature = generateSignature(dataToSign);
   const formattedMessage = `${commitMsg}
-[Module: ${moduleName}]
-[TaskType: ${taskType}]
-[Problem Statement: ${problemStmt}]
-[TicketID: ${ticketId.trim() || "N/A"}]
-[Signature: ${signature}]`;
+    [Module: ${moduleName}]
+    [TaskType: ${taskType}]
+    [Problem Statement: ${problemStmt}]
+    [TicketID: ${ticketId.trim() || "N/A"}]
+    [Signature: ${signature}]`;
 
+  console.log("\nFormatted Commit Message:\n", formattedMessage);
   try {
     execSync("git add .", { stdio: "inherit" });
     execSync(`git commit -m "${formattedMessage}"`, { stdio: "inherit" });
