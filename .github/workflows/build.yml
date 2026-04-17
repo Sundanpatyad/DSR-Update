@@ -5,12 +5,10 @@ on:
     branches: [ dev ]
 
 jobs:
-  build:
-    strategy:
-      matrix:
-        os: [windows-latest, ubuntu-latest, macos-latest]
 
-    runs-on: ${{ matrix.os }}
+  # 🪟 WINDOWS
+  build-windows:
+    runs-on: windows-latest
 
     steps:
       - name: Checkout
@@ -24,21 +22,65 @@ jobs:
       - name: Install pkg
         run: npm install -g pkg
 
-      - name: Build
-        shell: bash
-        run: |
-          if [ "$RUNNER_OS" = "Windows" ]; then
-            pkg git-commit.js --targets node18-win-x64
-          elif [ "$RUNNER_OS" = "Linux" ]; then
-            pkg git-commit.js --targets node18-linux-x64
-          elif [ "$RUNNER_OS" = "macOS" ]; then
-            pkg git-commit.js --targets node18-macos-x64,node18-macos-arm64
-          fi
+      - name: Build Windows Binary
+        run: pkg git-commit.js --targets node18-win-x64
 
-      - name: Upload Artifacts
+      - name: Upload Windows Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: binaries-${{ runner.os }}
+          name: windows
+          path: git-commit.exe
+
+
+  # 🐧 LINUX
+  build-linux:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install pkg
+        run: npm install -g pkg
+
+      - name: Build Linux Binary
+        run: pkg git-commit.js --targets node18-linux-x64
+
+      - name: Upload Linux Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: linux
+          path: git-commit
+
+
+  # 🍎 MACOS
+  build-macos:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install pkg
+        run: npm install -g pkg
+
+      - name: Build macOS Binaries
+        run: pkg git-commit.js --targets node18-macos-x64,node18-macos-arm64
+
+      - name: Upload macOS Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: macos
           path: |
-            *.exe
-            git-commit*
+            git-commit-macos-x64
+            git-commit-macos-arm64
