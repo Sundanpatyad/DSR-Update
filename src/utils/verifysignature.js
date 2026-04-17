@@ -7,14 +7,28 @@ function generateSignature(data) {
 }
 
 function verifySignature(data, receivedSignature) {
+  if (!receivedSignature || typeof receivedSignature !== "string") {
+    return "Unauthorized";
+  }
+
   const expectedSignature = generateSignature(data);
 
-  const isValid = crypto.timingSafeEqual(
-    Buffer.from(expectedSignature, "hex"),
-    Buffer.from(receivedSignature, "hex")
-  );
+  try {
+    const expectedBuffer = Buffer.from(expectedSignature, "hex");
+    const receivedBuffer = Buffer.from(receivedSignature.trim(), "hex");
 
-  return isValid ? "Authorized" : "Unauthorized";
+    // 🔥 FIX: check length before comparing
+    if (expectedBuffer.length !== receivedBuffer.length) {
+      return "Unauthorized";
+    }
+
+    const isValid = crypto.timingSafeEqual(expectedBuffer, receivedBuffer);
+
+    return isValid ? "Authorized" : "Unauthorized";
+  } catch (err) {
+    // handles invalid hex etc.
+    return "Unauthorized";
+  }
 }
 
 module.exports = {
