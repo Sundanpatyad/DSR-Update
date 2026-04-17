@@ -38,8 +38,10 @@ async function processPushPayload(payload) {
     }
 
     const excelRows = [];
-
+    console.log("payload.repository", payload);
     for (const commit of commits) {
+
+      console.log("=========>>>> commit", commit);
       const sha = commit.id;
       const author = commit.author?.name || 'Unknown Author';
       const email = commit.author?.email || 'unknown_email';
