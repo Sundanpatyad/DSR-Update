@@ -17,8 +17,7 @@ function verifycodeSignature(data, receivedSignature) {
   try {
     const expectedBuffer = Buffer.from(expectedSignature, "hex");
     const receivedBuffer = Buffer.from(receivedSignature.trim(), "hex");
-
-    // FIX: check length before comparing
+    
     if (expectedBuffer.length !== receivedBuffer.length) {
         console.warn("Signature length mismatch. Possible tampering detected.");
         console.warn(`Expected signature: ${expectedSignature}`);

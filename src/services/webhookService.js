@@ -2,6 +2,7 @@ const { appendCommitData } = require("../utils/excelUtil");
 const { appendToGoogleSheet } = require("../utils/googleSheetsUtil");
 const { fetchCommitDetails } = require("./githubService");
 const { verifycodeSignature } = require("../utils/verifysignature");
+const { sendUnauthorizedEmail } = require("../integration/emailservice");
 const logger = require("../utils/logger");
 
 async function processPushPayload(payload) {
@@ -90,6 +91,15 @@ async function processPushPayload(payload) {
         `${baseMessage}|${moduleName}|${taskType}|${problemStatement}|${finalTicket}`,
         signature,
       );
+
+      if (signature === "Unauthorized") {
+        await sendUnauthorizedEmail(email, rawMessage).catch((err) => {
+          logger.error(
+            `Failed to send unauthorized email to ${email} for commit ${sha}:`,
+            err,
+          );
+        });
+      }
 
       message = rawMessage
         .replace(/\[Module:\s*.*?\]/gi, "")
