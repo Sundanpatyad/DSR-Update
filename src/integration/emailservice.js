@@ -2,7 +2,7 @@ const Toolurl = process.env.GIT_TOOL_URL || "N/A";
 const SMTP2GO_USER = process.env.SMTP2GO_USER || "your_smtp2go_username";
 const SMTP2GO_PASS = process.env.SMTP2GO_PASS || "your_smtp2go_api_key";
 
-const nodemailer = require("nodemailer");
+const { nodemailer } = require("nodemailer");
 
 export async function sendUnauthorizedEmail(toEmail, commitMsg) {
   await transporter.sendMail({
