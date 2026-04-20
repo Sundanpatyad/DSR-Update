@@ -1,5 +1,5 @@
 
-const { nodemailer } = require("nodemailer");
+const nodemailer = require("nodemailer");
 
 const Toolurl = process.env.GIT_TOOL_URL || "N/A";
 const SMTP2GO_USER = process.env.SMTP2GO_USER || "your_smtp2go_username";
