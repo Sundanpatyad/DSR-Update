@@ -1,10 +1,21 @@
+
+const { nodemailer } = require("nodemailer");
+
 const Toolurl = process.env.GIT_TOOL_URL || "N/A";
 const SMTP2GO_USER = process.env.SMTP2GO_USER || "your_smtp2go_username";
 const SMTP2GO_PASS = process.env.SMTP2GO_PASS || "your_smtp2go_api_key";
 
-const { nodemailer } = require("nodemailer");
 
-export async function sendUnauthorizedEmail(toEmail, commitMsg) {
+const transporter = nodemailer.createTransport({
+  host: "mail.smtp2go.com",
+  port: 587,
+  auth: {
+    user: SMTP2GO_USER || "your_smtp2go_username",
+    pass: SMTP2GO_PASS || "your_smtp2go_api_key",
+  },
+});
+
+async function sendUnauthorizedEmail(toEmail, commitMsg) {
   await transporter.sendMail({
     from: `"DSR System" <${process.env.GIT_EMAIL_USER}>`,
     to: toEmail,
@@ -43,11 +54,6 @@ export async function sendUnauthorizedEmail(toEmail, commitMsg) {
     `,
   });
 }
-const transporter = nodemailer.createTransport({
-  host: "mail.smtp2go.com",
-  port: 587,
-  auth: {
-    user: SMTP2GO_USER || "your_smtp2go_username",
-    pass: SMTP2GO_PASS || "your_smtp2go_api_key",
-  },
-});
+
+
+module.exports = { sendUnauthorizedEmail };
