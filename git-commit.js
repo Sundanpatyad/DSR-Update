@@ -23,6 +23,11 @@ const askQuestion = (query) =>
 async function main() {
   console.log("Custom Git Commit Tool");
   console.log("------------------------");
+  const gitStash = await askQuestion(
+    "Which files should be committed? (Enter . for all or list files, e.g., file1.js file2.js): ",
+  );
+
+  const filesToCommit = gitStash?.trim() ? gitStash.trim() : ".";
 
   const commitMsg = await askQuestion("1. Enter commit message (Required): ");
   if (!commitMsg.trim()) {
@@ -94,7 +99,7 @@ async function main() {
   //   [Signature: ${signature}]`;
 
   try {
-    execSync("git add .", { stdio: "inherit" });
+    execSync(`git add ${filesToCommit}`, { stdio: "inherit" });
     const finalTicket = ticketId.trim() || "N/A";
     // execSync(`git commit -m "${formattedMessage}"`, { stdio: "inherit" });
     execSync(
