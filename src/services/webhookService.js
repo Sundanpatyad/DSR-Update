@@ -78,15 +78,15 @@ async function processPushPayload(payload) {
       if (problemMatch) problemStatement = problemMatch[1].trim();
       if (ticketMatch) ticketId = ticketMatch[1].trim();
 
-      console.log("RAW MESSAGE:\n", rawMessage);
-      const lines = rawMessage
-        .split("\n")
-        .map((l) => l.trim())
-        .filter((l) => l && !l.startsWith("["));
+      console.log("RAW MESSAGE --->>>: ", rawMessage);
+      // const lines = rawMessage
+      //   .split("\n")
+      //   .map((l) => l.trim())
+      //   .filter((l) => l && !l.startsWith("["));
 
       const finalTicket = ticketId.trim() || "N/A";
 
-      const baseMessage = lines[0];
+      const baseMessage = rawMessage.split("\n")[0].trim();
       signature = verifycodeSignature(
         `${baseMessage}|${moduleName}|${taskType}|${problemStatement}|${finalTicket}`,
         signature,
