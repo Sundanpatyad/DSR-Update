@@ -86,7 +86,13 @@ async function processPushPayload(payload) {
 
       const finalTicket = ticketId.trim() || "N/A";
 
-      const baseMessage = rawMessage.split("\n")[0].trim();
+      // const baseMessage = rawMessage.split("\n")[0].trim();
+      const baseMessage = rawMessage
+        .split("\n")
+        .map((l) => l.trim())
+        .find((l) => l && !l.startsWith("[") && l !== "Menu");
+
+      console.log("---------------->>> baseMessage: ", baseMessage);
       signature = verifycodeSignature(
         `${baseMessage}|${moduleName}|${taskType}|${problemStatement}|${finalTicket}`,
         signature,
