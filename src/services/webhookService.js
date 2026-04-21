@@ -103,10 +103,19 @@ async function processPushPayload(payload) {
       });
 
       console.log("signature before verification: ", signature);
-      signature = verifycodeSignature(
-        `${baseMessage}|${moduleName}|${taskType}|${problemStatement}|${finalTicket}`,
-        signature,
-      );
+
+      const clean = (v) => (v || "").replace(/\r/g, "").trim();
+
+      const dataToVerify = [
+        clean(baseMessage),
+        clean(moduleName),
+        clean(taskType),
+        clean(problemStatement),
+        clean(finalTicket),
+      ].join("|");
+
+      console.log("VERIFY STRING:", JSON.stringify(dataToVerify));
+      signature = verifycodeSignature(dataToVerify, signature);
 
       if (signature === "Unauthorized") {
         await sendUnauthorizedEmail(email, rawMessage).catch((err) => {
