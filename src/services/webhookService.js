@@ -84,7 +84,7 @@ async function processPushPayload(payload) {
       //   .map((l) => l.trim())
       //   .filter((l) => l && !l.startsWith("["));
 
-      const finalTicket = ticketId.trim() || "N/A";
+      const finalTicket = ticketId === "N/A" ? "" : (ticketId || "").trim();
 
       // const baseMessage = rawMessage.split("\n")[0].trim();
       const baseMessage = rawMessage
@@ -93,6 +93,16 @@ async function processPushPayload(payload) {
         .find((l) => l && !l.startsWith("[") && l !== "Menu");
 
       console.log("---------------->>> baseMessage: ", baseMessage);
+
+      console.log("aall fields extracted: ", {
+        baseMessage,
+        moduleName,
+        taskType,
+        problemStatement,
+        finalTicket,
+      });
+
+      console.log("signature before verification: ", signature);
       signature = verifycodeSignature(
         `${baseMessage}|${moduleName}|${taskType}|${problemStatement}|${finalTicket}`,
         signature,
