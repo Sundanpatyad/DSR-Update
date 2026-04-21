@@ -84,6 +84,7 @@ async function main() {
     "5. Enter Ticket ID (Optional – recommended for Bug/Refactor, press Enter to skip): ",
   );
   const dataToSign = `${commitMsg}|${moduleName}|${tasktype}|${problemStmt}|${ticketId}`;
+  console.log("Data to be signed: ", dataToSign);
   const signature = generateSignature(dataToSign);
   // const formattedMessage = `${commitMsg}
   //   [Module: ${moduleName}]
