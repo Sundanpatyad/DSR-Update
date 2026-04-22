@@ -78,7 +78,7 @@ async function processPushPayload(payload) {
       if (problemMatch) problemStatement = problemMatch[1].trim();
       if (ticketMatch) ticketId = ticketMatch[1].trim();
 
-      console.log("RAW MESSAGE --->>>: ", rawMessage);
+      // console.log("RAW MESSAGE --->>>: ", rawMessage);
       // const lines = rawMessage
       //   .split("\n")
       //   .map((l) => l.trim())
@@ -92,7 +92,7 @@ async function processPushPayload(payload) {
         .map((l) => l.trim())
         .find((l) => l && !l.startsWith("[") && l !== "Menu");
 
-      console.log("---------------->>> baseMessage: ", baseMessage);
+      // console.log("---------------->>> baseMessage: ", baseMessage);
 
       console.log("aall fields extracted: ", {
         baseMessage,
@@ -102,7 +102,7 @@ async function processPushPayload(payload) {
         finalTicket,
       });
 
-      console.log("signature before verification: ", signature);
+      // console.log("signature before verification: ", signature);
 
       const clean = (v) => (v || "").replace(/\r/g, "").trim();
 

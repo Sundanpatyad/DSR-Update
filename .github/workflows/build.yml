@@ -2,7 +2,7 @@ name: Build Binaries
 
 on:
   push:
-    branches: [ dev ]
+    branches: [ create_tool ]
 
 jobs:
 

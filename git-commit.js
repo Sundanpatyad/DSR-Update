@@ -12,6 +12,16 @@ function generateSignature(data) {
   return crypto.createHmac("sha256", SECRET).update(data).digest("hex");
 }
 
+function getStagedFiles() {
+  const output = execSync("git diff --cached --name-only", {
+    encoding: "utf-8",
+  }).trim();
+
+  if (!output) return [];
+
+  return output.split("\n");
+}
+
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
@@ -21,14 +31,12 @@ const askQuestion = (query) =>
   new Promise((resolve) => rl.question(query, resolve));
 
 async function main() {
-  console.log("Custom Git Commit Tool");
-  console.log("------------------------");
-  const gitStash = await askQuestion(
-    "Which files should be committed? (Enter . for all or list files, e.g., file1.js file2.js): ",
-  );
-
-  const filesToCommit = gitStash?.trim() ? gitStash.trim() : ".";
-
+  console.log("---------------------------------------------- \n-----------Custom Git Commit Tool------------\n----------------------------------------------");
+  const stagedFiles = getStagedFiles();
+  if (stagedFiles.length === 0) {
+    console.error("Error: No files staged for commit. Use `git add` or a Git UI to stage files first.");
+    process.exit(1);
+  }
   const commitMsg = await askQuestion("1. Enter commit message (Required): ");
   if (!commitMsg.trim()) {
     console.error("Error: Commit message is compulsory.");
@@ -65,7 +73,7 @@ async function main() {
   let problemStmt = "N/A";
   if (["bug", "refactor"].includes(tasktype)) {
     problemStmt = await askQuestion(
-      "4. Problem Statement (e.g., API null issue, UI padding issue, App crash on click etc.): (Required) ",
+      "3(i). Problem Statement (e.g., API null issue, UI padding issue, App crash on click etc.): (Required) ",
     );
     if (!problemStmt.trim()) {
       console.error(
@@ -74,34 +82,15 @@ async function main() {
       process.exit(1);
     }
   }
-  // if (hasProblem.toLowerCase() === 'y' || hasProblem.toLowerCase() === 'yes') {
-  // problemStmt = await askQuestion('   Enter Problem Statement (Required): ');
-  // if (!problemStmt.trim()) {
-  //   console.error('Error: Problem Statement is compulsory if you said yes.');
-  //   process.exit(1);
-  // }
-  // } else {
-  //   console.error('Error: Problem Statement is compulsory.');
-  //   process.exit(1);
-  // }
 
   const ticketId = await askQuestion(
-    "5. Enter Ticket ID (Optional – recommended for Bug/Refactor, press Enter to skip): ",
+    "4. Enter Ticket ID (Optional – recommended for Bug/Refactor, press Enter to skip): ",
   );
   const dataToSign = `${commitMsg}|${moduleName}|${tasktype}|${problemStmt}|${ticketId}`;
   // console.log("Data to be signed: ", dataToSign);
   const signature = generateSignature(dataToSign);
-  // const formattedMessage = `${commitMsg}
-  //   [Module: ${moduleName}]
-  //   [TaskType: ${taskType}]
-  //   [Problem Statement: ${problemStmt}]
-  //   [TicketID: ${ticketId.trim() || "N/A"}]
-  //   [Signature: ${signature}]`;
-
   try {
-    execSync(`git add ${filesToCommit}`, { stdio: "inherit" });
     const finalTicket = ticketId.trim() || "N/A";
-    // execSync(`git commit -m "${formattedMessage}"`, { stdio: "inherit" });
     execSync(
       `git commit -m "${commitMsg}" \
 -m "[Module: ${moduleName}]" \
