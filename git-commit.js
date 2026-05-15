@@ -2,6 +2,8 @@
 
 const { execSync } = require("child_process");
 const readline = require("readline");
+const fs = require("fs");
+const path = require("path");
 
 const crypto = require("crypto");
 
@@ -91,23 +93,39 @@ async function main() {
   const signature = generateSignature(dataToSign);
   try {
     const finalTicket = ticketId.trim() || "N/A";
-    execSync(
-      `git commit -m "${commitMsg}" \
--m "[Module: ${moduleName}]" \
--m "[TaskType: ${tasktype}]" \
--m "[Problem Statement: ${problemStmt}]" \
--m "[TicketID: ${finalTicket}]" \
--m "[Signature: ${signature}]"`,
-      { stdio: "inherit" },
-    );
-    console.log("\nSuccessfully committed!");
+    
+    // Create commit message in a temporary file to avoid shell escaping issues with many files
+    const commitMessageLines = [
+      commitMsg,
+      "",
+      `[Module: ${moduleName}]`,
+      `[TaskType: ${tasktype}]`,
+      `[Problem Statement: ${problemStmt}]`,
+      `[TicketID: ${finalTicket}]`,
+      `[Signature: ${signature}]`,
+    ];
+    const commitMessageContent = commitMessageLines.join("\n");
+    
+    const tempCommitFile = path.join(process.cwd(), ".git_commit_msg_temp");
+    fs.writeFileSync(tempCommitFile, commitMessageContent, "utf-8");
+    
+    try {
+      // Use -F flag to read commit message from file
+      execSync(`git commit -F "${tempCommitFile}"`, { stdio: "inherit" });
+      console.log("\nSuccessfully committed!");
 
-    const pushAns = await askQuestion("6. Do you want to push now? (y/n): ");
-    if (pushAns.toLowerCase() === "y" || pushAns.toLowerCase() === "yes") {
-      execSync("git push", { stdio: "inherit" });
-      console.log("Successfully pushed to remote!");
-    } else {
-      console.log("Skipped push.");
+      const pushAns = await askQuestion("6. Do you want to push now? (y/n): ");
+      if (pushAns.toLowerCase() === "y" || pushAns.toLowerCase() === "yes") {
+        execSync("git push", { stdio: "inherit" });
+        console.log("Successfully pushed to remote!");
+      } else {
+        console.log("Skipped push.");
+      }
+    } finally {
+      // Clean up temporary file
+      if (fs.existsSync(tempCommitFile)) {
+        fs.unlinkSync(tempCommitFile);
+      }
     }
   } catch (error) {
     console.error("\nGit command failed.");
