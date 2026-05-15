@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 
 const { execSync } = require("child_process");
 const readline = require("readline");
@@ -26,11 +27,8 @@ function getStagedFiles() {
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
-  output: process.stdout,
 });
 
-const askQuestion = (query) =>
-  new Promise((resolve) => rl.question(query, resolve));
 const askQuestion = (query) =>
   new Promise((resolve) => rl.question(query, resolve));
 
@@ -44,13 +42,11 @@ async function main() {
   const commitMsg = await askQuestion("1. Enter commit message (Required): ");
   if (!commitMsg.trim()) {
     console.error("Error: Commit message is compulsory.");
-    console.error("Error: Commit message is compulsory.");
     process.exit(1);
   }
 
   const moduleName = await askQuestion("2. Enter Module Name (Required): ");
   if (!moduleName.trim()) {
-    console.error("Error: Module Name is compulsory.");
     console.error("Error: Module Name is compulsory.");
     process.exit(1);
   }
@@ -59,20 +55,6 @@ async function main() {
     "3. Enter Task Type (Required): (F/f = Feature, B/b = Bug, R/r = Refactor)",
   );
   if (!taskType.trim()) {
-    console.error("Error: Task Type is compulsory.");
-    process.exit(1);
-  }
-  let tasktype = taskType.toLowerCase();
-  tasktype =
-    tasktype === "f"
-      ? "feature"
-      : tasktype === "b"
-        ? "bug"
-        : tasktype === "r"
-          ? "refactor"
-          : tasktype;
-  if (!["feature", "bug", "refactor"].includes(tasktype)) {
-    console.error("Error: Please enter valid input");
     console.error("Error: Task Type is compulsory.");
     process.exit(1);
   }
@@ -96,9 +78,6 @@ async function main() {
       "3(i). Problem Statement (e.g., API null issue, UI padding issue, App crash on click etc.): (Required) ",
     );
     if (!problemStmt.trim()) {
-      console.error(
-        "Error: Problem Statement is compulsory if you select bug/refactor.",
-      );
       console.error(
         "Error: Problem Statement is compulsory if you select bug/refactor.",
       );
@@ -135,12 +114,6 @@ async function main() {
       execSync(`git commit -F "${tempCommitFile}"`, { stdio: "inherit" });
       console.log("\nSuccessfully committed!");
 
-    const pushAns = await askQuestion("6. Do you want to push now? (y/n): ");
-    if (pushAns.toLowerCase() === "y" || pushAns.toLowerCase() === "yes") {
-      execSync("git push", { stdio: "inherit" });
-      console.log("Successfully pushed to remote!");
-    } else {
-      console.log("Skipped push.");
       const pushAns = await askQuestion("6. Do you want to push now? (y/n): ");
       if (pushAns.toLowerCase() === "y" || pushAns.toLowerCase() === "yes") {
         execSync("git push", { stdio: "inherit" });
@@ -156,11 +129,9 @@ async function main() {
     }
   } catch (error) {
     console.error("\nGit command failed.");
-    console.error("\nGit command failed.");
   } finally {
     rl.close();
   }
 }
 
 main();
->>>>>>> 229e5f80da5f3c411dbb9bc9b5e677b208d8c3a4
