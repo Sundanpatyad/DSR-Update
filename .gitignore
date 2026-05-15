@@ -9,7 +9,6 @@ lerna-debug.log*
 git-commit-linux
 git-commit-macos
 git-commit-win.exe
-git-commit
 git-commit-x64
 
 # Dependency directories
